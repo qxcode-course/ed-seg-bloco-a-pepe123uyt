@@ -1,0 +1,69 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-19_04-07-26",
+            "content": "@@ -33,17 +33,16 @@\n ain() %7B%0A\n-%0A\n     var \n@@ -76,16 +76,19 @@\n     %0A   \n+ //\n  desca :\n@@ -105,18 +105,26 @@\n     \n-pares := 0\n+animais := %5B%5Dint%7B%7D\n %0A%0A  \n@@ -152,18 +152,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n var ani \n@@ -172,18 +172,24 @@\n ani int%0A\n-%09%09\n+        \n fmt.Scan\n@@ -199,170 +199,23 @@\n ni)%0A\n-%0A%09%09encontrou := false%0A%0A%09%09for j := 0; j %3C len(desca); j++ %7B%0A%09%09%09if desca%5Bj%5D == ani %7B%0A%09%09%09%09pares++%0A%09%09%09%09encontrou = true%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%7D%0A%0A%09%09if !encontrou %7B%0A%09%09%09desca\n+        animais\n  = a\n@@ -224,26 +224,28 @@\n end(\n-desca\n+animais\n , ani)%0A\n-%09%09%7D%0A%09%7D\n+    %7D%0A\n %0A   \n@@ -261,12 +261,14 @@\n tln(\n-pare\n+animai\n s)%0A%7D\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-19_04-20-54",
+            "content": "@@ -174,16 +174,38 @@\n (&ani)%0A%0A\n+%09%09encontrou := false%0A%0A\n %09%09for j \n@@ -276,22 +276,60 @@\n %09%09%09%09\n-break%0A%09%09%09%7Delse\n+encontrou = true%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%7D%0A%0A%09%09if !encontrou\n  %7B%0A%09\n@@ -365,21 +365,8 @@\n %09%09%7D%0A\n-%09%09%7D%0A        %0A\n %09%7D%0A \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-19_04-22-07",
+            "content": "@@ -178,30 +178,8 @@\n i)%0A%0A\n-%09%09encontrou := false%0A%0A\n %09%09fo\n@@ -234,17 +234,16 @@\n = ani %7B%0A\n-%0A\n %09%09%09%09pare\n@@ -254,60 +254,22 @@\n %09%09%09%09\n-encontrou = true%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%7D%0A%0A%09%09if !encontrou\n+break%0A%09%09%09%7Delse\n  %7B%0A%09\n@@ -301,16 +301,29 @@\n ni)%0A%09%09%7D%0A\n+%09%09%7D%0A        %0A\n %09%7D%0A    f\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-19_04-22-26",
+            "content": "@@ -260,53 +260,8 @@\n i %7B%0A\n-%09%09%09%09desca = append(desca%5B:j%5D, desca%5Bj+1:%5D...)\n %0A%09%09%09\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-19_04-22-30",
+            "content": "@@ -256,16 +256,62 @@\n = ani %7B%0A\n+%09%09%09%09desca = append(desca%5B:j%5D, desca%5Bj+1:%5D...)%0A\n %09%09%09%09pare\n@@ -414,31 +414,8 @@\n %0A%09%7D%0A\n-    fmt.Println(desca)%0A\n     \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-19_04-22-58",
+            "content": "@@ -260,37 +260,8 @@\n i %7B%0A\n-                desca%5Bj%5D = 0%0A\n %09%09%09%09\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-19_04-23-27",
+            "content": "@@ -257,15 +257,39 @@\n  ani\n-*(-1) %7B\n+ %7B%0A                desca%5Bj%5D = 0\n %0A%09%09%09\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-19_04-25-25",
+            "content": "@@ -376,11 +376,8 @@\n %0A   \n- //\n  fmt\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-19_04-25-33",
+            "content": "@@ -176,19 +176,16 @@\n ani)%0A%0A%09%09\n-// \n encontro\n@@ -277,19 +277,16 @@\n s++%0A%09%09%09%09\n-// \n encontro\n@@ -316,19 +316,16 @@\n %0A%09%09%7D%0A%0A%09%09\n-// \n if !enco\n@@ -334,19 +334,16 @@\n rou %7B%0A%09%09\n-// \n %09desca =\n@@ -364,19 +364,16 @@\n  ani)%0A%09%09\n-// \n %7D%0A%09%7D%0A   \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-19_04-26-23",
+            "content": "@@ -176,16 +176,19 @@\n ani)%0A%0A%09%09\n+// \n encontro\n@@ -280,16 +280,19 @@\n s++%0A%09%09%09%09\n+// \n encontro\n@@ -322,16 +322,19 @@\n %0A%09%09%7D%0A%0A%09%09\n+// \n if !enco\n@@ -343,16 +343,19 @@\n rou %7B%0A%09%09\n+// \n %09desca =\n@@ -380,16 +380,19 @@\n )%0A%09%09\n+// \n %7D%0A%09%7D%0A   \n  fmt\n@@ -383,24 +383,27 @@\n %09// %7D%0A%09%7D%0A   \n+ //\n  fmt.Println\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-19_04-28-43",
+            "content": "@@ -369,16 +369,39 @@\n %0A%09%09%7D%0A%09%7D%0A\n+    fmt.Println(desca)%0A\n     fmt.\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-19_04-28-50",
+            "content": "@@ -265,37 +265,8 @@\n ) %7B%0A\n-                desca%5Bj%5D = 0%0A\n %09%09%09%09\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-19_04-32-00",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\n    var num int\n    fmt.Scan(&num)\n    \n    desca := []int{}\n    pares := 0\n\n    for i := 0; i < num; i++ {\n\t\tvar ani int\n\t\tfmt.Scan(&ani)\n\n\t\tencontrou := false\n\n\t\tfor j := 0; j < len(desca); j++ {\n\t\t\tif desca[j] == ani*(-1) {\n                desca[j] = 0\n\t\t\t\tpares++\n\t\t\t\tencontrou = true\n\t\t\t\tbreak\n\t\t\t}\n\t\t}\n\n\t\tif !encontrou {\n\t\t\tdesca = append(desca, ani)\n\t\t}\n\t}\n    fmt.Println(pares)\n}\n",
+            "lines": "31"
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-10_13-42-27",
+            "content": "@@ -20,19 +20,16 @@\n  %22fmt%22%0A%0A\n-// \n func mat\n@@ -61,35 +61,8 @@\n t %7B%0A\n-//     novo := %5B%5Dint%7B%7D%0A%0A// \n     \n@@ -70,17 +70,19 @@\n or i := \n-0\n+pos\n ; i %3C le\n@@ -84,16 +84,20 @@\n  %3C len(v\n+ - 1\n ); i++ %7B\n@@ -97,26 +97,24 @@\n ; i++ %7B%0A\n-//\n         \n  if i !=\n@@ -109,109 +109,28 @@\n     \n- if i != pos %7B%0A//             novo = append(novo, v%5Bi%5D)%0A//         %7D%0A//     %7D%0A%0A//     return novo%0A// \n+v%5Bi%5D = v%5Bi+1%5D%0A    %7D%0A\n %7D%0A%0Af\n@@ -304,128 +304,28 @@\n    f\n-or len(fila) %3E 0 %7B %0A        fmt.Print(%22%5B %22)%0A        for _, v:= range fila %7B%0A            fmt.Print(v, %22 %22)%0A        %7D%0A    \n+mt.Print(%22%5B %22)%0A    %0A\n     \n@@ -345,20 +345,7 @@\n  %5D%22)\n-%0A%0A    %7D%0A%0A    \n %0A%7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-10_13-51-00",
+            "content": "@@ -20,16 +20,19 @@\n  %22fmt%22%0A%0A\n+// \n func mat\n@@ -60,16 +60,19 @@\n %5B%5Dint %7B%0A\n+// \n     novo\n@@ -84,16 +84,19 @@\n %5Dint%7B%7D%0A%0A\n+// \n     for \n@@ -113,32 +113,35 @@\n %3C len(v); i++ %7B%0A\n+// \n         if i != \n@@ -146,16 +146,18 @@\n = pos %7B%0A\n+//\n         \n@@ -156,24 +156,25 @@\n             \n+ \n novo = appen\n@@ -187,16 +187,19 @@\n , v%5Bi%5D)%0A\n+// \n         \n@@ -196,31 +196,37 @@\n /         %7D%0A\n+// \n     %7D%0A%0A\n+// \n     return n\n@@ -229,16 +229,19 @@\n rn novo%0A\n+// \n %7D%0A%0Afunc \n@@ -406,31 +406,8 @@\n  %7D%0A%0A\n-    pos := espada + 1%0A%0A\n     \n@@ -554,112 +554,8 @@\n %22)%0A%0A\n-        fila = matar(fila, pos)%0A%0A        if len(fila) %3E 0 %7B%0A            pos = pos %25 len(fila)%0A        %7D%0A\n     \n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-10_13-53-10",
+            "content": "@@ -318,22 +318,23 @@\n or i := \n-0\n+1\n ; i %3C\n+=\n  num; i+\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-10_13-53-47",
+            "content": "@@ -324,17 +324,16 @@\n = 0; i %3C\n-=\n  num; i+\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-10_13-54-01",
+            "content": "@@ -540,16 +540,17 @@\n rintln(%22\n+ \n %5D%22)%0A%0A   \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-10_13-54-14",
+            "content": "@@ -283,31 +283,40 @@\n     fila := \n-%5B%5Dint%7B%7D\n+make(%5B%5Dint, num)\n %0A%0A    for i \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-10_13-55-35",
+            "content": "@@ -388,9 +388,9 @@\n ada \n--\n++\n  1%0A%0A\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-10_13-56-18",
+            "content": "@@ -384,17 +384,17 @@\n  espada \n-+\n+-\n  1%0A%0A    \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-10_13-56-30",
+            "content": "@@ -309,17 +309,17 @@\n or i := \n-1\n+0\n ; i %3C= n\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-10_13-56-49",
+            "content": "package main\nimport \"fmt\"\n\nfunc matar(v []int, pos int) []int {\n    novo := []int{}\n\n    for i := 0; i < len(v); i++ {\n        if i != pos {\n            novo = append(novo, v[i])\n        }\n    }\n\n    return novo\n}\n\nfunc main() {\n    var num, espada int\n    fmt.Scan(&num, &espada)\n\n    fila := []int{}\n\n    for i := 1; i <= num; i++ {\n        fila = append(fila, i)\n    }\n\n    pos := espada + 1\n\n    for len(fila) > 0 { \n        fmt.Print(\"[ \")\n        for _, v:= range fila {\n            fmt.Print(v, \" \")\n        }\n        fmt.Println(\"]\")\n\n        fila = matar(fila, pos)\n\n        if len(fila) > 0 {\n            pos = pos % len(fila)\n        }\n    }\n\n    \n}\n",
+            "lines": "43"
+        }
+    ]
+}

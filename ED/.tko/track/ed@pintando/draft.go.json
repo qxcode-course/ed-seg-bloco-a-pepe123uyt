@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-19_03-01-18",
+            "content": "@@ -188,16 +188,15 @@\n rint\n-f\n+ln\n (%22%25.2\n-%5Cn\n %22, a\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-19_03-01-58",
+            "content": "@@ -188,16 +188,17 @@\n rintf(%22%25\n+.\n 2%5Cn%22, ar\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-19_03-02-07",
+            "content": "@@ -188,17 +188,16 @@\n rintf(%22%25\n-f\n 2%5Cn%22, ar\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-19_03-02-47",
+            "content": "@@ -189,17 +189,16 @@\n intf(%22%25f\n-.\n 2%5Cn%22, ar\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-19_03-02-57",
+            "content": "@@ -189,16 +189,18 @@\n intf(%22%25f\n+.2\n %5Cn%22, are\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-19_03-03-13",
+            "content": "@@ -192,11 +192,11 @@\n f(%22%25\n-.2f\n+f%5Cn\n %22, a\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-19_03-03-22",
+            "content": "@@ -195,10 +195,8 @@\n %25.2f\n-%5Cn\n %22, a\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-19_03-03-29",
+            "content": "@@ -68,12 +68,10 @@\n , c \n-floa\n+in\n t%0A  \n@@ -140,16 +140,23 @@\n th.Sqrt(\n+float64\n (p*(p-a)\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-19_03-03-51",
+            "content": "@@ -73,10 +73,8 @@\n loat\n-64\n %0A   \n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-19_03-04-01",
+            "content": "package main\nimport \"fmt\"\nimport \"math\"\n\nfunc main() {\n    var a, b, c float64\n    fmt.Scan(&a, &b, &c)\n\n    p := (a + b + c)/2\n\n    area := math.Sqrt((p*(p-a)*(p-b)*(p-c)))\n\n    fmt.Printf(\"%.2f\\n\", area)\n}\n",
+            "lines": "14"
+        }
+    ]
+}

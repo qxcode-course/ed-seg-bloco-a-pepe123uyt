@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-19_03-53-27",
+            "content": "@@ -203,24 +203,75 @@\n %7C b %3C 10) %7B%0A\n+            fmt.Println(%22jogador desclacificados%22)%0A\n             \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-19_03-53-46",
+            "content": "@@ -211,59 +211,8 @@\n ) %7B%0A\n-            fmt.Println(%22jogador desclacificados%22)%0A\n     \n@@ -379,85 +379,8 @@\n   %7D%0A\n-    if (ganhador == 0)%7B%0A        fmt.Println(%22sem ganhador%22)%0A    %7D else %7B%0A    \n     \n@@ -401,16 +401,10 @@\n nhador)%0A\n-    %7D%0A\n %7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-19_03-55-40",
+            "content": "@@ -203,24 +203,75 @@\n %7C b %3C 10) %7B%0A\n+            fmt.Println(%22jogador desclacificados%22)%0A\n             \n@@ -422,25 +422,24 @@\n     %0A%0A    %7D%0A\n-%0A\n     if (ganh\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-19_03-56-02",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var comp int\n    var ganhador int\n    fmt.Scan(&comp)\n    \n\n    for i := 0; i < comp; i++{\n        var a, b int\n        fmt.Scan(&a, &b)\n\n        if (a < 10 || b < 10) {\n            continue\n        }\n\n        distA := a - b\n        distB := distA\n        \n\n        if (distA >= distB){\n            ganhador = i\n        }\n        \n\n    }\n\n    if (ganhador == 0){\n        fmt.Println(\"sem ganhador\")\n    } else {\n        fmt.Println(ganhador)\n    }\n}\n",
+            "lines": "33"
+        }
+    ]
+}
