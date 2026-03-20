@@ -1,0 +1,214 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-19_04-46-18",
+            "content": "@@ -236,16 +236,17 @@\n urinhas \n+:\n = append\n@@ -270,16 +270,20 @@\n )%0A    %7D%0A\n+    \n %0A    sor\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-19_04-46-51",
+            "content": "@@ -123,16 +123,19 @@\n  %5B%5D int%7B\n+tem\n %7D%0A%0A    f\n@@ -149,19 +149,31 @@\n  0; i %3C \n-tem\n+len(figurinhas)\n ; i++%7B%0A \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-19_04-47-29",
+            "content": "@@ -106,16 +106,21 @@\n     figu\n+rinha\n s := %5B%5D \n@@ -214,16 +214,21 @@\n     figu\n+rinha\n s = appe\n@@ -234,16 +234,21 @@\n end(figu\n+rinha\n s, figu)\n@@ -277,434 +277,43 @@\n figu\n-s)%0A%0A    // fmt.Println(figurinhas)%0A    repetidas := false%0A    repe := %5B%5D int%7B%7D%0A    dife := 0%0A%0A    for i := 0; i %3C len(figus); i++%7B%0A        if (figus%5Bi%5D == figus%5Bi+1%5D)%7B%0A            repetidas = true%0A            repe = append(repe, figus%5Bi%5D)%0A        %7D else %7B%0A            dife++%0A        %7D%0A    %7D %0A%0A    if (repetidas == false)%7B%0A        fmt.Println(%22N%22)%0A    %7D else %7B%0A        fmt.Println(repe)%0A    %7D%0A    %0A    fmt.Println(total - dife)%0A\n+rinhas)%0A%0A    fmt.Println(figurinhas)\n %0A%7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-20_20-30-05",
+            "content": "@@ -386,10 +386,8 @@\n gus)\n--1\n ; i+\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-20_20-32-02",
+            "content": "@@ -47,17 +47,16 @@\n ain() %7B%0A\n-%0A\n     var \n@@ -633,101 +633,24 @@\n    f\n-or i := 0; i %3C len(repe); i++%7B%0A            fmt.Printf(%22%25d %22, repe%5Bi%5D)%0A            %0A        %7D \n+mt.Println(repe)\n %0A   \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-20_20-36-09",
+            "content": "@@ -654,18 +654,16 @@\n en(repe)\n--1\n ; i++%7B%0A \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-20_20-36-24",
+            "content": "@@ -706,88 +706,8 @@\n i%5D)%0A\n-            if(i == len(repe)-1)%7B%0A                fmt.Print(%22/n%22)%0A            %7D%0A\n     \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-20_20-37-14",
+            "content": "@@ -731,16 +731,18 @@\n en(repe)\n+-1\n )%7B%0A     \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-20_20-37-28",
+            "content": "@@ -731,18 +731,16 @@\n en(repe)\n--1\n )%7B%0A     \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-20_20-38-07",
+            "content": "@@ -761,19 +761,21 @@\n mt.Print\n-ln(\n+(%22/n%22\n )%0A      \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-20_20-38-40",
+            "content": "@@ -655,32 +655,71 @@\n n(repe)-1; i++%7B%0A\n+            fmt.Printf(%22%25d %22, repe%5Bi%5D)%0A\n             if(i\n@@ -784,47 +784,8 @@\n   %7D%0A\n-            fmt.Printf(%22%25d %22, repe%5Bi%5D)%0A\n     \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-20_20-38-54",
+            "content": "@@ -731,30 +731,8 @@\n n()%0A\n-                break%0A\n     \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-20_20-39-18",
+            "content": "@@ -655,32 +655,132 @@\n n(repe)-1; i++%7B%0A\n+            if(i == len(repe)-1)%7B%0A                fmt.Println()%0A                break%0A            %7D%0A\n             fmt.\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-20_20-39-34",
+            "content": "@@ -263,16 +263,47 @@\n figus)%0A%0A\n+    // fmt.Println(figurinhas)%0A\n     repe\n@@ -430,33 +430,8 @@\n i+1%5D\n-%7C%7C figus%5Bi%5D == figus%5Bi-1%5D\n )%7B%0A \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-20_20-40-55",
+            "content": "@@ -395,17 +395,16 @@\n gus%5Bi+1%5D\n- \n %7C%7C figus\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-20_20-41-15",
+            "content": "@@ -662,93 +662,8 @@\n ++%7B%0A\n-            if (i == 0)%7B%0A                fmt.Print(repe%5Bi%5D)%0A            %7D else %7B%0A    \n     \n@@ -686,11 +686,11 @@\n tf(%22\n- \n %25d\n+ \n %22, r\n@@ -705,25 +705,24 @@\n             \n-%7D\n %0A        %7D %0A\n@@ -725,30 +725,8 @@\n  %7D %0A\n-        fmt.Println()%0A\n     \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-20_20-44-17",
+            "content": "@@ -714,17 +714,17 @@\n nt(repe%5B\n-0\n+i\n %5D)%0A     \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-20_20-44-27",
+            "content": "@@ -561,21 +561,26 @@\n if (\n-len(repe)== 0\n+repetidas == false\n )%7B%0A \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-20_20-45-39",
+            "content": "@@ -266,19 +266,16 @@\n us)%0A%0A   \n- //\n  repetid\n@@ -439,11 +439,8 @@\n     \n- //\n  rep\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-20_20-45-53",
+            "content": "@@ -263,16 +263,42 @@\n figus)%0A%0A\n+    // repetidas := false%0A\n     repe\n@@ -398,18 +398,76 @@\n gus%5Bi+1%5D\n-)%7B\n+ %7C%7C figus%5Bi%5D == figus%5Bi-1%5D)%7B%0A            // repetidas = true\n %0A       \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-20_20-46-13",
+            "content": "@@ -566,16 +566,18 @@\n en(repe)\n+-1\n ; i++%7B%0A \n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-20_20-46-23",
+            "content": "@@ -566,18 +566,16 @@\n en(repe)\n--1\n ; i++%7B%0A \n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-20_20-46-29",
+            "content": "@@ -566,16 +566,18 @@\n en(repe)\n+-1\n ; i++%7B%0A \n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-20_20-46-41",
+            "content": "@@ -124,103 +124,8 @@\n nt%7B%7D\n-%0A    todas := %5B%5D int%7B%7D%0A%0A    for i := 1; i %3C= total; i++%7B%0A        todas = append(todas, i)%0A    %7D\n %0A%0A  \n@@ -284,16 +284,29 @@\n %5D int%7B%7D%0A\n+    dife := 0\n %0A%0A    fo\n@@ -438,24 +438,34 @@\n e %7B%0A        \n+    dife++\n %0A        %7D%0A \n@@ -488,17 +488,16 @@\n en(repe)\n- \n == 0)%7B%0A \n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-20_20-51-20",
+            "content": "@@ -846,16 +846,23 @@\n intln(to\n-das\n+tal - dife\n )%0A%0A%7D%0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-20_20-51-41",
+            "content": "@@ -383,31 +383,9 @@\n t%7B%7D%0A\n-    faltam := %5B%5D int%7B%7D\n %0A\n+\n %0A   \n@@ -528,104 +528,8 @@\n     \n-    if figus%5Bi%5D == todas%5Bi+1%5D%7B%0A                faltam = append(faltam, todas%5Bi+1%5D)%0A            %7D\n %0A   \n@@ -836,291 +836,26 @@\n     \n-if (len(faltam) == 0)%7B%0A        fmt.Println(%22N%22)%0A    %7D else %7B%0A        for i := 0; i %3C len(faltam); i++%7B%0A            if (i == 0)%7B%0A                fmt.Print(faltam%5B0%5D)%0A            %7D else %7B%0A                fmt.Printf(%22 %25d%22, faltam%5Bi%5D)%0A            %7D%0A        %7D %0A        fmt.Println()%0A    %7D\n+fmt.Println(todas)\n %0A%0A%7D%0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-20_20-55-44",
+            "content": "@@ -1046,18 +1046,16 @@\n (faltam)\n--1\n ; i++%7B%0A \n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-03-20_20-56-00",
+            "content": "@@ -473,17 +473,17 @@\n  figus%5Bi\n--\n++\n 1%5D)%7B%0A   \n@@ -1046,16 +1046,18 @@\n (faltam)\n+-1\n ; i++%7B%0A \n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-03-20_20-58-16",
+            "content": "@@ -412,25 +412,25 @@\n    for i := \n-1\n+0\n ; i %3C len(fi\n@@ -437,21 +437,29 @@\n gus)\n+-1\n ; i++\n- \n %7B%0A\n-%09%09\n+        \n if \n+(\n figu\n@@ -480,112 +480,191 @@\n i-1%5D\n- %7B%0A%09%09%09if len(repe) == 0 %7C%7C repe%5Blen(repe)-1%5D != figus%5Bi%5D %7B%0A%09%09%09%09repe = append(repe, figu\n+)%7B%0A            repe = append(repe, figus%5Bi%5D)%0A        %7D else %7B%0A            if figus%5Bi%5D == todas%5Bi+1%5D%7B%0A                faltam = append(faltam, toda\n s%5Bi\n++1\n %5D)%0A\n-%09%09%09%7D%0A%09%09%7D%0A%09%7D\n+            %7D%0A        %7D%0A    %7D \n %0A%0A  \n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-03-20_20-59-06",
+            "content": "@@ -576,144 +576,8 @@\n %7D%0A%09%7D\n-%0A    j := 0%0A%09for i := 1; i %3C= total; i++ %7B%0A%09%09if j %3C len(figus) && figus%5Bj%5D == i %7B%0A%09%09%09j++%0A%09%09%7D else %7B%0A%09%09%09faltam = append(faltam, i)%0A%09%09%7D%0A%09%7D\n %0A%0A  \n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-03-20_20-59-29",
+            "content": "@@ -717,16 +717,17 @@\n %0A    if \n+(\n len(repe\n@@ -728,29 +728,35 @@\n n(repe) == 0\n- %7B%0A%09%09\n+)%7B%0A        \n fmt.Println(\n@@ -752,33 +752,36 @@\n mt.Println(%22N%22)%0A\n-%09\n+    \n %7D else %7B%0A%09%09for i\n@@ -765,34 +765,40 @@\n %22)%0A    %7D else %7B%0A\n-%09%09\n+        \n for i := 0; i %3C \n@@ -811,38 +811,59 @@\n pe); i++\n- \n %7B%0A\n-%09%09%09\n+            \n if \n+(\n i == 0\n- %7B%0A%09%09%09%09\n+)%7B%0A                \n fmt.Prin\n@@ -873,108 +873,142 @@\n epe%5B\n-i%5D)%0A%09%09%09%7D else %7B%0A%09%09%09%09fmt.Printf(%22 %25d%22, repe%5Bi%5D)%0A%09%09%09%7D%0A%09%09%7D%0A%09%09fmt.Println()%0A%09%7D%0A%0A%09// sa%C3%ADda faltantes%0A%09\n+0%5D)%0A            %7D else %7B%0A                fmt.Printf(%22 %25d%22, repe%5Bi%5D)%0A            %7D%0A        %7D %0A        fmt.Println()%0A    %7D%0A    %0A    \n if \n+(\n len(\n@@ -1019,21 +1019,27 @@\n am) == 0\n- %7B%0A%09%09\n+)%7B%0A        \n fmt.Prin\n@@ -1047,17 +1047,20 @@\n ln(%22N%22)%0A\n-%09\n+    \n %7D else %7B\n@@ -1060,18 +1060,24 @@\n  else %7B%0A\n-%09%09\n+        \n for i :=\n@@ -1104,30 +1104,51 @@\n  i++\n- \n %7B%0A\n-%09%09%09\n+            \n if \n+(\n i == 0\n- %7B%0A%09%09%09%09\n+)%7B%0A                \n fmt.\n@@ -1164,68 +1164,111 @@\n tam%5B\n-i%5D)%0A%09%09%09%7D else %7B%0A%09%09%09%09fmt.Printf(%22 %25d%22, faltam%5Bi%5D)%0A%09%09%09%7D%0A%09%09%7D%0A%09%09\n+0%5D)%0A            %7D else %7B%0A                fmt.Printf(%22 %25d%22, faltam%5Bi%5D)%0A            %7D%0A        %7D %0A        \n fmt.\n@@ -1277,14 +1277,17 @@\n intln()%0A\n-%09\n+    \n %7D%0A%0A%7D%0A\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-03-20_21-00-04",
+            "content": "@@ -713,25 +713,24 @@\n %0A%09%7D%0A%0A    if \n-(\n len(repe) ==\n@@ -727,35 +727,29 @@\n n(repe) == 0\n-)%7B%0A        \n+ %7B%0A%09%09\n fmt.Println(\n@@ -745,36 +745,33 @@\n mt.Println(%22N%22)%0A\n-    \n+%09\n %7D else %7B%0A       \n@@ -759,32 +759,26 @@\n )%0A%09%7D else %7B%0A\n-        \n+%09%09\n for i := 0; \n@@ -799,51 +799,30 @@\n  i++\n+ \n %7B%0A\n-            \n+%09%09%09\n if \n-(\n i == 0\n-)%7B%0A                \n+ %7B%0A%09%09%09%09\n fmt.\n@@ -836,142 +836,108 @@\n epe%5B\n-0%5D)%0A            %7D else %7B%0A                fmt.Printf(%22 %25d%22, repe%5Bi%5D)%0A            %7D%0A        %7D %0A        fmt.Println()%0A    %7D%0A    %0A    \n+i%5D)%0A%09%09%09%7D else %7B%0A%09%09%09%09fmt.Printf(%22 %25d%22, repe%5Bi%5D)%0A%09%09%09%7D%0A%09%09%7D%0A%09%09fmt.Println()%0A%09%7D%0A%0A%09// sa%C3%ADda faltantes%0A%09\n if \n-(\n len(\n@@ -948,27 +948,21 @@\n am) == 0\n-)%7B%0A        \n+ %7B%0A%09%09\n fmt.Prin\n@@ -970,20 +970,17 @@\n ln(%22N%22)%0A\n-    \n+%09\n %7D else %7B\n@@ -980,24 +980,18 @@\n  else %7B%0A\n-        \n+%09%09\n for i :=\n@@ -1018,51 +1018,30 @@\n  i++\n+ \n %7B%0A\n-            \n+%09%09%09\n if \n-(\n i == 0\n-)%7B%0A                \n+ %7B%0A%09%09%09%09\n fmt.\n@@ -1057,111 +1057,68 @@\n tam%5B\n-0%5D)%0A            %7D else %7B%0A                fmt.Printf(%22 %25d%22, faltam%5Bi%5D)%0A            %7D%0A        %7D %0A        \n+i%5D)%0A%09%09%09%7D else %7B%0A%09%09%09%09fmt.Printf(%22 %25d%22, faltam%5Bi%5D)%0A%09%09%09%7D%0A%09%09%7D%0A%09%09\n fmt.\n@@ -1127,17 +1127,14 @@\n intln()%0A\n-    \n+%09\n %7D%0A%0A%7D%0A\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-03-20_21-00-19",
+            "content": "@@ -121,24 +121,115 @@\n %5D int%7B%7D%0A    \n+todas := %5B%5D int%7B%7D%0A%0A    for i := 1; i %3C= total; i++%7B%0A        todas = append(todas, i)%0A    %7D%0A\n %0A    for i :\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-03-20_21-01-29",
+            "content": "@@ -380,16 +380,73 @@\n %5Bi-1%5D %7B%0A\n+%09%09%09if len(repe) == 0 %7C%7C repe%5Blen(repe)-1%5D != figus%5Bi%5D %7B%0A%09\n %09%09%09repe \n@@ -470,16 +470,21 @@\n gus%5Bi%5D)%0A\n+%09%09%09%7D%0A\n %09%09%7D%0A%09%7D%0A \n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-03-20_21-02-41",
+            "content": "@@ -420,17 +420,26 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%0A\n+    j := 0\n %0A%09for i \n@@ -464,17 +464,70 @@\n i++ %7B%0A%09%09\n-%0A\n+if j %3C len(figus) && figus%5Bj%5D == i %7B%0A%09%09%09j++%0A%09%09%7D else %7B\n %0A%09%09%09falt\n@@ -551,16 +551,17 @@\n m, i)%0A%09%09\n+%7D\n %0A%09%7D%0A%0A   \n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-03-20_21-03-55",
+            "content": "@@ -424,23 +424,9 @@\n %0A%09%7D%0A\n-    %0A    j := 0\n+%0A\n %0A%09fo\n@@ -459,62 +459,9 @@\n %7B%0A%09%09\n-if j %3C len(figus) && figus%5Bj%5D == i %7B%0A%09%09%09j++%0A%09%09%7D else %7B\n+%0A\n %0A%09%09%09\n@@ -485,25 +485,24 @@\n altam, i)%0A%09%09\n-%7D\n %0A%09%7D%0A%0A    if \n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-03-20_21-04-05",
+            "content": "@@ -284,32 +284,51 @@\n := %5B%5D int%7B%7D%0A    \n+faltam := %5B%5D int%7B%7D%0A\n %0A    for i := 1;\n@@ -350,24 +350,18 @@\n ; i++ %7B%0A\n-        \n+%09%09\n if figus\n@@ -380,28 +380,19 @@\n %5Bi-1%5D %7B%0A\n-            \n+%09%09%09\n repe = a\n@@ -429,35 +429,22 @@\n    %0A    \n-faltam := %5B%5D int%7B%7D%0A\n+j := 0\n %0A%09for i \n@@ -473,19 +473,10 @@\n %7B%0A%09%09\n+i\n f\n-or j := 0;\n  j %3C\n@@ -490,31 +490,11 @@\n gus)\n--1; j++%7B%0A            if\n+ &&\n  fig\n@@ -503,31 +503,36 @@\n %5Bj%5D \n-!\n+=\n = i %7B%0A\n-                \n+%09%09%09j++%0A%09%09%7D else %7B%0A%09%09%09\n falt\n@@ -558,76 +558,10 @@\n  i)%0A\n-            %7D else %7B%0A                continue%0A            %7D%0A        \n+%09%09\n %7D%0A%09%7D\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-03-20_21-08-26",
+            "content": "@@ -537,17 +537,17 @@\n igus%5Bj%5D \n-=\n+!\n = i %7B%0A  \n@@ -564,16 +564,34 @@\n     \n-continue\n+faltam = append(faltam, i)\n %0A   \n@@ -628,34 +628,16 @@\n     \n-faltam = append(faltam, i)\n+continue\n %0A   \n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-03-20_21-09-08",
+            "content": "@@ -630,17 +630,17 @@\n faltam, \n-j\n+i\n )%0A      \n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-03-20_21-09-13",
+            "content": "@@ -480,32 +480,10 @@\n + %7B%0A\n-    found := false%0A%0A    \n+%09%09\n for \n@@ -508,16 +508,21 @@\n gus)\n+-1\n ; j++\n- \n %7B%0A\n+    \n     \n@@ -560,18 +560,18 @@\n     \n-found = tr\n+    contin\n ue%0A \n@@ -585,47 +585,25 @@\n     \n-break%0A        %7D\n+%7D else %7B\n %0A    \n-%7D%0A%0A\n     \n-if !found %7B%0A\n     \n@@ -634,17 +634,36 @@\n am, \n-i\n+j\n )%0A    \n-%7D%0A\n+        %7D%0A        %7D%0A%09\n %7D%0A%0A \n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-03-20_21-10-39",
+            "content": "@@ -480,25 +480,21 @@\n + %7B%0A    \n-    achei\n+found\n  := fals\n@@ -496,20 +496,16 @@\n  false%0A%0A\n-    \n     for \n@@ -538,28 +538,24 @@\n + %7B%0A        \n- \n-   \n if figus%5Bj%5D \n@@ -577,17 +577,13 @@\n     \n-    achei\n+found\n  = t\n@@ -598,20 +598,16 @@\n         \n- \n-   \n break%0A  \n@@ -616,37 +616,25 @@\n     \n-    %7D%0A   \n+%7D%0A\n     \n- \n %7D%0A%0A\n-    \n     if !\n ache\n@@ -633,20 +633,16 @@\n if !\n-achei %7B%0A    \n+found %7B%0A\n     \n@@ -672,34 +672,26 @@\n tam, i)%0A    \n-    %7D%0A    \n+%7D%0A\n %7D%0A%0A    if (l\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-03-20_21-11-58",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"sort\"\n)\nfunc main() {\n\n    var total, tem int\n    fmt.Scan(&total, &tem)\n\n    figus := [] int{}\n    \n    for i := 0; i < tem; i++{\n        var figu int\n        fmt.Scan(&figu)\n\n        figus = append(figus, figu)\n    }\n\n    sort.Ints(figus)\n\n    repe := [] int{}\n    \n    for i := 1; i < len(figus); i++ {\n        if figus[i] == figus[i-1] {\n            repe = append(repe, figus[i])\n\t\t}\n\t}\n    \n    faltam := [] int{}\n\n\tfor i := 1; i <= total; i++ {\n        achei := false\n\n        for j := 0; j < len(figus); j++ {\n            if figus[j] == i {\n                achei = true\n                break\n            }\n        }\n\n        if !achei {\n            faltam = append(faltam, i)\n        }\n    }\n\n    if (len(repe) == 0){\n        fmt.Println(\"N\")\n    } else {\n        for i := 0; i < len(repe); i++{\n            if (i == 0){\n                fmt.Print(repe[0])\n            } else {\n                fmt.Printf(\" %d\", repe[i])\n            }\n        } \n        fmt.Println()\n    }\n    \n    if (len(faltam) == 0){\n        fmt.Println(\"N\")\n    } else {\n        for i := 0; i < len(faltam); i++{\n            if (i == 0){\n                fmt.Print(faltam[0])\n            } else {\n                fmt.Printf(\" %d\", faltam[i])\n            }\n        } \n        fmt.Println()\n    }\n\n}\n",
+            "lines": "74"
+        }
+    ]
+}

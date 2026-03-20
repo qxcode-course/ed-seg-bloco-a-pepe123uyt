@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-20_21-33-52",
+            "content": "@@ -498,16 +498,18 @@\n  = aux%5Bi\n+-1\n %5D%0A%09%7D%0A%0A%09f\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-20_21-35-35",
+            "content": "@@ -502,10 +502,8 @@\n ux%5Bi\n--1\n %5D%0A%09%7D\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-20_21-35-46",
+            "content": "@@ -405,18 +405,18 @@\n bra%5B0%5D.y\n-++\n+--\n %0A    cas\n@@ -437,26 +437,26 @@\n   cobra%5B0%5D.y\n---\n+++\n %0A    %7D%0A%0A    \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-20_21-36-58",
+            "content": "package main\nimport \"fmt\"\n\ntype Pontos struct{\n    x, y int\n}\n\nfunc main() {\n    var q int\n    var d string\n\n    fmt.Scan(&q, &d)\n\n    cobra := make([]Pontos, q)\n\n    for i := 0; i < q; i++{\n        fmt.Scan(&cobra[i].x, &cobra[i].y)\n    }\n\n    aux := make([]Pontos, q)\n    copy (aux, cobra)\n\n    switch d{\n    case \"L\" :\n        cobra[0].x--\n    case \"R\" :\n        cobra[0].x++\n    case \"D\" :\n        cobra[0].y++\n    case \"U\" :\n        cobra[0].y--\n    }\n\n    for i := 1; i < q; i++ {\n\t\tcobra[i] = aux[i-1]\n\t}\n\n\tfor i := 0; i < q; i++ {\n\t\tfmt.Println(cobra[i].x, cobra[i].y)\n\t}\n\n}\n",
+            "lines": "42"
+        }
+    ]
+}
