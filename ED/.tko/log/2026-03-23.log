@@ -1,0 +1,23 @@
+2026-03-23 22:46:10, MOVE, v:1, k:ed@apagando, mode:DOWN
+2026-03-23 22:46:12, MOVE, v:1, k:ed@apagando, mode:PICK
+2026-03-23 22:48:02, MOVE, v:1, k:ed@apagando, mode:BACK
+2026-03-23 22:48:05, MOVE, v:1, k:ed@apagando, mode:PICK
+2026-03-23 23:00:22, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0, size:15
+2026-03-23 23:00:54, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0, size:15
+2026-03-23 23:03:12, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0, size:27
+2026-03-23 23:03:28, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0, size:27
+2026-03-23 23:12:23, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0, size:38
+2026-03-23 23:19:34, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0, size:48
+2026-03-23 23:19:43, SELF, v:1, k:ed@apagando, self:1, friend:nge fila 
+2026-03-23 23:19:44, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0
+2026-03-23 23:19:44, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0
+2026-03-23 23:19:45, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0
+2026-03-23 23:19:45, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0
+2026-03-23 23:19:46, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0
+2026-03-23 23:19:56, SELF, v:1, k:ed@apagando, self:1, friend:nge fila Fila
+2026-03-23 23:20:20, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0, size:48
+2026-03-23 23:20:37, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0, size:48
+2026-03-23 23:21:00, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0, size:48
+2026-03-23 23:21:57, EXEC, v:1, k:ed@apagando, mode:FULL, rate:100, size:45
+2026-03-23 23:21:59, MOVE, v:1, k:ed@apagando, mode:BACK
+2026-03-23 23:24:59, SELF, v:1, k:ed@apagando, self:1, rate:100, study:90, friend:Camila, concept:1

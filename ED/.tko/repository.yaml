@@ -13,6 +13,7 @@ sources:
   quests: null
   tasks: null
 expanded:
+- ed@análise
 - ed@main-quest
 tasks:
   ed@pintando: '{self:1, rate:100, study:10, friend:nao}'
@@ -22,6 +23,7 @@ tasks:
   ed@casais: '{self:1, rate:100, study:45, friend:nao}'
   ed@baruel: '{self:1, rate:100, study:80, friend:nao, debug:1}'
   ed@gomos: '{self:1, rate:100, study:40, friend:naoda}'
+  ed@apagando: '{self:1, rate:100, study:90, friend:Camila, concept:1}'
 flags:
   painel: 0
   quests: 0
@@ -30,4 +32,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@análise
+selected: ed@wiki/analise/analise.md

@@ -1,43 +1,39 @@
 package main
 import "fmt"
 
-func matar(v []int, pos int) []int {
-    novo := []int{}
-
-    for i := 0; i < len(v); i++ {
-        if i != pos {
-            novo = append(novo, v[i])
+func procurar_vivo(elementos []int) int {
+    for i := 0; i < len(elementos); i++ {
+        if elementos[i] != 0 {
+            return elementos[i]
         }
     }
-
-    return novo
+    return 0
 }
 
-func main() {
-    var num, espada int
-    fmt.Scan(&num, &espada)
-
+func main(){
+    var n, e int
+    fmt.Scan(&n, &e)
+    
     fila := []int{}
-
-    for i := 1; i <= num; i++ {
+    
+    for i := 1; i <= n; i++{
         fila = append(fila, i)
     }
-
-    pos := espada + 1
-
-    for len(fila) > 0 { 
-        fmt.Print("[ ")
-        for _, v:= range fila {
-            fmt.Print(v, " ")
-        }
-        fmt.Println("]")
-
-        fila = matar(fila, pos)
-
-        if len(fila) > 0 {
-            pos = pos % len(fila)
-        }
-    }
-
     
+    //abordagem 1
+    
+    for i := 0;; i++{
+        fmt.Print("[ ")
+        if i == e {
+            
+        }
+        for j := 0; j < len(fila); j++{
+            fmt.Printf("%d ", procurar_vivo(fila))
+            if j == len(fila)-1 {
+                fmt.Println("]")
+            }
+            
+        }
+        e++
+    } 
 }

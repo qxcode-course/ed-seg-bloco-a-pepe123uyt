@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-23_23-00-22",
+            "content": "@@ -85,12 +85,11 @@\n int%5D\n-bool\n+int\n )%0A%0A%09\n@@ -155,19 +155,16 @@\n ila%5B\n-num\n+v\n %5D = \n-true\n+num\n %0A%09%7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-23_23-00-53",
+            "content": "@@ -43,16 +43,13 @@\n ar n\n-, m\n  int%0A\n+\n %09fmt\n@@ -167,17 +167,16 @@\n true%0A%09%7D%0A\n-%0A\n %09fmt.Pri\n@@ -181,163 +181,13 @@\n rint\n-ln\n (fila)\n-%0A%0A%09fmt.Scan(&m)%0A%0A%09tirar := make(map%5Bint%5Dbool)%0A%0A%09for v := 0; v %3C n; v++ %7B%0A%09%09var num int%0A%09%09fmt.Scan(&num)%0A%09%09tirar%5Bnum%5D = false%0A%09%7D %0A%09fmt.Println(tirar)\n %0A%7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-23_23-03-12",
+            "content": "@@ -253,17 +253,17 @@\n  0; v %3C \n-m\n+n\n ; v++ %7B%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-23_23-03-28",
+            "content": "@@ -67,31 +67,42 @@\n )%0A%0A%09fila := \n-%5B%5Dint%7B%7D\n+make(map%5Bint%5Dbool)\n %0A%0A%09for v := \n@@ -158,37 +158,26 @@\n fila\n- = append(fila, num)\n+%5Bnum%5D = true\n %0A%09%7D%0A%0A%09\n-// \n fmt.\n@@ -312,22 +312,19 @@\n %5D = \n-tru\n+fals\n e%0A%09%7D %0A\n-%0A%09// \n+%09\n fmt.\n@@ -341,138 +341,7 @@\n rar)\n-%0A%0A%09novaFila := %5B%5Dint%7B%7D%0A%0A%09for _, v := range fila %7B%0A%09%09if !tirar%5Bv%5D %7B%0A%09%09%09novaFila = append(novaFila, v)%0A%09%09%7D%0A%09%7D%0A%0A%09fmt.Println(novaFila)\n %0A%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-23_23-12-23",
+            "content": "@@ -22,165 +22,8 @@\n fmt%22\n-%0A%0Afunc toString(v %5B%5Dint, w int) %7B%0A%09for i := 0; i %3C w && i %3C len(v); i++ %7B%0A%09%09if i != w-1 %7B%0A%09%09%09fmt.Printf(%22%25d %22, v%5Bi%5D)%0A%09%09%7D else %7B%0A%09%09%09fmt.Println(v%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%7D\n %0Afun\n@@ -454,29 +454,18 @@\n %7D%0A%0A%09\n-toString(novaFila, le\n+fmt.Printl\n n(no\n@@ -471,12 +471,11 @@\n ovaFila)\n-)\n %0A%7D%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-23_23-19-34",
+            "content": "@@ -120,19 +120,25 @@\n mt.Print\n-ln(\n+f(%22%25d %22, \n v%5Bi%5D)%0A%09%09\n@@ -154,33 +154,27 @@\n %09%09%09fmt.Print\n-f(%22%25d %22, \n+ln(\n v%5Bi%5D)%0A%09%09%7D%0A%09%7D\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-23_23-20-20",
+            "content": "@@ -99,17 +99,17 @@\n %0A%09%09if i \n-=\n+!\n = w-1 %7B%0A\n@@ -123,16 +123,20 @@\n Println(\n+v%5Bi%5D\n )%0A%09%09%7D el\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-23_23-20-37",
+            "content": "@@ -103,16 +103,18 @@\n f i == w\n+-1\n  %7B%0A%09%09%09fm\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-23_23-21-00",
+            "content": "@@ -38,16 +38,23 @@\n ing(v %5B%5D\n+int, w \n int) %7B%0A%09\n@@ -68,16 +68,25 @@\n = 0; i %3C\n+ w && i %3C\n  len(v);\n@@ -92,16 +92,59 @@\n ; i++ %7B%0A\n+%09%09if i == w %7B%0A%09%09%09fmt.Println()%0A%09%09%7D else %7B%0A%09\n %09%09fmt.Pr\n@@ -161,16 +161,20 @@\n , v%5Bi%5D)%0A\n+%09%09%7D%0A\n %09%7D%0A%7D%0Afun\n@@ -622,23 +622,23 @@\n Fila\n-)%0A%09fmt.Println(\n+, len(novaFila)\n )%0A%7D%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-23_23-21-57",
+            "content": "package main\nimport \"fmt\"\n\nfunc toString(v []int) {\n\tfor i := 0; i < len(v); i++ {\n\t\tfmt.Printf(\"%d \", v[i])\n\t}\n}\nfunc main() {\n\tvar n, m int\n\tfmt.Scan(&n)\n\n\tfila := []int{}\n\n\tfor v := 0; v < n; v++ {\n\t\tvar num int\n\t\tfmt.Scan(&num)\n\t\tfila = append(fila, num)\n\t}\n\n\t// fmt.Println(fila)\n\n\tfmt.Scan(&m)\n\n\ttirar := make(map[int]bool)\n\n\tfor v := 0; v < m; v++ {\n\t\tvar num int\n\t\tfmt.Scan(&num)\n\t\ttirar[num] = true\n\t} \n\n\t// fmt.Println(tirar)\n\n\tnovaFila := []int{}\n\n\tfor _, v := range fila {\n\t\tif !tirar[v] {\n\t\t\tnovaFila = append(novaFila, v)\n\t\t}\n\t}\n\n\ttoString(novaFila)\n\tfmt.Println()\n}\n",
+            "lines": "45"
+        }
+    ]
+}
