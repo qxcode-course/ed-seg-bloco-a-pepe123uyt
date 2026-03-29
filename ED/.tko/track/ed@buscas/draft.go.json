@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-24_23-55-00",
+            "content": "@@ -41,203 +41,35 @@\n     \n-var n int%0A    fmt.Scan(&n)%0A%0A    consultas := %5B%5Dstring%7B%7D %0A    for i := 0; i %3C n; i++%7B%0A        var consu string%0A        fmt.Scan(consu)%0A        consultas%5Bi%5D = consu%0A    %7D%0A%0A    fmt.Println(consultas\n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-25_00-01-49",
+            "content": "@@ -192,35 +192,19 @@\n ltas\n- = append(consultas, consu)\n+%5Bi%5D = consu\n %0A   \n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-25_00-02-18",
+            "content": "@@ -192,19 +192,35 @@\n ltas\n-%5Bi%5D = consu\n+ = append(consultas, consu)\n %0A   \n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-25_00-02-42",
+            "content": "@@ -164,17 +164,16 @@\n mt.Scan(\n-&\n consu)%0A \n@@ -192,35 +192,19 @@\n ltas\n- = append(consultas, consu)\n+%5Bi%5D = consu\n %0A   \n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-25_00-03-26",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    consultas := []string{} \n    for i := 0; i < n; i++{\n        var consu string\n        fmt.Scan(&consu)\n        consultas = append(consultas, consu)\n    }\n\n    fmt.Println(consultas)\n}\n",
+            "lines": "15"
+        }
+    ]
+}

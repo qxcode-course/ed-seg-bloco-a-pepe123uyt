@@ -1,0 +1,57 @@
+2026-03-28 22:59:45, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-28 23:00:17, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:39
+2026-03-28 23:00:34, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0
+2026-03-28 23:00:36, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0
+2026-03-28 23:00:38, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0
+2026-03-28 23:00:41, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0
+2026-03-28 23:03:57, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:52
+2026-03-28 23:05:49, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:45
+2026-03-28 23:06:19, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:46
+2026-03-28 23:06:50, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:45
+2026-03-28 23:08:18, EXEC, v:1, k:ed@princesa, mode:FULL, rate:100, size:39
+2026-03-28 23:08:24, EXEC, v:1, k:ed@princesa, mode:FULL, rate:100
+2026-03-28 23:08:25, EXEC, v:1, k:ed@princesa, mode:FREE
+2026-03-28 23:09:15, SELF, v:1, k:ed@princesa, self:1
+2026-03-28 23:09:15, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-28 23:09:15, EXEC, v:1, k:ed@princesa, mode:FULL, rate:100
+2026-03-28 23:09:15, EXEC, v:1, k:ed@princesa, mode:FULL, rate:100
+2026-03-28 23:09:18, EXEC, v:1, k:ed@princesa, mode:FULL, rate:100
+2026-03-28 23:09:18, EXEC, v:1, k:ed@princesa, mode:FREE
+2026-03-28 23:09:26, EXEC, v:1, k:ed@princesa, mode:FULL, rate:100
+2026-03-28 23:09:33, EXEC, v:1, k:ed@princesa, mode:FULL, rate:100
+2026-03-28 23:09:35, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-03-28 23:10:39, SELF, v:1, k:ed@princesa, self:1, rate:100, study:110, problem:1, refactor:1
+2026-03-28 23:11:01, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-28 23:11:26, EXEC, v:1, k:ed@princesa, mode:FULL, rate:100
+2026-03-28 23:11:28, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-03-28 23:11:55, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-03-28 23:13:56, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:0
+2026-03-28 23:17:52, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:14, size:112
+2026-03-28 23:18:54, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:14, size:118
+2026-03-28 23:19:51, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:28, size:118
+2026-03-28 23:23:20, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:28, size:124
+2026-03-28 23:23:36, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:28, size:124
+2026-03-28 23:24:11, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:28, size:124
+2026-03-28 23:24:44, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:28, size:127
+2026-03-28 23:26:03, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:42, size:122
+2026-03-28 23:32:59, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:57, size:138
+2026-03-28 23:39:55, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:57, size:142
+2026-03-28 23:40:08, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:57
+2026-03-28 23:41:34, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:57, size:142
+2026-03-28 23:42:12, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:57, size:142
+2026-03-28 23:42:42, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:71, size:143
+2026-03-28 23:42:54, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-03-28 23:43:01, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:57, size:142
+2026-03-28 23:43:44, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:71, size:142
+2026-03-28 23:48:23, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:71, size:151
+2026-03-28 23:53:31, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:150
+2026-03-28 23:54:18, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:158
+2026-03-28 23:55:56, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:159
+2026-03-28 23:56:09, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:159
+2026-03-28 23:56:27, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-03-28 23:56:41, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-03-28 23:56:42, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85
+2026-03-28 23:56:44, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-03-28 23:58:05, SELF, v:1, k:ed@princesa, self:1, rate:100, study:110, problem:1, refactor:1
+2026-03-28 23:58:28, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-03-28 23:58:30, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85

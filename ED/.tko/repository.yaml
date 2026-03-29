@@ -13,8 +13,7 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@análise
-- ed@main-quest
+- ed@map_set
 tasks:
   ed@pintando: '{self:1, rate:100, study:10, friend:nao}'
   ed@mumia: '{self:1, rate:100, study:10, friend:nao}'
@@ -23,13 +22,14 @@ tasks:
   ed@casais: '{self:1, rate:100, study:45, friend:nao}'
   ed@baruel: '{self:1, rate:100, study:80, friend:nao, debug:1}'
   ed@gomos: '{self:1, rate:100, study:40, friend:naoda}'
+  ed@princesa: '{self:1, rate:100, study:110, problem:1, refactor:1}'
   ed@apagando: '{self:1, rate:100, study:90, friend:Camila, concept:1}'
+  ed@manipulacao: '{rate:85}'
 flags:
-  painel: 0
-  quests: 0
-  tracks: 0
-  tasks: 0
+  panel: 2
+  inbox: 0
+  show_panel: 1
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@wiki/analise/analise.md
+selected: ed@manipulacao

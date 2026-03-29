@@ -21,3 +21,21 @@
 2026-03-23 23:21:57, EXEC, v:1, k:ed@apagando, mode:FULL, rate:100, size:45
 2026-03-23 23:21:59, MOVE, v:1, k:ed@apagando, mode:BACK
 2026-03-23 23:24:59, SELF, v:1, k:ed@apagando, self:1, rate:100, study:90, friend:Camila, concept:1
+2026-03-23 23:30:48, SELF, v:1, k:ed@baruel, self:1, rate:100, study:80, friend:nao, debug:1
+2026-03-23 23:30:48, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-23 23:30:50, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-03-23 23:33:10, MOVE, v:1, k:ed@apagando, mode:PICK
+2026-03-23 23:45:02, EXEC, v:1, k:ed@apagando, mode:FULL, rate:100
+2026-03-23 23:45:03, MOVE, v:1, k:ed@apagando, mode:BACK
+2026-03-23 23:47:33, MOVE, v:1, k:ed@manipulacao, mode:DOWN
+2026-03-23 23:47:34, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-03-23 23:47:47, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:0, size:106
+2026-03-23 23:50:15, SELF, v:1, k:ed@manipulacao, self:1, friend:nge fila 
+2026-03-23 23:50:15, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:0
+2026-03-23 23:50:16, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:0
+2026-03-23 23:50:16, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:0
+2026-03-23 23:50:17, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:0
+2026-03-23 23:50:17, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:0
+2026-03-23 23:50:22, SELF, v:1, k:ed@manipulacao, self:1, friend:nge fila Fila
+2026-03-23 23:50:28, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:0
+2026-03-23 23:50:59, EXEC, v:1, k:ed@manipulacao, mode:FREE

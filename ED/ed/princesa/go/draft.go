@@ -1,39 +1,39 @@
 package main
+
 import "fmt"
 
-func procurar_vivo(elementos []int) int {
-    for i := 0; i < len(elementos); i++ {
-        if elementos[i] != 0 {
-            return elementos[i]
-        }
-    }
-    return 0
+func imprimir(fila []int, pos int) {
+	fmt.Print("[ ")
+	for i := 0; i < len(fila); i++ {
+		if i == pos {
+			fmt.Printf("%d> ", fila[i])
+		} else {
+			fmt.Printf("%d ", fila[i])
+		}
+	}
+	fmt.Println("]")
 }
 
-func main(){
-    var n, e int
-    fmt.Scan(&n, &e)
-    
-    fila := []int{}
-    
-    for i := 1; i <= n; i++{
-        fila = append(fila, i)
-    }
-    
-    //abordagem 1
-    
-    for i := 0;; i++{
-        fmt.Print("[ ")
-        if i == e {
-            
-        }
-        for j := 0; j < len(fila); j++{
-            fmt.Printf("%d ", procurar_vivo(fila))
-            if j == len(fila)-1 {
-                fmt.Println("]")
-            }
-            
-        }
-        e++
-    } 
+func main() {
+	var n, e int
+	fmt.Scan(&n, &e)
+
+	fila := make([]int, n)
+	for i := 0; i < n; i++ {
+		fila[i] = i + 1
+	}
+
+	pos := e - 1
+
+	for len(fila) > 0 {
+		imprimir(fila, pos)
+
+		if len(fila) == 1 {
+			break
+		}
+
+		morto := (pos + 1) % len(fila)
+		fila = append(fila[:morto], fila[morto+1:]...)
+		pos = morto % len(fila)
+	}
 }

@@ -47,8 +47,38 @@
         },
         {
             "label": "2026-03-10_13-56-49",
-            "content": "package main\nimport \"fmt\"\n\nfunc matar(v []int, pos int) []int {\n    novo := []int{}\n\n    for i := 0; i < len(v); i++ {\n        if i != pos {\n            novo = append(novo, v[i])\n        }\n    }\n\n    return novo\n}\n\nfunc main() {\n    var num, espada int\n    fmt.Scan(&num, &espada)\n\n    fila := []int{}\n\n    for i := 1; i <= num; i++ {\n        fila = append(fila, i)\n    }\n\n    pos := espada + 1\n\n    for len(fila) > 0 { \n        fmt.Print(\"[ \")\n        for _, v:= range fila {\n            fmt.Print(v, \" \")\n        }\n        fmt.Println(\"]\")\n\n        fila = matar(fila, pos)\n\n        if len(fila) > 0 {\n            pos = pos % len(fila)\n        }\n    }\n\n    \n}\n",
+            "content": "@@ -29,45 +29,61 @@\n unc \n-procurar_vivo(element\n+matar(v %5B%5Dint, p\n os \n-%5B%5D\n int) \n+%5B%5D\n int %7B%0A\n+    novo := %5B%5Dint%7B%7D%0A%0A\n     \n@@ -102,25 +102,17 @@\n i %3C len(\n-elementos\n+v\n ); i++ %7B\n@@ -127,25 +127,16 @@\n  if \n-elementos%5Bi%5D\n+i\n  != \n-0\n+pos\n  %7B%0A \n@@ -150,27 +150,33 @@\n     \n-return elementos\n+novo = append(novo, v\n %5Bi%5D\n+)\n %0A   \n@@ -184,24 +184,25 @@\n     %7D%0A    %7D%0A\n+%0A\n     return 0\n@@ -200,17 +200,20 @@\n  return \n-0\n+novo\n %0A%7D%0A%0Afunc\n@@ -219,16 +219,17 @@\n c main()\n+ \n %7B%0A    va\n@@ -235,11 +235,18 @@\n ar n\n+um\n , e\n+spada\n  int\n@@ -265,18 +265,21 @@\n n(&n\n+um\n , &e\n-)%0A    \n+spada)%0A\n %0A   \n@@ -295,20 +295,16 @@\n %5B%5Dint%7B%7D%0A\n-    \n %0A    for\n@@ -318,21 +318,24 @@\n ; i %3C= n\n+um\n ; i++\n+ \n %7B%0A      \n@@ -369,220 +369,212 @@\n   %7D%0A\n+%0A\n     \n-%0A    //abordagem 1%0A    %0A    for i := 0;; i++%7B%0A        fmt.Print(%22%5B %22)%0A        if i == e %7B%0A            %0A        %7D%0A        for j := 0; j %3C len(fila); j++%7B%0A            fmt.Printf(%22%25d %22, procurar_vivo(fila))%0A    \n+pos := espada + 1%0A%0A    for len(fila) %3E 0 %7B %0A        fmt.Print(%22%5B %22)%0A        for _, v:= range fila %7B%0A            fmt.Print(v, %22 %22)%0A        %7D%0A        fmt.Println(%22%5D%22)%0A%0A        fila = matar(fila, pos)%0A%0A\n     \n@@ -583,13 +583,8 @@\n   if\n- j ==\n  len\n@@ -593,10 +593,12 @@\n ila)\n--1\n+ %3E 0\n  %7B%0A \n@@ -612,39 +612,38 @@\n     \n-    fmt.Println(%22%5D%22)%0A  \n+pos = pos %25 len(fila)%0A\n         \n   %7D%0A\n@@ -642,51 +642,20 @@\n     \n-  \n %7D%0A    \n-        %0A        %7D%0A        e++%0A    %7D %0A%7D\n+%7D%0A%0A    %0A%7D%0A\n",
             "lines": "43"
+        },
+        {
+            "label": "2026-03-28_23-00-17",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -29,200 +29,178 @@\n unc \n-matar(fila %5B%5Dint, p\n+procurar_vivo(element\n os \n+%5B%5D\n int) \n-%7B%0A%09fmt.Print(%22%5B %22)%0A%09for i := 0; i %3C len(fila); i++ %7B%0A%09%09if i == pos %7B%0A%09%09%09fmt.Printf(%22%25d%3E %22, fila%5Bi%5D)%0A%09%09%7D else %7B%0A%09%09%09fmt.Printf(%22%25d %22, fila%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(%22%5D%22)\n+int %7B%0A    for i := 0; i %3C len(elementos); i++ %7B%0A        if elementos%5Bi%5D != 0 %7B%0A            return elementos%5Bi%5D%0A        %7D%0A    %7D%0A    return 0\n %0A%7D%0A%0A\n@@ -210,20 +210,22 @@\n c main()\n- \n %7B%0A\n-%09\n+    \n var n, e\n@@ -229,17 +229,20 @@\n , e int%0A\n-%09\n+    \n fmt.Scan\n@@ -254,61 +254,42 @@\n &e)%0A\n-%0A%09// cria a fila de 1 at%C3%A9 N%0A%09fila := make(%5B%5Dint, n)%0A%09\n+    %0A    fila := %5B%5Dint%7B%7D%0A    %0A    \n for \n@@ -297,462 +297,389 @@\n  := \n-0\n+1\n ; i %3C\n+=\n  n; i++\n- \n %7B%0A\n-%09%09fila%5Bi%5D = i + 1%0A%09%7D%0A%0A%09// posi%C3%A7%C3%A3o inicial da espada%0A%09pos := e - 1%0A%0A%09for len(fila) %3E 0 %7B%0A%09%09// imprime estado atual%0A%09%09matar(fila, pos)%0A%0A%09%09// se sobrou s%C3%B3 1, acabou%0A%09%09if len(fila)\n+        fila = append(fila, i)%0A    %7D%0A    %0A    //abordagem 1%0A    %0A    for i := 0;; i++%7B%0A        fmt.Print(%22%5B %22)%0A        if i\n  == \n-1 %7B%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09// posi%C3%A7%C3%A3o de quem morre (%C3%A0 frente)%0A%09%09morto := (pos + 1) %25 len(fila)%0A%0A%09%09// remove o elemento morto%0A%09%09fila = app\n+e %7B%0A            %0A        %7D%0A        for j := 0; j %3C len(fila); j++%7B%0A            fmt.Printf(%22%25d %22, procurar_vivo(fila))%0A            if j == l\n en\n-d\n (fila\n-%5B:morto%5D, fila%5Bmorto+1:%5D...)%0A%0A%09%09// ajusta a posi%C3%A7%C3%A3o da espada%0A%09%09if morto %3C pos %7B%0A%09%09%09pos--%0A%09%09%7D%0A%0A%09%09pos = pos %25 len(fila)%0A%09%7D\n+)-1 %7B%0A                fmt.Println(%22%5D%22)%0A            %7D%0A            %0A        %7D%0A        e++%0A    %7D \n %0A%7D\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-28_23-03-57",
+            "content": "@@ -269,16 +269,43 @@\n n, &e)%0A%0A\n+%09// cria a fila de 1 at%C3%A9 N%0A\n %09fila :=\n@@ -368,16 +368,46 @@\n + 1%0A%09%7D%0A%0A\n+%09// posi%C3%A7%C3%A3o inicial da espada%0A\n %09pos := \n@@ -440,61 +440,153 @@\n %7B%0A%09%09\n-matar(fila, pos)%0A%0A%09%09if len(fila) == 1 %7B%0A%09%09%09break%0A%09%09%7D%0A\n+// imprime estado atual%0A%09%09matar(fila, pos)%0A%0A%09%09// se sobrou s%C3%B3 1, acabou%0A%09%09if len(fila) == 1 %7B%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09// posi%C3%A7%C3%A3o de quem morre (%C3%A0 frente)\n %0A%09%09m\n@@ -616,16 +616,45 @@\n (fila)%0A%0A\n+%09%09// remove o elemento morto%0A\n %09%09fila =\n@@ -695,16 +695,48 @@\n :%5D...)%0A%0A\n+%09%09// ajusta a posi%C3%A7%C3%A3o da espada%0A\n %09%09if mor\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-28_23-05-49",
+            "content": "@@ -578,22 +578,8 @@\n la)%0A\n-        pos++%0A\n %09%7D%0A%7D\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-28_23-06-19",
+            "content": "@@ -574,12 +574,26 @@\n n(fila)%0A\n+        pos++%0A\n %09%7D%0A%7D\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-28_23-06-50",
+            "content": "@@ -26,23 +26,20 @@\n %22%0A%0Afunc \n-imprimi\n+mata\n r(fila %5B\n@@ -383,15 +383,12 @@\n %7B%0A%09%09\n-imprimi\n+mata\n r(fi\n@@ -466,16 +466,17 @@\n n(fila)%0A\n+%0A\n %09%09fila =\n@@ -520,16 +520,50 @@\n ..)%0A\n+%0A%09%09if morto %3C pos %7B%0A%09%09%09pos--%0A%09%09%7D%0A%0A\n %09%09pos = \n mort\n@@ -558,21 +558,19 @@\n %09%09pos = \n-morto\n+pos\n  %25 len(f\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-28_23-08-18",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc imprimir(fila []int, pos int) {\n\tfmt.Print(\"[ \")\n\tfor i := 0; i < len(fila); i++ {\n\t\tif i == pos {\n\t\t\tfmt.Printf(\"%d> \", fila[i])\n\t\t} else {\n\t\t\tfmt.Printf(\"%d \", fila[i])\n\t\t}\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc main() {\n\tvar n, e int\n\tfmt.Scan(&n, &e)\n\n\tfila := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tfila[i] = i + 1\n\t}\n\n\tpos := e - 1\n\n\tfor len(fila) > 0 {\n\t\timprimir(fila, pos)\n\n\t\tif len(fila) == 1 {\n\t\t\tbreak\n\t\t}\n\n\t\tmorto := (pos + 1) % len(fila)\n\t\tfila = append(fila[:morto], fila[morto+1:]...)\n\t\tpos = morto % len(fila)\n\t}\n}",
+            "lines": "39"
         }
     ]
 }
