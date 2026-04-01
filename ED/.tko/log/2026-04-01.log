@@ -1,0 +1,60 @@
+2026-04-01 17:14:57, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-01 17:15:04, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:164
+2026-04-01 17:15:17, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:164
+2026-04-01 17:17:06, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:164
+2026-04-01 17:17:18, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:164
+2026-04-01 17:17:48, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:164
+2026-04-01 17:18:35, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:164
+2026-04-01 17:18:48, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:164
+2026-04-01 17:18:57, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:28, size:164
+2026-04-01 17:19:06, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-01 17:19:15, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:28, size:164
+2026-04-01 17:19:26, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:164
+2026-04-01 17:19:36, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:164
+2026-04-01 17:19:48, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:164
+2026-04-01 17:20:10, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:164
+2026-04-01 17:21:52, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:164
+2026-04-01 17:22:04, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:100, size:164
+2026-04-01 17:23:33, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:164
+2026-04-01 17:23:41, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:100, size:164
+2026-04-01 17:55:26, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:194
+2026-04-01 17:56:17, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:196
+2026-04-01 17:57:41, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:204
+2026-04-01 17:57:52, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:204
+2026-04-01 17:58:28, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:204
+2026-04-01 17:58:46, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:28, size:204
+2026-04-01 17:58:54, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:204
+2026-04-01 17:59:36, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:28, size:204
+2026-04-01 17:59:45, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:204
+2026-04-01 18:00:46, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:201
+2026-04-01 18:01:07, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:100, size:204
+2026-04-01 18:01:13, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-04-01 18:06:25, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-01 18:06:26, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:100, size:205
+2026-04-01 18:12:34, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:100, size:208
+2026-04-01 18:15:19, EXEC, v:1, k:ed@manipulacao, mode:FULL, size:243, fail:COMP
+2026-04-01 18:15:21, EXEC, v:1, k:ed@manipulacao, mode:FULL, fail:COMP
+2026-04-01 18:16:07, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:243
+2026-04-01 18:18:17, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:243
+2026-04-01 18:18:53, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:243
+2026-04-01 18:20:21, EXEC, v:1, k:ed@manipulacao, mode:FREE, size:243
+2026-04-01 18:23:08, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-01 18:23:11, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85
+2026-04-01 18:23:23, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:243
+2026-04-01 18:23:37, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:243
+2026-04-01 18:23:46, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:243
+2026-04-01 18:24:08, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:243
+2026-04-01 18:24:16, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:243
+2026-04-01 18:25:42, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:42, size:244
+2026-04-01 18:25:43, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:42
+2026-04-01 18:26:34, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:243
+2026-04-01 18:29:06, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:243
+2026-04-01 18:29:21, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:243
+2026-04-01 18:29:34, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:243
+2026-04-01 18:29:46, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:243
+2026-04-01 18:30:51, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:100, size:243
+2026-04-01 18:31:00, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-04-01 18:31:42, SELF, v:1, k:ed@manipulacao, self:1, rate:100, study:100, friend:Camila
+2026-04-01 18:31:43, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-01 18:31:44, EXEC, v:1, k:ed@manipulacao, mode:FREE
+2026-04-01 18:32:30, SELF, v:1, k:ed@manipulacao, self:1, rate:100, study:100, friend:Camila, concept:1, refactor:1

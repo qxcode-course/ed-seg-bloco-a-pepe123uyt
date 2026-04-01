@@ -1,7 +1,6 @@
 package main
 
 import (
-	"sort"
 	"bufio"
 	"fmt"
 	"os"
@@ -31,12 +30,56 @@ func getCalmWomen(vet []int) []int {
 	return women
 }
 
+func mergeSort(vet []int) []int {
+	if len(vet) <= 1 {
+		return vet
+	}
+	meio := len(vet)/2
+
+	esq := vet[0:meio]
+	dir := vet[meio:]
+
+	esq = mergeSort(esq)
+	dir = mergeSort(dir)
+
+	return mergeA(esq, dir)
+
+}
+
+func mergeA(esq, dir []int)[]int {
+	var vet []int
+	i, j := 0, 0
+
+	for i < len(esq) && j < len(dir) {
+		if esq[i] < dir[j] {
+			vet = append(vet, esq[i])
+			i++
+		} else {
+			vet = append(vet, dir[j])
+			j++
+		}
+	}
+
+	for i < len(esq){
+		vet = append(vet, esq[i])
+		i++
+	}
+	for j < len(dir){
+		vet = append(vet, dir[j])
+		j++
+	}
+	return vet
+}
+
 func sortVet(vet []int) []int {
-	novo := make([]int, len(vet))
-    copy(novo, vet)
-	
-    sort.Ints(novo)
-    return novo
+	// for i := 0; i < len(vet); i++{
+	// 	for j := 0; j < len(vet); j++{
+	// 		if vet[i] < vet[j] {
+	// 			vet[i], vet[j] = vet[j], vet[i]
+	// 		}
+	// 	}
+	// }
+	return mergeSort(vet)
 }
 
 func abs(x int) int {
@@ -46,18 +89,56 @@ func abs(x int) int {
     return x
 }
 
-func sortStress(vet []int) []int {
-	novo := make([]int, len(vet))
-    copy(novo, vet)
-	
-	for i := 0; i < len(novo); i++{
-		for j := 0; j < len(novo) - 1; j++{
-			if abs(novo[j]) > abs(novo[j+1]) {
-                novo[j], novo[j+1] = novo[j+1], novo[j]
-            }
+func mergeStres(vet []int) []int{
+	if len(vet) <= 1 {
+		return vet
+	}
+	meio := len(vet)/2
+
+	esq := vet[0:meio]
+	dir := vet[meio:]
+
+	esq = mergeStres(esq)
+	dir = mergeStres(dir)
+
+	return mergeB(esq, dir)
+}
+
+func mergeB(esq, dir []int) []int {
+	var vet []int
+	i, j := 0, 0
+
+	for i < len(esq) && j < len(dir) {
+		if abs(esq[i]) <= abs(dir[j]) {
+			vet = append(vet, esq[i])
+			i++
+		} else {
+			vet = append(vet, dir[j])
+			j++
 		}
 	}
-    return novo
+
+	for i < len(esq){
+		vet = append(vet, esq[i])
+		i++
+	}
+	for j < len(dir){
+		vet = append(vet, dir[j])
+		j++
+	}
+	return vet
+
+
+}
+func sortStress(vet []int) []int {
+	// for i := 0; i < len(vet); i++{
+	// 	for j := 0; j < len(vet) - 1; j++{
+	// 		if abs(vet[j]) > abs(vet[j+1]) {
+    //             vet[j], vet[j+1] = vet[j+1], vet[j]
+    //         }
+	// 	}
+	// }
+    return mergeStres(vet)
 }
 
 func reverse(vet []int) []int {
@@ -83,12 +164,18 @@ func unique(vet []int) []int {
 }
 
 func repeated(vet []int) []int {
-	rep := []int{}
 
-	for i := 0; i < len(vet); i++{
-			if vet[i-1] == vet[i]{
-				rep = append(rep, vet[i])
-			}
+	vt := make(map[int]bool)
+	var rep []int
+
+	for _, v := range vet{
+		_, existe := vt[v]
+
+		if !existe{
+			vt[v] = true
+		} else {
+			rep = append(rep, v)
+		}
 	}
 	return rep
 }
