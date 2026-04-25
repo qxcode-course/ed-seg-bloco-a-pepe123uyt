@@ -1,0 +1,94 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-25_00-47-34",
+            "content": "@@ -55,10 +55,9 @@\n num \n-==\n+%3C\n  0 %7B\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-04-25_00-48-42",
+            "content": "@@ -79,31 +79,16 @@\n n%0A    %7D%0A\n-    resto(num)%0A\n     fmt.\n@@ -119,16 +119,31 @@\n  num%252)%0A\n+    resto(num)%0A\n %7D%0Afunc m\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-04-25_00-48-47",
+            "content": "@@ -87,47 +87,57 @@\n     \n-fmt.Println(num/2, num%252)%0A    resto(num\n+resto(num)%0A    fmt.Printf(%22%25d %25d%5Cn%22, num/2, num%252\n )%0A%7D%0A\n@@ -166,17 +166,16 @@\n num int%0A\n-%0A\n     fmt.\n@@ -185,17 +185,16 @@\n n(&num)%0A\n-%0A\n     rest\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-04-25_00-49-35",
+            "content": "@@ -83,21 +83,8 @@\n   %7D%0A\n-    num /= 2%0A\n     \n@@ -98,16 +98,18 @@\n ntln(num\n+/2\n , num%252)\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-25_00-50-52",
+            "content": "@@ -91,32 +91,16 @@\n num /= 2\n-%0A%0A    resto(num)\n %0A    fmt\n@@ -120,16 +120,31 @@\n  num%252)%0A\n+    resto(num)%0A\n %7D%0Afunc m\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-25_00-51-05",
+            "content": "@@ -78,16 +78,29 @@\n rn%0A    %7D\n+%0A    num /= 2\n %0A%0A    re\n@@ -131,10 +131,8 @@\n (num\n-/2\n , nu\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-25_00-51-38",
+            "content": "@@ -83,37 +83,8 @@\n   %7D%0A\n-    num /= 2%0A    aux := num%252\n %0A   \n@@ -118,13 +118,17 @@\n (num\n-, aux\n+/2, num%252\n )%0A%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-25_00-52-05",
+            "content": "@@ -79,17 +79,16 @@\n n%0A    %7D%0A\n-%0A\n     num \n@@ -109,16 +109,30 @@\n = num%252%0A\n+    resto(num)\n %0A    fmt\n@@ -150,31 +150,16 @@\n m, aux)%0A\n-    resto(num)%0A\n %7D%0Afunc m\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-25_00-52-28",
+            "content": "@@ -79,20 +79,16 @@\n n%0A    %7D%0A\n-    \n %0A    num\n@@ -111,31 +111,16 @@\n  num%252%0A%0A\n-    resto(num)%0A\n     fmt.\n@@ -137,16 +137,31 @@\n m, aux)%0A\n+    resto(num)%0A\n %7D%0Afunc m\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-25_00-52-37",
+            "content": "@@ -55,9 +55,10 @@\n num \n-%3C\n+==\n  0 %7B\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-25_00-52-48",
+            "content": "@@ -55,10 +55,9 @@\n num \n-==\n+%3C\n  0 %7B\n@@ -69,21 +69,14 @@\n     \n-fmt.Println()\n+return\n %0A   \n@@ -142,16 +142,18 @@\n mt.Print\n+ln\n (num, au\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-25_00-53-29",
+            "content": "@@ -44,39 +44,8 @@\n t)%7B%0A\n-    num /= 2%0A    aux := num%252%0A%0A\n     \n@@ -82,43 +82,50 @@\n tln(\n-num, aux\n )%0A    \n+%7D%0A\n     \n-return%0A    %7D%0A    \n+%0A    num /= 2%0A    aux := num%252\n %0A%0A  \n@@ -150,18 +150,16 @@\n mt.Print\n-ln\n (num, au\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-25_00-54-13",
+            "content": "@@ -40,16 +40,47 @@\n m int)%7B%0A\n+    num /= 2%0A    aux := num%252%0A%0A\n     if n\n@@ -86,9 +86,9 @@\n num \n-%3E\n+=\n = 0 \n@@ -101,55 +101,55 @@\n     \n-return\n+fmt.Println(num, aux)\n %0A    \n-%7D%0A\n     \n-%0A    num /= 2%0A    aux := num%252\n+return%0A    %7D%0A    \n %0A%0A  \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-25_00-55-01",
+            "content": "@@ -55,9 +55,9 @@\n num \n-%3C\n+%3E\n = 0 \n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-25_00-55-07",
+            "content": "@@ -78,16 +78,51 @@\n rn%0A    %7D\n+%0A    %0A    num /= 2%0A    aux := num%252\n %0A%0A    re\n@@ -153,17 +153,13 @@\n (num\n-/2, num%252\n+, aux\n )%0A%7D%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-25_00-56-59",
+            "content": "@@ -82,43 +82,8 @@\n    %7D\n-%0A    %0A    num /= 2%0A    aux := num%252\n %0A%0A  \n@@ -118,13 +118,17 @@\n (num\n-, aux\n+/2, num%252\n )%0A%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-25_00-57-10",
+            "content": "@@ -92,30 +92,32 @@\n     \n-aux := num%0A    num /= \n+num /= 2%0A    aux := num%25\n 2%0A%0A \n@@ -154,18 +154,16 @@\n num, aux\n-%252\n )%0A%7D%0Afunc\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-25_00-58-06",
+            "content": "package main\nimport \"fmt\"\nfunc resto(num int){\n    if num <= 0 {\n        return\n    }\n    \n    aux := num\n    num /= 2\n\n    resto(num)\n    fmt.Println(num, aux%2)\n}\nfunc main() {\n    var num int\n\n    fmt.Scan(&num)\n\n    resto(num)\n}\n",
+            "lines": "20"
+        }
+    ]
+}

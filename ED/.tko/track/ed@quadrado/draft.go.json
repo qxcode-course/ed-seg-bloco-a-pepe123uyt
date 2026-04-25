@@ -1,0 +1,149 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-25_01-20-26",
+            "content": "@@ -41,222 +41,35 @@\n     \n-var num int%0A    fmt.Scan(&num)%0A    quadrado(num)%0A%7D%0A%0Afunc quadrado(num int) %7B%0A    if num %3C 1 %7B%0A        return %0A    %7D%0A    %0A    fmt.Printf(%22%25d%5E2 = %25d%5E2 + 2*%25d + 1 = %25d%5Cn%22, num, num-1, num-1, num*num)%0A    quadrado(num\n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n-%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-25_01-29-34",
+            "content": "@@ -250,15 +250,13 @@\n rado(num\n--1\n )%0A%7D%0A%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-25_01-29-51",
+            "content": "@@ -118,78 +118,8 @@\n ) %7B%0A\n-    if num == 1 %7B%0A        fmt.Println(%221%5E2 = 1%22)%0A        return%0A    %7D%0A\n     \n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-25_01-31-32",
+            "content": "@@ -273,9 +273,12 @@\n 1 = \n-?\n+%25d%5Cn\n %22, n\n@@ -293,16 +293,25 @@\n 1, num-1\n+, num*num\n )%0A    qu\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-25_01-32-18",
+            "content": "@@ -163,16 +163,31 @@\n 2 = 1%22)%0A\n+        return%0A\n     %7D%0A  \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-25_01-32-53",
+            "content": "@@ -167,23 +167,8 @@\n 1%22)%0A\n-        return%0A\n     \n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-25_01-33-04",
+            "content": "@@ -118,47 +118,8 @@\n ) %7B%0A\n-    if num %3C 1 %7B%0A        return %0A    %7D%0A\n     \n@@ -184,16 +184,55 @@\n n%0A    %7D%0A\n+    if num %3C 1 %7B%0A        return %0A    %7D%0A\n     %0A   \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-25_01-33-13",
+            "content": "@@ -274,10 +274,8 @@\n  = ?\n-%5Cn\n %22, n\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-25_01-33-24",
+            "content": "@@ -110,24 +110,63 @@\n (num int) %7B%0A\n+    if num %3C 1 %7B%0A        return %0A    %7D%0A\n     if num =\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-25_01-35-23",
+            "content": "@@ -76,40 +76,20 @@\n     \n-primeira(num)%0A    segunda\n+quadrado\n (num\n-, 2\n )%0A%7D%0A\n@@ -94,24 +94,24 @@\n %7D%0A%0Afunc \n-primeira\n+quadrado\n (num int\n@@ -176,32 +176,37 @@\n    return%0A    %7D%0A\n+    %0A\n     fmt.Printf(%22\n@@ -263,190 +263,23 @@\n     \n-primeira(num-1)%0A%7D%0Afunc segunda(num int, i int)%7B%0A    if i %3E num %7B%0A        return%0A    %7D%0A    fmt.Printf(%22%25d%5E2 = %25d%5E2 + 2*%25d + 1 = %25d%22, num, num-1, num-1, num*num)%0A    segunda(num, i+\n+quadrado(num-\n 1)%0A%7D%0A%0A\n-%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-25_01-43-55",
+            "content": "@@ -403,18 +403,16 @@\n + 1 = %25d\n-%5Cn\n %22, num, \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-25_01-44-07",
+            "content": "@@ -403,16 +403,18 @@\n + 1 = %25d\n+%5Cn\n %22, num, \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-25_01-44-20",
+            "content": "@@ -23,22 +23,8 @@\n mt%22%0A\n-import %22math%22%0A\n func\n@@ -308,16 +308,20 @@\n unda(num\n+ int\n , i int)\n@@ -429,11 +429,15 @@\n -1, \n-aux\n+num*num\n )%0A  \n@@ -460,9 +460,8 @@\n +1)%0A%7D%0A%0A%0A\n-%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-25_01-49-13",
+            "content": "@@ -429,24 +429,29 @@\n num-1, num-1\n+, aux\n )%0A    segund\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-25_01-49-22",
+            "content": "@@ -19,16 +19,30 @@\n t %22fmt%22%0A\n+import %22math%22%0A\n func mai\n@@ -411,16 +411,18 @@\n d + 1 = \n+%25d\n %22, num, \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-25_01-49-39",
+            "content": "@@ -397,18 +397,16 @@\n d + 1 = \n-%25d\n %22, num, \n@@ -421,19 +421,8 @@\n um-1\n-, pow(i, 2)\n )%0A  \n@@ -447,99 +447,7 @@\n )%0A%7D%0A\n-func pow(base, exp int) int %7B%0A%09if exp == 0 %7B%0A%09%09return 1%0A%09%7D%0A%09return base * pow(base, exp-1)%0A%7D\n %0A%0A%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-25_01-51-09",
+            "content": "@@ -399,18 +399,16 @@\n + 1 = %25d\n-%5Cn\n %22, num, \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-25_01-51-19",
+            "content": "@@ -103,17 +103,17 @@\n da(num, \n-1\n+2\n )%0A%7D%0A%0Afun\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-25_01-51-53",
+            "content": "@@ -103,17 +103,17 @@\n da(num, \n-2\n+1\n )%0A%7D%0A%0Afun\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-25_01-52-02",
+            "content": "@@ -404,17 +404,19 @@\n  %25d%5Cn%22, \n-i\n+num\n , num-1,\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-25_01-52-50",
+            "content": "@@ -411,14 +411,18 @@\n  i, \n-i\n+num\n -1, \n-i\n+num\n -1, \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-25_01-53-04",
+            "content": "@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -71,19 +71,16 @@\n num)%0A   \n- //\n  primeir\n@@ -93,11 +93,8 @@\n %0A   \n- //\n  seg\n@@ -110,265 +110,11 @@\n  2)%0A\n-    f(num)%0A%7D%0Afunc f(n int) int %7B%0A%09if n == 1 %7B%0A%09%09fmt.Println(%221%5E2 = 1%22)%0A%09%09return 1%0A%09%7D%0A%0A%09prev := f(n-1)%0A%0A%09fmt.Printf(%22%25d%5E2 = %25d%5E2 + 2*%25d + 1 = %25d%5Cn%22, n, n-1, n-1, prev+2*(n-1)+1)%0A%0A%09return prev + 2*(n-1) + 1%0A%7D%0A// primeira versao ficou um for disfa%C3%A7ado %3E-%3C%0A%0A// \n+%7D%0A%0A\n func\n@@ -134,19 +134,16 @@\n  int) %7B%0A\n-// \n     if n\n@@ -152,19 +152,16 @@\n  == 1 %7B%0A\n-// \n         \n@@ -183,19 +183,16 @@\n 2 = 1%22)%0A\n-// \n         \n@@ -194,36 +194,30 @@\n      return%0A\n-//\n     \n- \n %7D%0A\n-// \n     fmt.Prin\n@@ -270,19 +270,16 @@\n  num-1)%0A\n-// \n     prim\n@@ -290,24 +290,18 @@\n (num-1)%0A\n-// %7D%0A// \n+%7D%0A\n func seg\n@@ -318,23 +318,20 @@\n i int)%7B%0A\n-//\n     \n- \n if i %3E n\n@@ -339,18 +339,16 @@\n m %7B%0A\n-//\n         \n  ret\n@@ -347,28 +347,21 @@\n     \n- \n return%0A\n-// \n     %7D%0A\n-// \n     \n@@ -428,19 +428,16 @@\n (i, 2))%0A\n-// \n     segu\n@@ -454,16 +454,10 @@\n +1)%0A\n-// %7D%0A// \n+%7D%0A\n func\n@@ -482,19 +482,16 @@\n ) int %7B%0A\n-// \n %09if exp \n@@ -497,19 +497,16 @@\n  == 0 %7B%0A\n-// \n %09%09return\n@@ -512,17 +512,11 @@\n n 1%0A\n-// %09%7D%0A// \n+%09%7D%0A\n %09ret\n@@ -547,12 +547,8 @@\n -1)%0A\n-// %7D%0A\n+%7D\n %0A%0A%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-25_02-03-45",
+            "content": "@@ -113,32 +113,25 @@\n num, 2)%0A    \n-quadrado\n+f\n (num)%0A%7D%0Afunc\n@@ -135,46 +135,36 @@\n unc \n-quadrado(num int) %7B%0A    \n+f(n int) int %7B%0A%09\n if n\n-um\n  == 1 %7B%0A\n     \n@@ -159,24 +159,18 @@\n  == 1 %7B%0A\n-        \n+%09%09\n fmt.Prin\n@@ -188,33 +188,41 @@\n 1%22)%0A\n-        return%0A    %7D%0A    \n+%09%09return 1%0A%09%7D%0A%0A%09prev := f(n-1)%0A%0A%09\n fmt.\n@@ -258,58 +258,71 @@\n 1 = \n-?\n+%25d\n %5Cn%22, n\n-um\n , n\n-um\n -1, n\n-um-1)%0A    quadrado(num-1)%0A    %0A\n+-1, prev+2*(n-1)+1)%0A%0A%09return prev + 2*(n-1) + 1\n %0A%7D%0A/\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-25_02-08-34",
+            "content": "@@ -221,17 +221,16 @@\n   return\n- \n %0A    %7D%0A \n@@ -322,102 +322,8 @@\n     \n-fmt.Printf(%22%25d%5E2 = %25d%5E2 + 2*%25d + 1 = 10%5Cn%22, num, num-1, num-1)%0A    quadrado(num+1)%0A%0A    return\n %0A%0A%7D%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-25_02-10-58",
+            "content": "@@ -403,16 +403,28 @@\n num+1)%0A%0A\n+    return%0A%0A\n %7D%0A// pri\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-25_02-11-17",
+            "content": "@@ -155,20 +155,16 @@\n num int)\n- int\n  %7B%0A    i\n@@ -222,17 +222,16 @@\n  return \n-1\n %0A    %7D%0A \n@@ -381,16 +381,36 @@\n , num-1)\n+%0A    quadrado(num+1)\n %0A%0A%7D%0A// p\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-25_02-11-46",
+            "content": "@@ -237,20 +237,8 @@\n    %7D\n-%0A%0A    // IDA\n %0A   \n@@ -304,20 +304,11 @@\n -1)%0A\n-%0A\n    \n- prev :=\n  qua\n@@ -323,56 +323,8 @@\n m-1)\n-%0A%0A    // VOLTA%0A    atual := prev + 2*(num-1) + 1\n %0A   \n@@ -357,26 +357,26 @@\n  2*%25d + 1 = \n-%25d\n+10\n %5Cn%22, num, nu\n@@ -389,34 +389,10 @@\n um-1\n-, atual)%0A%0A    return atual\n+)%0A\n %0A%7D%0A/\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-25_02-12-51",
+            "content": "@@ -235,16 +235,27 @@\n %0A    %7D%0A%0A\n+    // IDA%0A\n     fmt.\n@@ -338,24 +338,37 @@\n ado(num-1)%0A%0A\n+    // VOLTA%0A\n     atual :=\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-25_02-15-57",
+            "content": "package main\nimport \"fmt\"\n\nfunc main() {\n    var num int\n    fmt.Scan(&num)\n    // primeira(num)\n    // segunda(num, 2)\n    quadrado(num)\n}\nfunc quadrado(num int) int {\n    if num == 1 {\n        fmt.Println(\"1^2 = 1\")\n        return 1\n    }\n\n    fmt.Printf(\"%d^2 = %d^2 + 2*%d + 1 = ?\\n\", num, num-1, num-1)\n\n    prev := quadrado(num-1)\n\n    atual := prev + 2*(num-1) + 1\n    fmt.Printf(\"%d^2 = %d^2 + 2*%d + 1 = %d\\n\", num, num-1, num-1, atual)\n\n    return atual\n}\n// primeira versao ficou um for disfa\u00e7ado >-<\n\n// func primeira(num int) {\n//     if num == 1 {\n//         fmt.Println(\"1^2 = 1\")\n//         return\n//     }\n//     fmt.Printf(\"%d^2 = %d^2 + 2*%d + 1 = ?\\n\", num, num-1, num-1)\n//     primeira(num-1)\n// }\n// func segunda(num, i int){\n//     if i > num {\n//         return\n//     }\n//     fmt.Printf(\"%d^2 = %d^2 + 2*%d + 1 = %d\\n\", i, i-1, i-1, pow(i, 2))\n//     segunda(num, i+1)\n// }\n// func pow(base, exp int) int {\n// \tif exp == 0 {\n// \t\treturn 1\n// \t}\n// \treturn base * pow(base, exp-1)\n// }\n\n\n\n",
+            "lines": "51"
+        }
+    ]
+}
