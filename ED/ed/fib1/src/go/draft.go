@@ -2,10 +2,10 @@ package main
 import "fmt"
 
 func main() {
-    var a, b int
-    fmt.Scan(&a, &b)
+    var meses, pares int
+    fmt.Scan(&meses, &pares)
 
-    fmt.Println(fibo(a, b))
+    fmt.Println(fibo(meses, pares))
 }
 
 func fibo(n, k int) int {

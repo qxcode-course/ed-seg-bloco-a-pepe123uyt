@@ -9,7 +9,7 @@ import (
 )
 
 func getMen(vet []int) []int {
-	men := []int{}
+	var men []int 
 	for i := 0; i < len(vet); i++{
 		if vet[i] > 0 {
 			men = append(men, vet[i])

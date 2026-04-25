@@ -62,7 +62,37 @@
         },
         {
             "label": "2026-04-25_16-43-02",
-            "content": "package main\nimport \"fmt\"\n\nfunc main() {\n    var a, b int\n    fmt.Scan(&a, &b)\n\n    fmt.Println(fibo(a, b))\n}\n\nfunc fibo(n, k int) int {\n    if n == 1 || n == 2{\n\t\treturn 1\n\t}\n\treturn fibo(n-1, k) + k * fibo(n-2, k)\n}\n",
+            "content": "@@ -173,30 +173,8 @@\n %0A%09%7D%0A\n-    fmt.Println(n, k)%0A\n %09ret\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-25_16-49-56",
+            "content": "@@ -191,20 +191,17 @@\n n(n, k)%0A\n-    \n+%09\n return f\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-25_16-50-21",
+            "content": "@@ -169,17 +169,42 @@\n rn 1%0A%09%7D%0A\n-%09\n+    fmt.Println(n, k)%0A    \n return f\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-25_16-51-12",
+            "content": "@@ -77,16 +77,27 @@\n b)%0A%0A    \n+fmt.Println\n (fibo(a,\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-25_16-51-29",
+            "content": "@@ -81,19 +81,8 @@\n     \n-fmt.Println\n (fib\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-25_16-51-34",
+            "content": "@@ -42,28 +42,20 @@\n     var \n-meses, pares\n+a, b\n  int%0A   \n@@ -69,21 +69,13 @@\n an(&\n-meses, &pares\n+a, &b\n )%0A%0A \n@@ -98,20 +98,12 @@\n ibo(\n-meses, pares\n+a, b\n ))%0A%7D\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-25_16-53-27",
+            "content": "package main\nimport \"fmt\"\n\nfunc main() {\n    var meses, pares int\n    fmt.Scan(&meses, &pares)\n\n    fmt.Println(fibo(meses, pares))\n}\n\nfunc fibo(n, k int) int {\n    if n == 1 || n == 2{\n\t\treturn 1\n\t}\n\treturn fibo(n-1, k) + k * fibo(n-2, k)\n}\n",
             "lines": "16"
         }
     ]
