@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-25_02-26-18",
+            "content": "@@ -542,19 +542,16 @@\n n -1%0A%7D%0A%0A\n-// \n func era\n@@ -591,211 +591,105 @@\n t %7B%0A\n-// %09for i := 0; i %3C len(vet); i++ %7B%0A// %09%09if %0A// %09%7D%0A// %09return posList%0A// %7D%0A%0Afunc clear(vet %5B%5Dint, value int) %5B%5Dint %7B%0A%09var aux %5B%5Dint%0A%0A%09for v := range vet %7B%0A%09%09if v != value %7B%0A%09%09%09aux = append(aux, v)%0A%09%09%7D%0A%09%7D\n+%09_ = vet%0A%09_ = posList%0A%09return nil%0A%7D%0A%0Afunc clear(vet %5B%5Dint, value int) %5B%5Dint %7B%0A%09_ = vet%0A%09_ = value\n %0A%09re\n@@ -693,19 +693,19 @@\n %09return \n-aux\n+nil\n %0A%7D%0A%0Afunc\n",
+            "lines": "132"
+        },
+        {
+            "label": "2026-04-25_02-35-22",
+            "content": "@@ -727,19 +727,16 @@\n nt%0A%0A%09for\n- _,\n  v := ra\n",
+            "lines": "138"
+        },
+        {
+            "label": "2026-04-25_02-36-07",
+            "content": "@@ -538,24 +538,27 @@\n eturn -1%0A%7D%0A%0A\n+// \n func erase(v\n@@ -593,32 +593,63 @@\n nt %7B\n-%09%0A%09_ = vet%0A%09_ = posList%0A\n+%0A// %09for i := 0; i %3C len(vet); i++ %7B%0A// %09%09if %0A// %09%7D%0A// \n %09ret\n@@ -664,10 +664,11 @@\n ist%0A\n-%09%0A\n+// \n %7D%0A%0Af\n",
+            "lines": "138"
+        },
+        {
+            "label": "2026-04-25_02-37-31",
+            "content": "@@ -140,182 +140,15 @@\n  %7B%0A%09\n-cont := make(map%5Bint%5Dint)%0A%0A%09for _, v := range vet %7B%0A%09%09if v %3C 0 %7B%0A%09%09%09v = -v%0A%09%09%7D%0A%09%09cont%5Bv%5D++%0A%09%7D%0A%0A%09var res %5B%5DPair%0A%09%0A%09for k, v := range cont %7B%0A%09%09res = append(res, Pair%7Bk, v%7D)%0A%09%7D%0A\n+_ = vet\n %0A%09re\n@@ -152,19 +152,19 @@\n %09return \n-res\n+nil\n %0A%7D%0A%0Afunc\n",
+            "lines": "138"
+        },
+        {
+            "label": "2026-04-25_02-43-21",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Pair struct {\n\tOne int\n\tTwo int\n}\n\nfunc occurr(vet []int) []Pair {\n\tcont := make(map[int]int)\n\n\tfor _, v := range vet {\n\t\tif v < 0 {\n\t\t\tv = -v\n\t\t}\n\t\tcont[v]++\n\t}\n\n\tvar res []Pair\n\t\n\tfor k, v := range cont {\n\t\tres = append(res, Pair{k, v})\n\t}\n\n\treturn res\n}\n\nfunc teams(vet []int) []Pair {\n\t_ = vet\n\treturn nil\n}\n\nfunc mnext(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc alone(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc couple(vet []int) int {\n\t_ = vet\n\treturn 0\n}\n\nfunc hasSubseq(vet []int, seq []int, pos int) bool {\n\t_ = vet\n\t_ = seq\n\t_ = pos\n\treturn false\n}\n\nfunc subseq(vet []int, seq []int) int {\n\t_ = vet\n\t_ = seq\n\treturn -1\n}\n\nfunc erase(vet []int, posList []int) []int {\t\n\t_ = vet\n\t_ = posList\n\treturn posList\n\t\n}\n\nfunc clear(vet []int, value int) []int {\n\tvar aux []int\n\n\tfor _, v := range vet {\n\t\tif v != value {\n\t\t\taux = append(aux, v)\n\t\t}\n\t}\n\treturn aux\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tfor {\n\t\tfmt.Print(\"$\")\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\targs := strings.Split(line, \" \")\n\t\tfmt.Println(line)\n\n\t\tswitch args[0] {\n\t\tcase \"occurr\":\n\t\t\tprintSlice(occurr(str2vet(args[1])))\n\t\tcase \"teams\":\n\t\t\tprintSlice(teams(str2vet(args[1])))\n\t\tcase \"mnext\":\n\t\t\tprintSlice(mnext(str2vet(args[1])))\n\t\tcase \"alone\":\n\t\t\tprintSlice(alone(str2vet(args[1])))\n\t\tcase \"erase\":\n\t\t\tprintSlice(erase(str2vet(args[1]), str2vet(args[2])))\n\t\tcase \"clear\":\n\t\t\tval, _ := strconv.Atoi(args[2])\n\t\t\tprintSlice(clear(str2vet(args[1]), val))\n\t\tcase \"subseq\":\n\t\t\tfmt.Println(subseq(str2vet(args[1]), str2vet(args[2])))\n\t\tcase \"couple\":\n\t\t\tfmt.Println(couple(str2vet(args[1])))\n\t\tcase \"end\":\n\t\t\treturn\n\t\tdefault:\n\t\t\tfmt.Println(\"Invalid command\")\n\t\t}\n\t}\n}\n\n// Fun\u00e7\u00f5es auxiliares\n\nfunc str2vet(str string) []int {\n\tif str == \"[]\" {\n\t\treturn nil\n\t}\n\tstr = str[1 : len(str)-1]\n\tparts := strings.Split(str, \",\")\n\tvar vet []int\n\tfor _, part := range parts {\n\t\tnum, _ := strconv.Atoi(strings.TrimSpace(part))\n\t\tvet = append(vet, num)\n\t}\n\treturn vet\n}\n\nfunc printSlice[T any](vet []T) {\n\tfmt.Print(\"[\")\n\tfor i, x := range vet {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(x)\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc (p Pair) String() string {\n\treturn fmt.Sprintf(\"(%v, %v)\", p.One, p.Two)\n}\n",
+            "lines": "152"
+        }
+    ]
+}

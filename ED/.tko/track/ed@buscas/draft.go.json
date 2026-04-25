@@ -22,8 +22,83 @@
         },
         {
             "label": "2026-03-25_00-03-26",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    consultas := []string{} \n    for i := 0; i < n; i++{\n        var consu string\n        fmt.Scan(&consu)\n        consultas = append(consultas, consu)\n    }\n\n    fmt.Println(consultas)\n}\n",
+            "content": "@@ -23,64 +23,8 @@\n mt%22%0A\n-// func matchingStrings(strings %5B%5D%5B%5Dstring, consultas )%0A\n func\n",
             "lines": "15"
+        },
+        {
+            "label": "2026-04-25_02-46-25",
+            "content": "@@ -19,16 +19,19 @@\n t %22fmt%22%0A\n+// \n func mat\n@@ -76,13 +76,10 @@\n ltas\n+ \n )\n-%7B%0A%0A%7D\n %0Afun\n@@ -154,13 +154,8 @@\n %7B%7D %0A\n-    %0A\n     \n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-25_02-48-22",
+            "content": "@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mat\n@@ -51,18 +51,8 @@\n ings\n-, consutas\n  %5B%5D%5B\n@@ -62,16 +62,20 @@\n ring\n-) %5B%5Dint \n+, consultas)\n %7B%0A%0A%7D\n@@ -102,11 +102,8 @@\n ar n\n-, m\n  int\n@@ -103,27 +103,41 @@\n r n int%0A    \n-var\n+fmt.Scan(&n)%0A%0A   \n  consultas, \n@@ -138,46 +138,28 @@\n ltas\n-, buscas\n+ :=\n  %5B%5D\n- \n string\n-%0A\n+%7B%7D \n %0A    \n-fmt.Scan(&n) %0A\n %0A   \n@@ -297,190 +297,23 @@\n fmt.\n-Scan(&m) %0A%0A    for i := 0; i %3C m; i++%7B%0A        var busca string%0A        fmt.Scan(&busca)%0A        buscas = append(buscas, busca)%0A    %7D%0A%0A    fmt.Println(consultas)%0A    fmt.Println(busc\n+Println(consult\n as)%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-25_02-52-47",
+            "content": "@@ -20,19 +20,16 @@\n  %22fmt%22%0A%0A\n-// \n func mat\n@@ -84,11 +84,8 @@\n  %7B%0A%0A\n-// \n %7D%0Afu\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-25_02-53-15",
+            "content": "@@ -20,16 +20,19 @@\n  %22fmt%22%0A%0A\n+// \n func mat\n@@ -86,54 +86,12 @@\n t %7B%0A\n-    var retorno %5B%5Dint%0A    %0A    return retorno%0A\n+%0A// \n %7D%0Afu\n@@ -448,11 +448,61 @@\n %0A    %7D%0A%0A\n+    fmt.Println(consultas)%0A    fmt.Println(buscas)\n %0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-25_02-57-05",
+            "content": "@@ -55,21 +55,22 @@\n s, consu\n-l\n tas \n+%5B%5D\n %5B%5Dstring\n@@ -87,192 +87,49 @@\n     \n-cont := make(map%5Bstring%5Dint)%0A    for _, v := range strings %7B%0A       cont%5Bv%5D++ %0A    %7D%0A    var ret %5B%5Dint%0A    for _, q := range consultas %7B%0A%09%09ret = append(ret, cont%5Bq%5D)%0A%09%7D%0A%0A    return ret\n+var retorno %5B%5Dint%0A    %0A    return retorno\n %0A%7D%0Af\n@@ -491,46 +491,7 @@\n  %7D%0A%0A\n-    matchingStrings(buscas, consultas)%0A\n %0A%7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-25_03-03-11",
+            "content": "@@ -163,25 +163,24 @@\n v%5D++ %0A    %7D%0A\n-%0A\n     var ret \n@@ -189,13 +189,8 @@\n int%0A\n-    %0A\n     \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-25_03-03-32",
+            "content": "@@ -186,16 +186,20 @@\n t %5B%5Dint%0A\n+    \n %0A    for\n@@ -642,14 +642,8 @@\n %0A   \n- ms :=\n  mat\n@@ -679,63 +679,6 @@\n s)%0A%0A\n-    for _, v := range ms %7B%0A        fmt.Println(v)%0A    %7D%0A%0A\n %7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-25_03-05-28",
+            "content": "@@ -721,16 +721,18 @@\n mt.Print\n+ln\n (v)%0A    \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-25_16-01-46",
+            "content": "@@ -725,17 +725,9 @@\n rint\n-f(%22%25d %22, \n+(\n v)%0A \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-25_16-02-36",
+            "content": "@@ -24,36 +24,8 @@\n t%22%0A%0A\n-package main%0A%0Aimport %22fmt%22%0A%0A\n func\n@@ -44,36 +44,34 @@\n ings(strings\n-Base, querie\n+, consulta\n s %5B%5Dstring) \n@@ -78,17 +78,20 @@\n %5B%5Dint %7B%0A\n-%09\n+    \n cont := \n@@ -115,103 +115,75 @@\n nt)%0A\n-%0A%09// Conta a frequ%C3%AAncia das strings%0A%09for _, v := range stringsBase %7B%0A%09%09cont%5Bv%5D++%0A%09%7D%0A%0A%09\n+    for _, v := range strings %7B%0A       cont%5Bv%5D++ %0A    %7D%0A%0A    \n var re\n-sul\n t %5B%5D\n@@ -191,35 +191,12 @@\n nt%0A%0A\n-%09// Responde as consultas%0A%09\n+    \n for \n@@ -213,22 +213,24 @@\n nge \n-querie\n+consulta\n s %7B%0A%09%09re\n sult\n@@ -225,19 +225,16 @@\n s %7B%0A%09%09re\n-sul\n t = appe\n@@ -238,19 +238,16 @@\n ppend(re\n-sul\n t, cont%5B\n@@ -254,17 +254,20 @@\n q%5D)%0A%09%7D%0A%0A\n-%09\n+    \n return r\n@@ -271,16 +271,12 @@\n n re\n-sul\n t%0A%7D%0A\n-%0A\n func\n@@ -285,17 +285,20 @@\n ain() %7B%0A\n-%09\n+    \n var n, m\n@@ -306,44 +306,45 @@\n int%0A\n-%09var stringsB\n+    var consult\n as\n-e\n , \n-querie\n+busca\n s %5B%5D\n+ \n string%0A%0A\n %09// \n@@ -343,43 +343,12 @@\n ng%0A%0A\n-%09// L%C3%AA quantidade de strings base%0A%09\n+    \n fmt.\n@@ -355,18 +355,23 @@\n Scan(&n)\n-%0A%09\n+ %0A%0A    \n for i :=\n@@ -388,54 +388,77 @@\n  i++\n- \n %7B%0A\n-%09%09var s string%0A%09%09fmt.Scan(&s)%0A%09%09stringsB\n+        var consu string%0A        fmt.Scan(&consu)%0A        consult\n as\n-e\n  = a\n@@ -467,60 +467,37 @@\n end(\n-stringsB\n+consult\n as\n-e\n , \n-s)%0A%09%7D%0A%0A%09// L%C3%AA quantidade de consultas%0A%09\n+consu)%0A    %7D%0A%0A    \n fmt.\n@@ -504,18 +504,23 @@\n Scan(&m)\n-%0A%09\n+ %0A%0A    \n for i :=\n@@ -537,103 +537,112 @@\n  i++\n- \n %7B%0A\n-%09%09var q string%0A%09%09fmt.Scan(&q)%0A%09%09queries = append(queries, q)%0A%09%7D%0A%0A%09// Chamada correta%0A%09result\n+        var busca string%0A        fmt.Scan(&busca)%0A        buscas = append(buscas, busca)%0A    %7D%0A%0A    ms\n  := \n@@ -661,54 +661,32 @@\n ngs(\n-stringsB\n+busc\n as\n-e\n , \n-queries)%0A%0A%09// Imprime resultado%0A%09\n+consultas)%0A%0A    \n for \n@@ -703,19 +703,21 @@\n nge \n-result %7B%0A%09%09\n+ms %7B%0A        \n fmt.\n@@ -733,13 +733,17 @@\n d %22, v)%0A\n-%09%7D\n+    %7D%0A\n %0A%7D%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-25_16-07-06",
+            "content": "@@ -20,16 +20,44 @@\n  %22fmt%22%0A%0A\n+package main%0A%0Aimport %22fmt%22%0A%0A\n func mat\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-25_16-07-22",
+            "content": "@@ -41,32 +41,35 @@\n Strings(\n-consult\n+stringsB\n as\n+e\n , \n-busca\n+querie\n s %5B%5Dstri\n@@ -111,16 +111,51 @@\n g%5Dint)%0A%0A\n+%09// Conta a frequ%C3%AAncia das strings%0A\n %09for _, \n@@ -165,25 +165,27 @@\n = range \n-consult\n+stringsB\n as\n+e\n  %7B%0A%09%09con\n@@ -208,16 +208,18 @@\n resu\n+lt\n  %5B%5Dint%0A%0A\n %09for\n@@ -214,16 +214,42 @@\n  %5B%5Dint%0A%0A\n+%09// Responde as consultas%0A\n %09for _, \n@@ -259,21 +259,22 @@\n = range \n-busca\n+querie\n s %7B%0A%09%09re\n@@ -275,16 +275,18 @@\n %7B%0A%09%09resu\n+lt\n  = appen\n@@ -291,16 +291,18 @@\n end(resu\n+lt\n , cont%5Bq\n@@ -320,16 +320,18 @@\n urn resu\n+lt\n %0A%7D%0A%0Afunc\n@@ -359,32 +359,35 @@\n nt%0A%09var \n-consult\n+stringsB\n as\n+e\n , \n-busca\n+querie\n s %5B%5Dstri\n@@ -390,16 +390,50 @@\n string%0A%0A\n+%09// L%C3%AA quantidade de strings base%0A\n %09fmt.Sca\n@@ -496,25 +496,27 @@\n n(&s)%0A%09%09\n-consult\n+stringsB\n as\n+e\n  = appen\n@@ -517,25 +517,27 @@\n  append(\n-consult\n+stringsB\n as\n+e\n , s)%0A%09%7D%0A\n@@ -537,16 +537,47 @@\n  s)%0A%09%7D%0A%0A\n+%09// L%C3%AA quantidade de consultas%0A\n %09fmt.Sca\n@@ -640,21 +640,22 @@\n n(&q)%0A%09%09\n-busca\n+querie\n s = appe\n@@ -657,21 +657,22 @@\n  append(\n-busca\n+querie\n s, q)%0A%09%7D\n@@ -673,16 +673,36 @@\n  q)%0A%09%7D%0A%0A\n+%09// Chamada correta%0A\n %09result \n@@ -724,27 +724,52 @@\n ngs(\n-consult\n+stringsB\n as\n+e\n , \n-buscas)%0A\n+queries)%0A%0A%09// Imprime resultado\n %0A%09fo\n@@ -822,26 +822,7 @@\n )%0A%09%7D\n-%0A%0A    fmt.Println()\n %0A%7D%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-25_16-10-31",
+            "content": "@@ -529,16 +529,18 @@\n %7D%0A%0A%09resu\n+lt\n  := matc\n@@ -580,113 +580,33 @@\n for \n-i := 0; i %3C len(resu); i++ %7B%0A        if i == 0 %7B%0A            fmt.Printf(%22%25d%22, resu%5B0%5D)%0A        %7D%0A        \n+_, v := range result %7B%0A%09%09\n fmt.\n@@ -617,21 +617,15 @@\n tf(%22\n- \n %25d\n+ \n %22, \n-resu%5Bi%5D\n+v\n )%0A%09%7D\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-25_16-16-10",
+            "content": "@@ -674,20 +674,9 @@\n    %7D\n- else %7B%0A    \n+%0A\n     \n@@ -706,26 +706,16 @@\n esu%5Bi%5D)%0A\n-        %7D%0A\n %09%7D%0A%0A    \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-25_16-16-30",
+            "content": "package main\nimport \"fmt\"\n\nfunc matchingStrings(consultas, buscas []string) []int {\n\tcont := make(map[string]int)\n\n\tfor _, v := range consultas {\n\t\tcont[v]++\n\t}\n\n\tvar resu []int\n\n\tfor _, q := range buscas {\n\t\tresu = append(resu, cont[q])\n\t}\n\n\treturn resu\n}\n\nfunc main() {\n\tvar n, m int\n\tvar consultas, buscas []string\n\n\tfmt.Scan(&n)\n\tfor i := 0; i < n; i++ {\n\t\tvar s string\n\t\tfmt.Scan(&s)\n\t\tconsultas = append(consultas, s)\n\t}\n\n\tfmt.Scan(&m)\n\tfor i := 0; i < m; i++ {\n\t\tvar q string\n\t\tfmt.Scan(&q)\n\t\tbuscas = append(buscas, q)\n\t}\n\n\tresu := matchingStrings(consultas, buscas)\n\n\tfor i := 0; i < len(resu); i++ {\n        if i == 0 {\n            fmt.Printf(\"%d\", resu[0])\n        } else {\n            fmt.Printf(\" %d\", resu[i])\n        }\n\t}\n\n    fmt.Println()\n}\n",
+            "lines": "49"
         }
     ]
 }

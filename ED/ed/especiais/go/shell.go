@@ -14,8 +14,22 @@ type Pair struct {
 }
 
 func occurr(vet []int) []Pair {
-	_ = vet
-	return nil
+	cont := make(map[int]int)
+
+	for _, v := range vet {
+		if v < 0 {
+			v = -v
+		}
+		cont[v]++
+	}
+
+	var res []Pair
+	
+	for k, v := range cont {
+		res = append(res, Pair{k, v})
+	}
+
+	return res
 }
 
 func teams(vet []int) []Pair {
@@ -51,16 +65,22 @@ func subseq(vet []int, seq []int) int {
 	return -1
 }
 
-func erase(vet []int, posList []int) []int {
+func erase(vet []int, posList []int) []int {	
 	_ = vet
 	_ = posList
-	return nil
+	return posList
+	
 }
 
 func clear(vet []int, value int) []int {
-	_ = vet
-	_ = value
-	return nil
+	var aux []int
+
+	for _, v := range vet {
+		if v != value {
+			aux = append(aux, v)
+		}
+	}
+	return aux
 }
 
 func main() {

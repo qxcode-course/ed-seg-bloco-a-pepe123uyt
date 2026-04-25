@@ -23,5 +23,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@quadrado
-selected_index: 22
+selected: ed@fib1
+selected_index: 23
