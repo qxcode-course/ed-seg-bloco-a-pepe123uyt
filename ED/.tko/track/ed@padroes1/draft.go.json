@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-26_00-20-46",
+            "content": "@@ -67,143 +67,7 @@\n (&n)\n-%0A%0A    fmt.Println(quadrado(n))%0A%0A%7D%0Afunc quadrado(num int) int %7B%0A    if num == 1 %7B%0A        return 20%0A    %7D %0A    return 8 + quadrado(num-1)\n %0A%7D%0A\n",
+            "lines": "6"
+        },
+        {
+            "label": "2026-04-26_00-30-02",
+            "content": "@@ -81,26 +81,24 @@\n Println(\n-bloquinhos\n+quadrado\n (n))%0A%0A%7D%0A\n@@ -102,26 +102,24 @@\n %0A%7D%0Afunc \n-bloquinhos\n+quadrado\n (num int\n@@ -188,18 +188,16 @@\n 8 + \n-bloquinhos\n+quadrado\n (num\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-04-26_00-31-36",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    fmt.Println(bloquinhos(n))\n\n}\nfunc bloquinhos(num int) int {\n    if num == 1 {\n        return 20\n    } \n    return 8 + bloquinhos(num-1)\n}\n",
+            "lines": "15"
+        }
+    ]
+}

@@ -15,9 +15,7 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@map_set
 - ed@rec
-- ed@basic
 flags:
   inbox: all
   panel: graph
@@ -25,5 +23,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@especiais
+selected: ed@priminhos
 selected_index: 14

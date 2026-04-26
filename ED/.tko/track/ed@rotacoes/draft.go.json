@@ -1,0 +1,79 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-25_23-50-24",
+            "content": "@@ -41,206 +41,35 @@\n     \n-var t, r int%0A    fmt.Scan(&t, &r)%0A%0A    vet := make(%5B%5Dint, t)%0A%0A    for i := 0; i %3C len(vet); i++ %7B%0A        var num int%0A        fmt.Scan(&num)%0A%0A        vet = append(vet, num)%0A    %7D%0A    fmt.Println(vet\n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-25_23-54-36",
+            "content": "@@ -147,24 +147,73 @@\n     \n-fmt.Scan(&vet%5Bi%5D\n+var num int%0A        fmt.Scan(&num)%0A%0A        vet = append(vet, num\n )%0A  \n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-25_23-55-34",
+            "content": "@@ -171,44 +171,8 @@\n   %7D%0A\n-    %0A    vetRot := rotacao(vet, r)%0A%0A\n     \n@@ -190,159 +190,8 @@\n (vet\n-Rot\n )%0A%7D%0A\n-func rotacao(vet %5B%5Dint, num int)%5B%5Dint %7B%0A    if num == 0 %7B%0A        return vet%0A    %7D%0A%0A    vet%5Blen(vet)-1%5D = vet%5B0%5D%0A%0A    return rotacao(vet, num-1)%0A%0A%7D%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-04-26_00-01-36",
+            "content": "@@ -212,211 +212,26 @@\n    f\n-or i := 0; i %3C len(vetRot); i++%7B%0A        if i == 0 %7B%0A            fmt.Print(vetRot%5B0%5D)%0A        %7D%0A        fmt.Printf(%22 %25d%22, vet%5Bi%5D)%0A        if i == len(vetRot)-1 %7B%0A            fmt.Println()%0A        %7D%0A    %7D\n+mt.Println(vetRot)\n %0A%7D%0Af\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-26_00-04-46",
+            "content": "@@ -286,25 +286,17 @@\n rint\n-f(%22%5B %25d%22,\n+(\n vetRot%5B\n-i\n+0\n %5D)%0A \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-26_00-05-25",
+            "content": "@@ -406,12 +406,8 @@\n tln(\n-%22 %5D%22\n )%0A  \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-26_00-05-34",
+            "content": "@@ -314,31 +314,9 @@\n     \n-    continue%0A        %7D%0A\n+%7D\n %0A   \n@@ -346,17 +346,16 @@\n vet%5Bi%5D)%0A\n-%0A\n         \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-26_00-06-22",
+            "content": "@@ -589,12 +589,8 @@\n (vet\n-%5B1:%5D\n , nu\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-26_00-07-13",
+            "content": "@@ -590,19 +590,10 @@\n vet%5B\n-:len(vet)-\n 1\n+:\n %5D, n\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-26_00-07-54",
+            "content": "@@ -506,25 +506,8 @@\n m ==\n- 0 %7C%7C len(vet) ==\n  0 %7B\n@@ -540,18 +540,8 @@\n %0A   \n- ultimo :=\n  vet\n@@ -556,91 +556,17 @@\n )-1%5D\n-%0A%0A    for i := len(vet)-1; i %3E 0; i-- %7B%0A%09%09vet%5Bi%5D = vet%5Bi-1%5D%0A%09%7D%0A%0A    vet%5B0%5D = ultimo\n+ = vet%5B0%5D\n %0A%0A  \n@@ -585,16 +585,29 @@\n acao(vet\n+%5B:len(vet)-1%5D\n , num-1)\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-26_00-10-20",
+            "content": "@@ -363,19 +363,16 @@\n %25d%22, vet\n-Rot\n %5Bi%5D)%0A%0A  \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-26_00-11-48",
+            "content": "@@ -505,16 +505,33 @@\n f num ==\n+ 0 %7C%7C len(vet) ==\n  0 %7B%0A   \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-26_00-12-33",
+            "content": "@@ -532,24 +532,55 @@\n  vet%0A    %7D%0A%0A\n+    ultimo := vet%5Blen(vet)-1%5D%0A%0A\n     for i :=\n@@ -642,31 +642,22 @@\n et%5B0%5D = \n-vet%5Blen(vet)-1%5D\n+ultimo\n %0A%0A    re\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-26_00-12-50",
+            "content": "@@ -540,39 +540,8 @@\n  %7D%0A%0A\n-    ultimo := vet%5Blen(vet)-1%5D%0A%0A\n     \n@@ -615,14 +615,23 @@\n %5D = \n-ultimo\n+vet%5Blen(vet)-1%5D\n %0A%0A  \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-26_00-13-10",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var t, r int\n    fmt.Scan(&t, &r)\n\n    vet := make([]int, t)\n\n    for i := 0; i < len(vet); i++ {\n        fmt.Scan(&vet[i])\n    }\n    \n    vetRot := rotacao(vet, r)\n\n    for i := 0; i < len(vetRot); i++{\n        if i == 0 {\n            fmt.Printf(\"[ %d\",vetRot[i])\n            continue\n        }\n\n        fmt.Printf(\" %d\", vetRot[i])\n\n        if i == len(vetRot)-1 {\n            fmt.Println(\" ]\")\n        }\n    }\n}\nfunc rotacao(vet []int, num int)[]int {\n    if num == 0 {\n        return vet\n    }\n\n    ultimo := vet[len(vet)-1]\n\n    for i := len(vet)-1; i > 0; i-- {\n\t\tvet[i] = vet[i-1]\n\t}\n\n    vet[0] = ultimo\n\n    return rotacao(vet, num-1)\n\n}\n",
+            "lines": "43"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-26_00-36-34",
+            "content": "@@ -18,13 +18,18 @@\n ort \n+(%0A%09\n %22fmt%22\n+%0A)\n %0A%0Afu\n@@ -56,80 +56,16 @@\n  %7B%0A%09\n-if a == 0 %7B%0A%09%09return b%0A%09%7D%0A%09if b == 0 %7B%0A%09%09return a%0A%09%7D%0A%09return mdc(b, a%25b)\n+return 0\n %0A%7D%0A%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-04-26_00-39-25",
+            "content": "@@ -46,16 +46,43 @@\n ) int %7B%0A\n+%09if a == 0 %7B%0A%09%09return b%0A%09%7D%0A\n %09if b ==\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-26_00-39-31",
+            "content": "@@ -50,35 +50,8 @@\n t %7B%0A\n-%09if a == 0 %7B%0A%09%09return b%0A%09%7D%0A\n %09if \n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-26_00-39-39",
+            "content": "@@ -173,10 +173,8 @@\n &b)%0A\n-%09%0A\n %09fmt\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-26_00-40-23",
+            "content": "@@ -104,20 +104,8 @@\n %0A%09%7D%0A\n-%09r := a %25b%0A%0A\n %09ret\n@@ -115,17 +115,19 @@\n  mdc(b, \n-r\n+a%25b\n )%0A%7D%0A%0Afun\n@@ -169,16 +169,17 @@\n &a, &b)%0A\n+%09\n %0A%09fmt.Pr\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-26_00-41-51",
+            "content": "@@ -104,17 +104,16 @@\n %0A%09%7D%0A\n-%09%0A\n %09r := a\n+ \n %25b%0A%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-26_16-09-08",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc mdc(a, b int) int {\n\tif a == 0 {\n\t\treturn b\n\t}\n\tif b == 0 {\n\t\treturn a\n\t}\n\t\n\tr := a%b\n\n\treturn mdc(b, r)\n}\n\nfunc main() {\n\tvar a, b int\n\tfmt.Scan(&a, &b)\n\n\tfmt.Println(mdc(a, b))\n}\n",
+            "lines": "23"
+        }
+    ]
+}
