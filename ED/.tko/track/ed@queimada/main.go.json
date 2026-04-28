@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-26_16-57-52",
+            "content": "@@ -84,19 +84,16 @@\n int) %7B%0A%09\n-// \n _, _, _ \n@@ -105,16 +105,16 @@\n d, l, c%0A\n+\n %09nl := l\n@@ -143,19 +143,16 @@\n id%5B0%5D)%0A%09\n-// \n _, _ = n\n@@ -311,16 +311,16 @@\n o atual%0A\n+\n %09// cham\n@@ -361,387 +361,8 @@\n hos%0A\n-%09if l %3E nl %7C%7C c %3E nc %7B%0A%09%09return%0A%09%7D%0A%09if grid%5Bl%5D%5Bc%5D != '#' %7B%0A%09%09return%0A%09%7D%0A%0A%09if grid%5Bl+1%5D%5Bc%5D == '#' %7B%0A%09%09grid%5Bl+1%5D%5Bc%5D = 'o'%0A%09%09burnTrees(grid, l+1, c)%0A%09%7D%0A%09if grid%5Bl-1%5D%5Bc%5D == '#' %7B%0A%09%09grid%5Bl-1%5D%5Bc%5D = 'o'%0A%09%09burnTrees(grid, l-1, c)%0A%09%7D %0A%09if grid%5Bl%5D%5Bc+1%5D == '#' %7B%0A%09%09grid%5Bl%5D%5Bc+1%5D = 'o'%0A%09%09burnTrees(grid, l, c+1)%0A%09%7D %0A%09if grid%5Bl%5D%5Bc-1%5D == '#' %7B%0A%09%09grid%5Bl%5D%5Bc-1%5D = 'o'%0A%09%09burnTrees(grid, l, c-1)%0A%09%7D %0A\n %7D%0A%0Af\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-26_17-10-53",
+            "content": "@@ -417,13 +417,13 @@\n %5Bc%5D \n-== '.\n+!= '#\n ' %7B%0A\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-04-26_17-11-21",
+            "content": "@@ -744,35 +744,8 @@\n )%0A%09%7D\n-%0A%09burnTrees(grid, l+1, c+1)\n  %0A%7D%0A\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-04-26_17-12-06",
+            "content": "@@ -373,39 +373,19 @@\n f l \n-%3C 0 %7C%7C l %3E= nl %7C%7C c %3C 0\n+%3E nl\n  %7C%7C c %3E\n-=\n  nc \n@@ -417,13 +417,13 @@\n %5Bc%5D \n-!= '#\n+== '.\n ' %7B%0A\n@@ -436,19 +436,16 @@\n rn%0A%09%7D%0A%0A%09\n-// \n if grid%5B\n@@ -458,27 +458,24 @@\n %5D == '#' %7B%0A%09\n-// \n %09grid%5Bl+1%5D%5Bc\n@@ -475,35 +475,32 @@\n %5Bl+1%5D%5Bc%5D = 'o'%0A%09\n-// \n %09burnTrees(grid,\n@@ -513,17 +513,11 @@\n c)%0A%09\n-// %7D%0A%09// \n+%7D%0A%09\n if g\n@@ -534,27 +534,24 @@\n %5D == '#' %7B%0A%09\n-// \n %09grid%5Bl-1%5D%5Bc\n@@ -551,35 +551,32 @@\n %5Bl-1%5D%5Bc%5D = 'o'%0A%09\n-// \n %09burnTrees(grid,\n@@ -585,26 +585,20 @@\n -1, c)%0A%09\n-// \n %7D %0A%09\n-// \n if grid%5B\n@@ -607,35 +607,32 @@\n %5Bc+1%5D == '#' %7B%0A%09\n-// \n %09grid%5Bl%5D%5Bc+1%5D = \n@@ -628,35 +628,32 @@\n %5Bl%5D%5Bc+1%5D = 'o'%0A%09\n-// \n %09burnTrees(grid,\n@@ -666,18 +666,12 @@\n 1)%0A%09\n-// \n %7D %0A%09\n-// \n if g\n@@ -692,19 +692,16 @@\n  '#' %7B%0A%09\n-// \n %09grid%5Bl%5D\n@@ -713,19 +713,16 @@\n  = 'o'%0A%09\n-// \n %09burnTre\n@@ -743,14 +743,9 @@\n 1)%0A%09\n-// %7D%0A%09\n+%7D\n %0A%09bu\n@@ -768,85 +768,9 @@\n 1, c\n-) %0A%09burnTrees(grid, l-1, c) %0A%09burnTrees(grid, l, c+1) %0A%09burnTrees(grid, l, c-\n++\n 1) %0A\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-04-26_17-14-21",
+            "content": "@@ -815,27 +815,8 @@\n %7D%0A%09%0A\n-%09grid%5Bl%5D%5Bc%5D = 'o'%0A%0A\n %09bur\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-04-26_17-14-42",
+            "content": "@@ -83,16 +83,96 @@\n  int) %7B%0A\n+%09// _, _, _ = grid, l, c%0A%09nl := len(grid)%0A%09nc := len(grid%5B0%5D)%0A%09// _, _ = nl, nc%0A\n %09// se e\n@@ -367,47 +367,8 @@\n hos%0A\n-%09nl := len(grid)%0A%09nc := len(grid%5B0%5D)%0A%09%0A\n %09if \n@@ -809,16 +809,17 @@\n )%0A%09// %7D%0A\n+%09\n %0A%09grid%5Bl\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-04-26_17-16-19",
+            "content": "@@ -320,16 +320,17 @@\n rid%5B0%5D)%0A\n+%09\n %0A%09if l %3C\n@@ -338,16 +338,17 @@\n 0 %7C%7C l %3E\n+=\n  nl %7C%7C c\n@@ -358,16 +358,17 @@\n 0 %7C%7C c %3E\n+=\n  nc %7B%0A%09%09\n@@ -416,133 +416,8 @@\n n%0A%09%7D\n-%0A%09%0A%09grid%5Bl%5D%5Bc%5D = 'o'%0A%0A%09burnTrees(grid, l+1, c) %0A%09burnTrees(grid, l-1, c) %0A%09burnTrees(grid, l, c+1) %0A%09burnTrees(grid, l, c-1) \n %0A%0A%09/\n@@ -443,17 +443,16 @@\n = '#' %7B%0A\n-%09\n %09// %09gri\n@@ -467,17 +467,16 @@\n %5D = 'o'%0A\n-%09\n %09// %09bur\n@@ -769,16 +769,139 @@\n %0A%09// %7D%0A%0A\n+%09grid%5Bl%5D%5Bc%5D = 'o'%0A%0A%09burnTrees(grid, l+1, c) %0A%09burnTrees(grid, l-1, c) %0A%09burnTrees(grid, l, c+1) %0A%09burnTrees(grid, l, c-1) %0A\n %7D%0A%0Afunc \n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-04-26_17-19-26",
+            "content": "@@ -337,17 +337,16 @@\n 0 %7C%7C l %3E\n-=\n  nl %7C%7C c\n@@ -356,17 +356,16 @@\n 0 %7C%7C c %3E\n-=\n  nc %7B%0A%09%09\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-04-26_17-19-35",
+            "content": "@@ -338,24 +338,24 @@\n  %7C%7C \n-c %3C 0 %7C%7C l %3E= nl\n+l %3E= nl %7C%7C c %3C 0\n  %7C%7C \n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-04-26_17-22-29",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc burnTrees(grid [][]rune, l, c int) {\n\t// se estiver fora da matriz, retorne\n\t// se o elemento atual n\u00e3o for uma arvore, retorne\n\t// queime a arvore colocando o caractere 'o' na posi\u00e7\u00e3o atual\n\t// chame a recurs\u00e3o para todos os 4 vizinhos\n\tnl := len(grid)\n\tnc := len(grid[0])\n\n\tif l < 0 || c < 0 || l >= nl || c >= nc {\n\t\treturn\n\t}\n\tif grid[l][c] != '#' {\n\t\treturn\n\t}\n\t\n\tgrid[l][c] = 'o'\n\n\tburnTrees(grid, l+1, c) \n\tburnTrees(grid, l-1, c) \n\tburnTrees(grid, l, c+1) \n\tburnTrees(grid, l, c-1) \n\n\t// if grid[l+1][c] == '#' {\n\t\t// \tgrid[l+1][c] = 'o'\n\t\t// \tburnTrees(grid, l+1, c)\n\t// }\n\t// if grid[l-1][c] == '#' {\n\t// \tgrid[l-1][c] = 'o'\n\t// \tburnTrees(grid, l-1, c)\n\t// } \n\t// if grid[l][c+1] == '#' {\n\t// \tgrid[l][c+1] = 'o'\n\t// \tburnTrees(grid, l, c+1)\n\t// } \n\t// if grid[l][c-1] == '#' {\n\t// \tgrid[l][c-1] = 'o'\n\t// \tburnTrees(grid, l, c-1)\n\t// }\n\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc, lfire, cfire int\n\tfmt.Sscanf(line, \"%d %d %d %d\", &nl, &nc, &lfire, &cfire)\n\n\tgrid := make([][]rune, 0, nl)\n\tfor range nl {\n\t\tscanner.Scan()\n\t\tline := []rune(scanner.Text())\n\t\tgrid = append(grid, line)\n\t}\n\tburnTrees(grid, lfire, cfire)\n\tshowGrid(grid)\n}\n\nfunc showGrid(grid [][]rune) {\n\tfor _, line := range grid {\n\t\tfmt.Println(string(line))\n\t}\n}\n",
+            "lines": "71"
+        }
+    ]
+}

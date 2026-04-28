@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-26_17-35-23",
+            "content": "@@ -196,51 +196,57 @@\n ;%0A%7D%0A\n+%0A\n func \n-ene_primo(num, base int) int%7B\n+main() %7B%0A%09var x int%0A%09fmt.Scan(&x)\n %0A    \n+%0A%09\n if \n-!\n eh_p\n@@ -254,190 +254,72 @@\n imo(\n-num\n+x\n , 2)\n-%7B%0A        return 0%0A    %7D%0A%0A    if base == num %7B%0A        return base%0A    %7D%0A%0A    return ene_primo(num, base+1)%0A    %0A%0A%0A%7D%0Afunc main() %7B%0A%09var num int%0A%09fmt.Scan(&num)%0A%0A%09ene_primo(num)\n+ %7B%0A%09%09fmt.Println(%22true%22)%0A%09%7D else %7B%0A%09%09fmt.Println(%22false%22)%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-26_17-42-23",
+            "content": "@@ -364,16 +364,18 @@\n 1)%0A    %0A\n+%0A%0A\n %7D%0Afunc m\n@@ -426,15 +426,12 @@\n rimo(num\n-, 2\n )%0A%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-26_17-42-33",
+            "content": "@@ -415,20 +415,8 @@\n )%0A%0A%09\n-fmt.Println(\n ene_\n@@ -428,17 +428,11 @@\n (num, 2)\n-)%0A    \n %0A%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-26_17-42-50",
+            "content": "@@ -249,20 +249,17 @@\n mo(num, \n-base\n+2\n )%7B%0A     \n@@ -442,11 +442,15 @@\n um, 2))%0A\n+    \n %0A%7D%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-26_17-43-02",
+            "content": "@@ -238,40 +238,72 @@\n  if \n-base == num && eh_primo(base, 2)\n+!eh_primo(num, base)%7B%0A        return 0%0A    %7D%0A%0A    if base == num\n  %7B%0A \n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-26_17-44-09",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc eh_primo(x int, div int) bool {\n\tif x < 2 {\n\t\treturn false\n\t}\n\n\tif div * div > x{\n\t\treturn true\n\t}\n\tif x % div == 0 {\n\t\treturn false\n\t}\n\treturn eh_primo(x, div+1);\n}\nfunc ene_primo(num, base int) int{\n    if base == num && eh_primo(base, 2) {\n        return base\n    }\n\n    return ene_primo(num, base+1)\n    \n}\nfunc main() {\n\tvar num int\n\tfmt.Scan(&num)\n\n\tfmt.Println(ene_primo(num, 2))\n\n}\n",
+            "lines": "32"
+        }
+    ]
+}
