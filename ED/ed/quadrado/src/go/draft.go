@@ -18,7 +18,7 @@ func quadrado(num int) int {
 
     prev := quadrado(num-1)
 
-    atual := prev + 2*(num-1) + 1
+    atual := prev + 2*(num-1) + 1 
     fmt.Printf("%d^2 = %d^2 + 2*%d + 1 = %d\n", num, num-1, num-1, atual)
 
     return atual

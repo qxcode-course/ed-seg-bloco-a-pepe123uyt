@@ -78,11 +78,11 @@ func min(vet []int) int {
 		}
 
 		i, val := rec(v[1:])
-
+		
 		if v[0] <= val {
 			return 0, v[0]
 		}
-
+		
 		return i + 1, val
 	}
 
