@@ -150,7 +150,7 @@ func (v *Vector) Erase(index int) error {
 	}
 
 	for i := index; i < v.Size()-1; i++ {
-    v.data[i] = v.data[i+1]
+    	v.data[i] = v.data[i+1]
 	}
 
 	v.size--
