@@ -105,3 +105,26 @@
 2026-04-29 15:36:14, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:100, size:150
 2026-04-29 15:36:31, MOVE, v:1, k:ed@setbuild, mode:BACK
 2026-04-29 15:37:33, SELF, v:1, k:ed@setbuild, self:1, rate:100, study:130, debug:1
+2026-04-29 15:37:08, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-04-29 15:36:14, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-04-29 15:40:20, SELF, v:1, k:ed@buscas, self:1, concept:1
+2026-04-29 15:40:52, MOVE, v:1, k:ed@buscas, mode:PICK
+2026-04-29 15:40:53, EXEC, v:1, k:ed@buscas, mode:FULL, rate:100
+2026-04-29 15:40:55, MOVE, v:1, k:ed@buscas, mode:BACK
+2026-04-29 15:41:05, SELF, v:1, k:ed@buscas, self:1, rate:100, concept:1
+2026-04-29 15:41:16, SELF, v:1, k:ed@buscas, self:1, rate:100, study:50, concept:1
+2026-04-29 15:41:29, SELF, v:1, k:ed@especiais, self:1, study:1, concept:1, debug:1
+2026-04-29 15:41:40, SELF, v:1, k:ed@especiais, self:1, study:240, concept:1, debug:1
+2026-04-29 15:43:15, SELF, v:1, k:ed@setbuild, self:1, rate:66, debug:1
+2026-04-29 15:43:16, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-04-29 15:43:17, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:100, size:149
+2026-04-29 15:43:28, SELF, v:1, k:ed@setbuild, self:1, rate:100, study:130, debug:1
+2026-04-29 15:43:32, MOVE, v:1, k:ed@setbuild, mode:BACK
+2026-04-29 15:45:12, SELF, v:1, k:ed@queimada, self:1, study:40, concept:1
+2026-04-29 15:45:20, SELF, v:1, k:ed@queimada, self:1, study:40, concept:1
+2026-04-29 15:40:53, MOVE, v:1, k:ed@buscas, mode:EDIT
+2026-04-29 15:43:17, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-04-29 15:53:26, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-04-29 15:53:27, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:100
+2026-04-29 15:53:27, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-04-29 15:56:55, MOVE, v:1, k:ed@setbuild, mode:BACK
