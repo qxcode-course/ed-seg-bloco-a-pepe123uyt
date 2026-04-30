@@ -15,7 +15,9 @@ sources:
   quests: null
   tasks: null
 expanded:
+- ed@backtrack
 - ed@vector
+- ed@rec
 flags:
   inbox: all
   panel: skills
@@ -23,5 +25,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@backtrack
-selected_index: 4
+selected: ed@magicsearch
+selected_index: 40
