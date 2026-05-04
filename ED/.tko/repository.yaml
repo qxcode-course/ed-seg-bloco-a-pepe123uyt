@@ -15,15 +15,13 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@backtrack
-- ed@vector
-- ed@rec
+- ed@list
 flags:
   inbox: all
-  panel: skills
+  panel: graph
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@magicsearch
-selected_index: 40
+selected: ed@list
+selected_index: 6

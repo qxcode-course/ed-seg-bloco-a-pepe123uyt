@@ -33,6 +33,7 @@ func (m *MultiSet) expand(){
 	m.data = newData
 
 }
+
 func (m *MultiSet) Insert(value int) {
 	if m.size == m.capacity {
 		m.expand()

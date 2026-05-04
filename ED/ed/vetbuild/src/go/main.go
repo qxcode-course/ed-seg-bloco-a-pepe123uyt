@@ -25,6 +25,7 @@ func NewVector(capacity int) *Vector {
 func (v *Vector) Size() int {
 	return v.size
 }
+
 func (v *Vector) Capacity() int {
 	return v.capacity
 } 
