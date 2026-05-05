@@ -35,7 +35,7 @@ func (e *Editor) KeyRight() {
 		e.cursor = e.cursor.Next() // Move o cursor para a direita
 		return
 	}
-	// Estamos no fim da linha
+	// Estamos no comeco da linha
 	if e.line != e.lines.End() { // Se não está na última linha
 		e.line = e.line.Next()        // Move para a linha posterior
 		e.cursor = e.line.Value.Front() // Move o cursor para o final da linha
@@ -43,29 +43,98 @@ func (e *Editor) KeyRight() {
 }
 
 func (e *Editor) KeyEnter() {
-	newLine := NewList[rune]()
+    newLine := NewList[rune]()
+
+    if e.cursor != e.line.Value.End(){
+        for e.cursor != e.line.Value.End() {
+            prox := e.cursor.Next()
+            newLine.PushBack(e.cursor.Value)
+            e.line.Value.Erase(e.cursor) 
+            e.cursor = prox
+        }
+    }
 	e.lines.Insert(e.line.Next(), newLine)
 	e.line = e.line.Next()
-	e.cursor = e.line.Value.Front()
-
+    e.cursor = e.line.Value.Front()
 }
 
 func (e *Editor) KeyBackspace() {
+	if e.cursor == e.line.Value.Front(){
+		linhaAnte := e.line.Prev()
+		for e.cursor != e.line.Value.End() {
+			prox := e.cursor.Next()
+			linhaAnte.Value.PushBack(e.cursor.Value)
+			e.line.Value.Erase(e.cursor)
+			e.cursor = prox
+		}
+		e.cursor = linhaAnte.Value.End()
+	}
 	e.line.Value.Erase(e.cursor.prev)
 }
 
 func (e *Editor) KeyDelete() {
-	e.line.Value.Erase(e.cursor.next)
+    if e.cursor == e.line.Value.End() {
+        proxLinha := e.line.Next()
+
+        if proxLinha == nil {
+            return
+        }
+
+        for it := proxLinha.Value.Front(); it != proxLinha.Value.End(); {
+            prox := it.Next()
+            e.line.Value.PushBack(it.Value)
+            proxLinha.Value.Erase(it)
+            it = prox
+        }
+
+        e.lines.Erase(proxLinha)
+
+        return
+    }
+
+    next := e.cursor.Next()
+    if next != e.line.Value.End() {
+        e.line.Value.Erase(next)
+    }
 }
 
 func (e *Editor) KeyUp() {
+	if e.line == e.lines.Front() {
+		return
+	}
+	index := e.line.Value.IndexOf(e.cursor)
 	e.line = e.line.Prev()
-	e.cursor = e.line.Value.Front()
+
+	it := e.line.Value.Front()
+
+    for i := 0; i < index; i++ {
+        it = it.Next()
+    }
+
+    e.cursor = it
 }
 
 func (e *Editor) KeyDown() {
+	if e.line == e.lines.Back() {
+		return
+	}
+	// if e.cursor == e.line.Value.Back(){
+	// 	e.cursor = e.line.Next().Value.Back()
+	// }
+	index := e.line.Value.IndexOf(e.cursor)
 	e.line = e.line.Next()
-	e.cursor = e.line.Value.Front()
+
+	it := e.line.Value.Front()
+	size := e.line.Next().Value.Size()
+
+	if index < size {
+		e.cursor = e.line.Next().Value.Back()
+	}
+    for i := 0; i < index; i++ {
+        it = it.Next()
+    }
+
+    e.cursor = it
 
 }
 
