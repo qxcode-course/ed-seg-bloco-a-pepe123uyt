@@ -16,6 +16,7 @@ sources:
   tasks: null
 expanded:
 - ed@sandbox
+- ed@vector
 - ed@list
 flags:
   inbox: all
@@ -25,4 +26,4 @@ flags:
   show_time: 'true'
 lang: go
 selected: ed@editorint
-selected_index: 14
+selected_index: 20

@@ -31,15 +31,15 @@ func (e *Editor) KeyLeft() {
 }
 
 func (e *Editor) KeyRight() {
-	if e.cursor != e.line.Value.Back() { // Se o cursor não está no fim da linha
+	if e.cursor != e.line.Value.End() { // Se o cursor não está no fim da linha
 		e.cursor = e.cursor.Next() // Move o cursor para a direita
 		return
 	}
 	// Estamos no comeco da linha
-	if e.line != e.lines.End() { // Se não está na última linha
+	if e.line != e.lines.Back() { // Se não está na última linha
 		e.line = e.line.Next()        // Move para a linha posterior
 		e.cursor = e.line.Value.Front() // Move o cursor para o final da linha
-	}
+	} 
 }
 
 func (e *Editor) KeyEnter() {
@@ -88,7 +88,7 @@ func (e *Editor) KeyDelete() {
         }
 
         e.lines.Erase(proxLinha)
-
+		
         return
     }
 
@@ -102,6 +102,7 @@ func (e *Editor) KeyUp() {
 	if e.line == e.lines.Front() {
 		return
 	}
+
 	index := e.line.Value.IndexOf(e.cursor)
 	e.line = e.line.Prev()
 
@@ -118,24 +119,23 @@ func (e *Editor) KeyDown() {
 	if e.line == e.lines.Back() {
 		return
 	}
-	// if e.cursor == e.line.Value.Back(){
-	// 	e.cursor = e.line.Next().Value.Back()
-	// }
+
 	index := e.line.Value.IndexOf(e.cursor)
 	e.line = e.line.Next()
+	size := e.line.Value.Size()
+
+	if index >= size {
+		e.cursor = e.line.Value.End()
+		return
+	}
 
 	it := e.line.Value.Front()
-	size := e.line.Next().Value.Size()
 
-	if index < size {
-		e.cursor = e.line.Next().Value.Back()
+	for i := 0; i < index; i++ {
+		it = it.Next()
 	}
-    for i := 0; i < index; i++ {
-        it = it.Next()
-    }
 
-    e.cursor = it
-
+	e.cursor = it
 }
 
 
