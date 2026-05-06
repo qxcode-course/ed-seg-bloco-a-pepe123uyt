@@ -40,3 +40,24 @@
 2026-05-05 23:10:10, MOVE, v:1, k:ed@editorint, mode:EDIT
 2026-05-05 23:15:57, MOVE, v:1, k:ed@editorint, mode:EDIT
 2026-05-05 23:12:09, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-05 23:20:09, SELF, v:1, k:ed@editorint, self:1, rate:100, study:240
+2026-05-05 23:20:33, MOVE, v:1, k:ed@lista_d1, mode:PICK
+2026-05-05 23:18:00, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-05 23:18:10, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-05 23:21:02, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-05 23:21:13, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-05 23:25:18, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-05 23:27:29, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:0, size:64
+2026-05-05 23:29:54, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-05 23:27:29, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-05 23:35:48, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-05 23:40:50, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-05 23:45:54, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-05 23:50:29, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-05 23:52:56, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:14, size:101
+2026-05-05 23:53:17, SELF, v:1, k:ed@lista_d1, self:1, rate:14, friend:prximdlista
+2026-05-05 23:53:18, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:14
+2026-05-05 23:55:18, EXEC, v:1, k:ed@lista_d1, mode:FREE
+2026-05-05 23:55:49, MOVE, v:1, k:ed@lista_d1, mode:PICK
+2026-05-05 23:55:50, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:14
+2026-05-05 23:55:50, MOVE, v:1, k:ed@lista_d1, mode:EDIT

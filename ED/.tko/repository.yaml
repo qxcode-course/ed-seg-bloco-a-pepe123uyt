@@ -15,8 +15,16 @@ sources:
   quests: null
   tasks: null
 expanded:
+- ed@backtrack
+- ed@tree
+- ed@bfs
 - ed@sandbox
+- ed@rec
+- ed@basic
 - ed@vector
+- ed@map_set
+- ed@dfs
+- ed@linear
 - ed@list
 flags:
   inbox: all
@@ -25,5 +33,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@editorint
-selected_index: 20
+selected: ed@lista_d1
+selected_index: 57

@@ -4,13 +4,111 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strconv"
 	"strings"
 )
 
+type Node struct {
+	Value int
+	next  *Node
+	prev  *Node
+}
 
+type LList struct {
+	root *Node
+	size int
+}
+
+func NewLList() *LList {
+	root := &Node{}
+	root.next = root
+	root.prev = root
+
+	return &LList{
+		root: root,
+		size: 0,
+	}
+}
+
+func (ll *LList) Size() int {
+	return ll.size
+}
+
+func (ll *LList) Clear() {
+	ll.root.next = ll.root
+	ll.root.prev = ll.root
+	ll.size = 0
+}
+
+func (ll *LList) String() string {
+	str := "["
+	for n := ll.root.next; n != ll.root; n = n.next {
+		str += fmt.Sprintf("%d", n.Value)
+		if n != ll.root.prev {
+			str += ", "
+		}
+	}
+	str += "]"
+	
+	return str
+}
+
+func (ll *LList) PushFront(value int) {
+	node := &Node{Value: value}
+
+	first := ll.root.next
+
+	node.next = first
+	node.prev = ll.root
+
+	first.prev = node
+	ll.root.next = node
+
+	ll.size++
+
+}
+
+func (ll *LList) PushBack(value int) {
+	node := &Node{Value: value}
+
+	last := ll.root.prev
+	node.next = ll.root
+	node.prev = last
+
+	last.next = node
+	ll.root.prev = node
+
+	ll.size++
+}
+
+func (ll *LList) PopFront(){
+	if ll.Size() == 0 {
+		return
+	}
+
+	first := ll.root.next
+
+	first.prev.next = first.next
+	first.next.prev = first.prev
+
+	ll.size--
+}
+
+func (ll *LList) PopBack() {
+	if ll.Size() == 0 {
+		return
+	}
+
+	last := ll.root.prev
+
+	last.prev.next = last.next
+	last.next.prev = last.prev
+
+	ll.size--
+}
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
-// 	ll := NewLList()
+	ll := NewLList()
 
 	for {
 		fmt.Print("$")
@@ -29,25 +127,25 @@ func main() {
 
 		switch cmd {
 		case "show":
-			// fmt.Println(ll.String())
+			fmt.Println(ll.String())
 		case "size":
-			// fmt.Println(ll.Size())
+			fmt.Println(ll.Size())
 		case "push_back":
-			// for _, v := range args[1:] {
-			// 	num, _ := strconv.Atoi(v)
-			// 	ll.PushBack(num)
-			// }
+			for _, v := range args[1:] {
+				num, _ := strconv.Atoi(v)
+				ll.PushBack(num)
+			}
 		case "push_front":
-			// for _, v := range args[1:] {
-			// 	num, _ := strconv.Atoi(v)
-			// 	ll.PushFront(num)
-			// }
+			for _, v := range args[1:] {
+				num, _ := strconv.Atoi(v)
+				ll.PushFront(num)
+			}
 		case "pop_back":
-			// ll.PopBack()
+			ll.PopBack()
 		case "pop_front":
-			// ll.PopFront()
+			ll.PopFront()
 		case "clear":
-			// ll.Clear()
+			ll.Clear()
 		case "end":
 			return
 		default:

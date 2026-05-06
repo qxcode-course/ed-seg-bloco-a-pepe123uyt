@@ -1,0 +1,33 @@
+2026-05-06 00:00:44, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-06 00:01:48, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:14, size:114
+2026-05-06 00:02:09, EXEC, v:1, k:ed@lista_d1, mode:FREE
+2026-05-06 00:03:30, MOVE, v:1, k:ed@lista_d1, mode:PICK
+2026-05-06 00:03:32, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:14, size:117
+2026-05-06 00:04:14, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:57, size:117
+2026-05-06 00:07:00, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:71, size:129
+2026-05-06 00:07:00, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-06 00:08:17, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-06 00:10:08, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:71, size:138
+2026-05-06 00:11:54, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:85, size:137
+2026-05-06 00:12:57, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:85, size:145
+2026-05-06 00:13:22, EXEC, v:1, k:ed@lista_d1, mode:FREE
+2026-05-06 00:12:57, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-06 00:13:22, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-06 00:14:26, MOVE, v:1, k:ed@lista_d1, mode:PICK
+2026-05-06 00:18:21, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:71, size:147
+2026-05-06 00:18:20, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-06 00:18:21, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-06 00:20:17, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:85, size:147
+2026-05-06 00:21:10, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:85, size:147
+2026-05-06 00:21:29, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:85, size:147
+2026-05-06 00:22:00, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:85, size:155
+2026-05-06 00:22:53, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:85, size:155
+2026-05-06 00:23:07, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:85
+2026-05-06 00:23:16, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:85, size:155
+2026-05-06 00:23:30, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:85, size:155
+2026-05-06 00:23:33, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:85
+2026-05-06 00:23:42, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:100, size:155
+2026-05-06 00:23:44, MOVE, v:1, k:ed@lista_d1, mode:BACK
+2026-05-06 00:23:59, SELF, v:1, k:ed@lista_d1, self:1, rate:100, study:70
+2026-05-06 00:23:41, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-06 00:23:42, MOVE, v:1, k:ed@lista_d1, mode:EDIT
