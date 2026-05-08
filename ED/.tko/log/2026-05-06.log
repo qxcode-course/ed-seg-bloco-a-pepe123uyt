@@ -31,3 +31,16 @@
 2026-05-06 00:23:59, SELF, v:1, k:ed@lista_d1, self:1, rate:100, study:70
 2026-05-06 00:23:41, MOVE, v:1, k:ed@lista_d1, mode:EDIT
 2026-05-06 00:23:42, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-06 00:25:05, SELF, v:1, k:ed@editorint, self:1, rate:100
+2026-05-06 00:25:06, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-06 00:25:09, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:100, size:349
+2026-05-06 00:25:11, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-06 00:25:26, SELF, v:1, k:ed@controlz, self:1, friend:last.next.prlast.prev
+2026-05-06 00:25:26, MOVE, v:1, k:ed@controlz, mode:DOWN
+2026-05-06 00:25:26, MOVE, v:1, k:ed@controlz, mode:PICK
+2026-05-06 00:25:28, EXEC, v:1, k:ed@controlz, mode:FULL, rate:0, size:5
+2026-05-06 00:25:30, EXEC, v:1, k:ed@controlz, mode:FULL, rate:0
+2026-05-06 00:25:31, EXEC, v:1, k:ed@controlz, mode:FULL, rate:0
+2026-05-06 00:25:33, EXEC, v:1, k:ed@controlz, mode:FULL, rate:0
+2026-05-06 00:25:34, EXEC, v:1, k:ed@controlz, mode:FULL, rate:0
+2026-05-06 00:25:36, EXEC, v:1, k:ed@controlz, mode:FULL, rate:0

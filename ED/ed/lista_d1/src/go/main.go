@@ -86,12 +86,7 @@ func (ll *LList) PopFront(){
 		return
 	}
 
-	first := ll.root.next
-
-	first.prev.next = first.next
-	first.next.prev = first.prev
-
-	ll.size--
+	string buider golang
 }
 
 func (ll *LList) PopBack() {
