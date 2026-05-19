@@ -2,8 +2,33 @@
     "patches": [
         {
             "label": "2026-05-04_18-45-25",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n",
+            "content": "@@ -23,301 +23,53 @@\n mt%22%0A\n-%0Atype Node struct %7B%0A    Value rune%0A    next *Node%0A    prev *Node%0A    root *Node%0A%0A%7D%0A%0Afunc (n *Node) Next() *Node %7B%0A    return n.next%0A%7D%0A%0Afunc (n *Node) Prev() *Node %7B%0A    return n.prev%0A%7D%0A%0Atype List struct %7B%0A    root *Node%0A    size int%0A%7D%0A%0A%0Afunc main() %7B%0A    rune := 'a'%0A%0A    fmt.Println(int(rune)\n+func main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
             "lines": "5"
+        },
+        {
+            "label": "2026-05-12_17-23-33",
+            "content": "@@ -283,17 +283,17 @@\n une := '\n-z\n+a\n '%0A%0A    f\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-05-12_17-23-43",
+            "content": "@@ -287,31 +287,11 @@\n := '\n-+\n+z\n '%0A\n- // 97 = a e z = 122\n %0A   \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-05-12_17-24-23",
+            "content": "@@ -287,9 +287,9 @@\n := '\n-%5C\n++\n '%0A /\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-05-12_17-24-31",
+            "content": "@@ -287,9 +287,9 @@\n := '\n-%7C\n+%5C\n '%0A /\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-05-12_17-25-02",
+            "content": "package main\nimport \"fmt\"\n\ntype Node struct {\n    Value rune\n    next *Node\n    prev *Node\n    root *Node\n\n}\n\nfunc (n *Node) Next() *Node {\n    return n.next\n}\n\nfunc (n *Node) Prev() *Node {\n    return n.prev\n}\n\ntype List struct {\n    root *Node\n    size int\n}\n\n\nfunc main() {\n    rune := '|'\n // 97 = a e z = 122\n    fmt.Println(int(rune))\n}\n",
+            "lines": "30"
         }
     ]
 }

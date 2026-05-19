@@ -86,7 +86,7 @@ func (ll *LList) PopFront(){
 		return
 	}
 
-	string buider golang
+	
 }
 
 func (ll *LList) PopBack() {

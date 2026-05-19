@@ -9,21 +9,21 @@ import (
 )
 
 type Node struct {
-	next *Node
-	prev *Node
-	root *Node
 	Value int
-	
+	next  *Node
+	prev  *Node
+	root  *Node
 }
 
-func (n *Node) Next() *Node {
+
+func (n *Node) Next() *Node{
 	if n.next == n.root {
 		return nil
 	}
 	return n.next
 }
 
-func (n *Node) Prev() *Node {
+func (n *Node) Prev() *Node{
 	if n.prev == n.root {
 		return nil
 	}
@@ -39,6 +39,7 @@ func NewLList() *LList {
 	root := &Node{}
 	root.next = root
 	root.prev = root
+	root.root = root
 
 	return &LList{
 		root: root,
@@ -46,67 +47,71 @@ func NewLList() *LList {
 	}
 }
 
-func (ll *LList) String() string {
-	str := "["
-
-	for i := ll.root.next; i != ll.root; i = i.Next() {
-		if i != ll.root.prev {
-			str += fmt.Sprintf("%d, ", i.Value)
-		} else {
-			str += fmt.Sprintf("%d", i.Value)
-		}
-	}
-	str += "]"
-	return str
-}
-
 func (ll *LList) Size() int {
 	return ll.size
 }
 
 func (ll *LList) Clear() {
-	ll.root.prev = ll.root
 	ll.root.next = ll.root
+	ll.root.prev = ll.root
 	ll.size = 0
 }
 
-func (ll *LList) PushFront(value int) {
-	node := &Node{Value: value}
+func (ll *LList) String() string {
+	str := "["
+	for n := ll.root.next; n != ll.root; n = n.next {
+		str += fmt.Sprintf("%d", n.Value)
+		if n != ll.root.prev {
+			str += ", "
+		}
+	}
+	str += "]"
 	
-	prime := ll.root.next
+	return str
+}
 
-	node.next = prime
+func (ll *LList) PushFront(value int) {
+	node := &Node{
+		Value: value,
+		root:  ll.root,
+	}
+
+	first := ll.root.next
+
+	node.next = first
 	node.prev = ll.root
-	
-	prime.prev = node
+
+	first.prev = node
 	ll.root.next = node
 
 	ll.size++
 }
 
 func (ll *LList) PushBack(value int) {
-	node := &Node{Value: value}
-	
-	ultimo := ll.root.prev
+	node := &Node{
+		Value: value,
+		root:  ll.root,
+	}
 
+	last := ll.root.prev
 	node.next = ll.root
-	node.prev = ultimo
-	
-	ultimo.next = node
+	node.prev = last
+
+	last.next = node
 	ll.root.prev = node
 
 	ll.size++
 }
 
-func (ll *LList) PopFront() {
+func (ll *LList) PopFront(){
 	if ll.Size() == 0 {
 		return
 	}
 
 	first := ll.root.next
 
-	first.prev.next = first.next
-	first.next.prev = first.prev
+	ll.root.next = first.next
+	first.next.prev = ll.root
 
 	ll.size--
 
@@ -125,16 +130,16 @@ func (ll *LList) PopBack() {
 	ll.size--
 }
 
-func (ll *LList) Front() *Node{
-	if ll.size == 0 {
-		return ll.root
+func (ll *LList) Front() *Node {
+	if ll.Size() == 0 {
+		return nil
 	}
 	return ll.root.next
 }
 
-func (ll *LList) Back() *Node{
-	if ll.size == 0 {
-		return ll.root
+func (ll *LList) Back() *Node {
+	if ll.Size() == 0 {
+		return nil
 	}
 	return ll.root.prev
 }
@@ -143,15 +148,46 @@ func (ll *LList) Search(value int) *Node {
 	for i := ll.Front(); i != ll.Back().Next(); i = i.Next(){
 		if i.Value == value {
 			return i
-		}
+		} 
 	}
 	return nil
 }
 
+func (ll *LList) Insert(node *Node, value int) {
+	newNode := &Node{
+		Value: value,
+		root:  ll.root,
+	}
 
+	prev := node.prev
+
+	newNode.prev = prev
+	newNode.next = node
+
+	prev.next = newNode
+	node.prev = newNode
+	
+	ll.size++
+
+}
+
+
+func (ll *LList) Remove(node *Node) *Node {
+	if node == nil || node == ll.root {
+		return nil
+	}
+
+	node.prev.next = node.next
+	node.next.prev = node.prev
+
+	ll.size--
+
+	return node
+}
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
+
  	ll := NewLList()
 
 	for {
@@ -210,22 +246,22 @@ func main() {
 			 	fmt.Println("fail: not found")
 			 }
 		case "insert":
-			// oldvalue, _ := strconv.Atoi(args[1])
-			// newvalue, _ := strconv.Atoi(args[2])
-			// node := ll.Search(oldvalue)
-			// if node != nil {
-			// 	ll.Insert(node, newvalue)
-			// } else {
-			// 	fmt.Println("fail: not found")
-			// }
+			oldvalue, _ := strconv.Atoi(args[1])
+			newvalue, _ := strconv.Atoi(args[2])
+			node := ll.Search(oldvalue)
+			if node != nil {
+				ll.Insert(node, newvalue)
+			} else {
+				fmt.Println("fail: not found")
+			}
 		case "remove":
-			// oldvalue, _ := strconv.Atoi(args[1])
-			// node := ll.Search(oldvalue)
-			// if node != nil {
-			// 	ll.Remove(node)
-			// } else {
-			// 	fmt.Println("fail: not found")
-			// }
+			oldvalue, _ := strconv.Atoi(args[1])
+			node := ll.Search(oldvalue)
+		    if node != nil {
+			 	ll.Remove(node)
+		 	} else {
+				fmt.Println("fail: not found")
+			}
 		case "end":
 			return
 		default:

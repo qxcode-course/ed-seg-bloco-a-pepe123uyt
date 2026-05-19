@@ -52,3 +52,24 @@
 2026-05-08 02:43:18, EXEC, v:1, k:ed@lista_d2, mode:FULL, rate:20, size:235
 2026-05-08 02:43:29, EXEC, v:1, k:ed@lista_d2, mode:FULL, rate:20
 2026-05-08 02:43:29, EXEC, v:1, k:ed@lista_d2, mode:FREE
+2026-05-08 02:45:08, MOVE, v:1, k:ed@lista_d2, mode:PICK
+2026-05-08 02:45:13, EXEC, v:1, k:ed@lista_d2, mode:FULL, rate:20
+2026-05-08 02:46:41, EXEC, v:1, k:ed@lista_d2, mode:FULL, rate:20, size:229
+2026-05-08 02:46:39, MOVE, v:1, k:ed@lista_d2, mode:EDIT
+2026-05-08 02:46:37, MOVE, v:1, k:ed@lista_d2, mode:EDIT
+2026-05-08 18:43:08, MOVE, v:1, k:ed@lista_d2, mode:PICK
+2026-05-08 18:43:11, EXEC, v:1, k:ed@lista_d2, mode:FULL, rate:20
+2026-05-08 18:44:58, EXEC, v:1, k:ed@lista_d2, mode:FULL, rate:20, size:232
+2026-05-08 18:45:54, EXEC, v:1, k:ed@lista_d2, mode:FULL, rate:20, size:231
+2026-05-08 18:47:33, MOVE, v:1, k:ed@lista_d2, mode:EDIT
+2026-05-08 18:47:32, MOVE, v:1, k:ed@lista_d2, mode:EDIT
+2026-05-08 18:47:35, EXEC, v:1, k:ed@lista_d2, mode:FULL, rate:20, size:236
+2026-05-08 18:52:31, MOVE, v:1, k:ed@lista_d2, mode:EDIT
+2026-05-08 18:52:52, EXEC, v:1, k:ed@lista_d2, mode:FULL, rate:20, size:232
+2026-05-08 18:53:30, EXEC, v:1, k:ed@lista_d2, mode:FULL, rate:20, size:232
+2026-05-08 18:56:19, EXEC, v:1, k:ed@lista_d2, mode:FULL, rate:20, size:238
+2026-05-08 18:56:42, EXEC, v:1, k:ed@lista_d2, mode:FULL, rate:20
+2026-05-08 18:57:15, EXEC, v:1, k:ed@lista_d2, mode:FULL, rate:20
+2026-05-08 18:56:16, MOVE, v:1, k:ed@lista_d2, mode:EDIT
+2026-05-08 18:57:13, MOVE, v:1, k:ed@lista_d2, mode:EDIT
+2026-05-08 18:57:08, MOVE, v:1, k:ed@lista_d1, mode:EDIT
