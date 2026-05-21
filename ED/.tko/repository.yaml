@@ -13,14 +13,13 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@linear
 - ed@list
 flags:
   inbox: all
-  panel: skills
+  panel: graph
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@lista_d3
+selected: ed@prin_list1
 selected_index: 10
