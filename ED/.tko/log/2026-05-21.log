@@ -92,3 +92,15 @@
 2026-05-21 13:44:15, EXEC, v:1, k:ed@iterador, mode:FULL, rate:100, size:121
 2026-05-21 13:44:21, MOVE, v:1, k:ed@iterador, mode:BACK
 2026-05-21 13:44:40, SELF, v:1, k:ed@iterador, self:1, rate:100, study:40
+2026-05-21 13:44:15, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-05-21 13:44:20, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-05-21 13:48:26, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-05-21 13:48:28, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25, size:62
+2026-05-21 13:49:13, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25
+2026-05-21 13:52:02, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-05-21 13:52:21, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-05-21 13:52:22, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0
+2026-05-21 13:49:13, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-21 13:52:22, MOVE, v:1, k:ed@labirinto, mode:EDIT
+2026-05-21 13:53:01, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0
+2026-05-21 13:53:01, MOVE, v:1, k:ed@labirinto, mode:EDIT
