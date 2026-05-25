@@ -199,3 +199,23 @@
 2026-05-22 23:43:49, SELF, v:1, k:ed@bufferring, self:1, rate:100, study:160, debug:1
 2026-05-22 23:43:07, MOVE, v:1, k:ed@bufferring, mode:EDIT
 2026-05-22 23:43:07, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-05-22 23:50:44, SELF, v:1, k:ed@bufferring, self:1, rate:100, study:160, debug:1
+2026-05-22 23:51:05, MOVE, v:1, k:ed@fila_enc, mode:DOWN
+2026-05-22 23:51:06, MOVE, v:1, k:ed@fila_enc, mode:PICK
+2026-05-22 23:51:15, EXEC, v:1, k:ed@fila_enc, mode:FULL, rate:0, size:82
+2026-05-22 23:51:15, EXEC, v:1, k:ed@fila_enc, mode:FREE, size:82
+2026-05-22 23:51:33, MOVE, v:1, k:ed@fila_enc, mode:PICK
+2026-05-22 23:51:34, EXEC, v:1, k:ed@fila_enc, mode:FULL, rate:0, size:82
+2026-05-22 23:51:34, MOVE, v:1, k:ed@fila_enc, mode:EDIT
+2026-05-22 23:56:23, MOVE, v:1, k:ed@fila_enc, mode:EDIT
+2026-05-22 23:57:20, EXEC, v:1, k:ed@fila_enc, mode:FULL, size:94, fail:COMP
+2026-05-22 23:57:46, EXEC, v:1, k:ed@fila_enc, mode:FULL, size:95, fail:COMP
+2026-05-22 23:57:47, EXEC, v:1, k:ed@fila_enc, mode:FULL, fail:COMP
+2026-05-22 23:57:51, EXEC, v:1, k:ed@fila_enc, mode:FULL, fail:COMP
+2026-05-22 23:58:36, EXEC, v:1, k:ed@fila_enc, mode:FULL, size:93, fail:COMP
+2026-05-22 23:58:38, EXEC, v:1, k:ed@fila_enc, mode:FULL, fail:COMP
+2026-05-22 23:58:51, EXEC, v:1, k:ed@fila_enc, mode:FULL, size:93, fail:COMP
+2026-05-22 23:58:52, EXEC, v:1, k:ed@fila_enc, mode:FULL, fail:COMP
+2026-05-22 23:58:52, EXEC, v:1, k:ed@fila_enc, mode:FULL, fail:COMP
+2026-05-22 23:58:53, EXEC, v:1, k:ed@fila_enc, mode:FULL, fail:COMP
+2026-05-22 23:59:06, EXEC, v:1, k:ed@fila_enc, mode:FULL, size:93, fail:COMP

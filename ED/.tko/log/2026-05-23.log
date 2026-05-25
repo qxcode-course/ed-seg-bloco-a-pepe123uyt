@@ -1,0 +1,10 @@
+2026-05-23 00:01:30, MOVE, v:1, k:ed@fila_enc, mode:EDIT
+2026-05-23 00:06:00, MOVE, v:1, k:ed@fila_enc, mode:EDIT
+2026-05-23 00:08:55, EXEC, v:1, k:ed@fila_enc, mode:FULL, rate:0, size:100
+2026-05-23 00:09:27, EXEC, v:1, k:ed@fila_enc, mode:FULL, rate:33, size:106
+2026-05-23 00:10:55, EXEC, v:1, k:ed@fila_enc, mode:FULL, size:109, fail:COMP
+2026-05-23 00:11:32, MOVE, v:1, k:ed@fila_enc, mode:EDIT
+2026-05-23 00:09:27, MOVE, v:1, k:ed@fila_enc, mode:EDIT
+2026-05-23 00:16:29, MOVE, v:1, k:ed@fila_enc, mode:EDIT
+2026-05-23 00:19:13, MOVE, v:1, k:ed@fila_enc, mode:BACK
+2026-05-23 00:18:12, MOVE, v:1, k:ed@fila_enc, mode:EDIT
