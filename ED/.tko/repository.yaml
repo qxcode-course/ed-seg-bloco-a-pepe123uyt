@@ -13,15 +13,13 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@linear
 - ed@dfs
-- ed@backtrack
 flags:
   inbox: all
-  panel: skills
+  panel: graph
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@linear
-selected_index: 13
+selected: ed@cercado
+selected_index: 12

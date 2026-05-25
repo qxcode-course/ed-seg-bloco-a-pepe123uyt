@@ -7,8 +7,133 @@
         },
         {
             "label": "2026-05-25_19-26-40",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\trow, collum int\n}\n\nfunc siege(board[][]byte, r, c int) {\n\tif (r == 0 || c == 0 ) || (r ==len(board) || c == len(board[0])) {\n\t\treturn\n\t}\n\n\tif board[r][c] == 'O' {\n\t\tif board[r+1][c] == 'X' && board[r-1][c] == 'X' && board[r][c+1] == 'X' && board[r][c-1] == 'X' {\n\t\t\tboard[r][c] = 'X'\n\t\t}\n\t}\n\tsiege(board, r+1, c)\n\t\n}\n// N\u00c3O ALTERE A ASSINATURA DA FUN\u00c7\u00c3O solve\nfunc solve(board [][]byte) {\n\tsiege(board, 0, 0)\n}\n\n// N\u00c3O ALTERE A MAIN\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar nrows, ncols int\n\tfmt.Sscanf(scanner.Text(), \"%d %d\", &nrows, &ncols)\n\tboard := make([][]byte, nrows)\n\tfor i := 0; i < nrows; i++ {\n\t\tscanner.Scan()\n\t\tboard[i] = []byte(scanner.Text())\n\t}\n\tsolve(board)\n\tfor _, row := range board {\n\t\tfmt.Println(string(row))\n\t}\n}\n",
+            "content": "@@ -45,16 +45,56 @@\n %0A)%0A%0A\n-func dps\n+type Pos struct %7B%0A%09row, collum int%0A%7D%0A%0Afunc siege\n (boa\n@@ -125,33 +125,80 @@\n %09if \n+(\n r == 0 \n-&& c == 0 %7B%0A%09%09for \n+%7C%7C c == 0 ) %7C%7C (r ==len(board) %7C%7C c == len(board%5B0%5D)) %7B%0A%09%09return\n %0A%09%7D%0A\n@@ -454,63 +454,19 @@\n  %7B%0A%09\n-visitacao := make(map%5BPos%5Dbool)%0A%09siege(board, visitacao\n+siege(board\n , 0,\n",
             "lines": "46"
+        },
+        {
+            "label": "2026-05-25_22-07-13",
+            "content": "@@ -87,72 +87,73 @@\n f r \n-%3C 0 %7C%7C r %3E= len(board) %7C%7C c %3C 0 %7C%7C c %3E= len(board%5B0%5D) %7C%7C\n+== 0 && c == 0 %7B%0A%09%09for %0A%09%7D%0A%0A%09if board%5Br%5D%5Bc%5D == 'O' %7B%0A%09%09if\n  board%5Br\n %5D%5Bc%5D\n@@ -140,32 +140,34 @@\n ' %7B%0A%09%09if board%5Br\n++1\n %5D%5Bc%5D == 'X' %7B%0A%09%09\n@@ -166,113 +166,116 @@\n 'X' \n-%7B%0A%09%09return%0A%09%7D%0A%0A%09\n+&& \n board%5Br\n+-1\n %5D%5Bc%5D =\n+=\n  'X'\n-%0A%0A%09dps(board, r + 1, c)%0A%09dps(board, r - 1, c)%0A%09dps(board, r, c + 1)%0A%09dps\n+ && board%5Br%5D%5Bc+1%5D == 'X' && board%5Br%5D%5Bc-1%5D == 'X' %7B%0A%09%09%09board%5Br%5D%5Bc%5D = 'X'%0A%09%09%7D%0A%09%7D%0A%09siege\n (boa\n@@ -283,17 +283,16 @@\n d, r\n++1\n , c\n- - 1\n )%0A\n+%09\n %0A%7D%0A/\n@@ -367,128 +367,70 @@\n  %7B%0A%09\n-for r := range board %7B%0A%09%09for c := 0; c %3C len(board%5B0%5D); c++%7B%0A%09%09%09if board%5Br%5D%5Bc%5D == '0' %7B%0A%09%09%09%09dps(board, r, c)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n+visitacao := make(map%5BPos%5Dbool)%0A%09siege(board, visitacao, 0, 0)\n %0A%7D%0A%0A\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-05-25_22-15-57",
+            "content": "@@ -175,16 +175,34 @@\n rn%0A%09%7D%0A%0A%09\n+board%5Br%5D%5Bc%5D = 'X'%0A\n %0A%09dps(bo\n@@ -286,28 +286,8 @@\n  1)%0A\n-%09board%5Br%5D%5Bc%5D = 'X'%0A%09\n %0A%7D%0A/\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-25_22-16-11",
+            "content": "@@ -179,26 +179,8 @@\n %7D%0A%0A%09\n-board%5Br%5D%5Bc%5D = 'X'%0A\n %0A%09dp\n@@ -264,16 +264,36 @@\n  c - 1)%0A\n+%09board%5Br%5D%5Bc%5D = 'X'%0A%09\n %0A%7D%0A// N%C3%83\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-25_22-16-48",
+            "content": "@@ -358,19 +358,16 @@\n yte) %7B%0A%09\n-// \n for r :=\n@@ -382,19 +382,16 @@\n oard %7B%0A%09\n-// \n %09for c :\n@@ -420,19 +420,16 @@\n ; c++%7B%0A%09\n-// \n %09%09if boa\n@@ -447,19 +447,16 @@\n  '0' %7B%0A%09\n-// \n %09%09%09dps(b\n@@ -472,35 +472,18 @@\n c)%0A%09\n-// \n %09%09%7D%0A%09\n-// \n %09%7D%0A%09\n-// %7D%0A%0A%09dps()\n+%7D\n %0A%7D%0A%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-25_22-51-48",
+            "content": "@@ -45,39 +45,8 @@\n %0A)%0A%0A\n-type Pos struct %7B%0A%09r, c int%0A%7D%0A%0A\n func\n@@ -51,25 +51,24 @@\n nc dps(board\n- \n %5B%5D%5B%5Dbyte, vi\n@@ -68,27 +68,8 @@\n yte,\n- visi map%5BPos%5Dbool,\n  r, \n@@ -178,73 +178,8 @@\n %09%7D%0A%0A\n-%09pos := Pos%7Br, c%7D%0A%09if visi%5Bpos%5D %7B%0A%09%09return%0A%09%7D%0A%09visi%5Bpos%5D = true%0A%0A\n %09boa\n@@ -210,16 +210,12 @@\n rd, \n-visi, r+\n+r + \n 1, c\n@@ -232,16 +232,12 @@\n rd, \n-visi, r-\n+r - \n 1, c\n@@ -253,20 +253,16 @@\n ard,\n- visi,\n  r, c\n-+\n+ + \n 1)%0A%09\n@@ -275,25 +275,21 @@\n ard,\n- visi,\n  r, c\n--\n+ - \n 1)%0A\n-%7D\n %0A\n+%7D\n %0A// \n@@ -362,37 +362,11 @@\n  %7B%0A%09\n-visi := make(map%5BPos%5Dbool)%0A%0A%09\n+// \n for \n@@ -385,16 +385,19 @@\n oard %7B%0A%09\n+// \n %09for c :\n@@ -423,20 +423,22 @@\n 0%5D); c++\n- \n %7B%0A%09\n+// \n %09%09if boa\n@@ -456,16 +456,19 @@\n  '0' %7B%0A%09\n+// \n %09%09%09dps(b\n@@ -476,22 +476,16 @@\n ard,\n- visi,\n  r, c)%0A%09\n %09%09%7D%0A\n@@ -484,18 +484,35 @@\n c)%0A%09\n+// \n %09%09%7D%0A%09\n+// \n %09%7D%0A%09\n-%7D\n+// %7D%0A%0A%09dps()\n %0A%7D%0A%0A\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-25_22-58-03",
+            "content": "@@ -243,17 +243,16 @@\n s%7Br, c%7D%0A\n-%0A\n %09if visi\n@@ -275,10 +275,8 @@\n %0A%09%7D%0A\n-%09%0A\n %09vis\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-05-25_22-59-30",
+            "content": "@@ -272,16 +272,17 @@\n turn%0A%09%7D%0A\n+%09\n %0A%09visi%5Bp\n@@ -293,18 +293,16 @@\n = true%0A%0A\n-%09%0A\n %09board%5Br\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-05-25_23-02-52",
+            "content": "@@ -76,186 +76,8 @@\n %0A%7D%0A%0A\n-func cercado(board %5B%5D%5B%5Dbyte, r, c int) bool %7B%0A%09if board%5Br+1%5D%5Bc%5D == 'X' && board%5Br-1%5D%5Bc%5D == 'X' && board%5Br%5D%5Bc+1%5D == 'X' && board%5Br%5D%5Bc-1%5D == 'X'%7B%0A%09%09return true%0A%09%7D%0A%09return false%0A%7D%0A%0A\n func\n@@ -128,16 +128,16 @@\n  int) %7B%0A\n+\n %09if r %3C \n@@ -296,37 +296,10 @@\n ue%0A%0A\n-%0A%09if cercado(board, r, c) %7B%0A\n %09\n+%0A\n %09boa\n@@ -312,19 +312,16 @@\n c%5D = 'X'\n-%0A%09%7D\n %0A%0A%09dps(b\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-05-25_23-08-18",
+            "content": "@@ -407,60 +407,8 @@\n %09%7D%0A%0A\n-%09if cercado(board, r, c) %7B%0A%09%09board%5Br%5D%5Bc%5D = 'X'%0A%09%7D%0A%09%0A\n %09pos\n@@ -470,16 +470,66 @@\n = true%0A%0A\n+%0A%09if cercado(board, r, c) %7B%0A%09%09board%5Br%5D%5Bc%5D = 'X'%0A%09%7D\n %0A%0A%09dps(b\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-05-25_23-08-52",
+            "content": "@@ -771,22 +771,27 @@\n  := \n-range \n+0; c %3C len(\n board%5B0%5D\n %7B%0A%09%09\n@@ -786,16 +786,23 @@\n board%5B0%5D\n+); c++ \n %7B%0A%09%09%09if \n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-05-25_23-10-51",
+            "content": "@@ -144,13 +144,13 @@\n == '\n-O' %7C%7C\n+X' &&\n  boa\n@@ -160,25 +160,25 @@\n r-1%5D%5Bc%5D == '\n-O\n+X\n ' && board%5Br\n@@ -188,17 +188,17 @@\n +1%5D == '\n-O\n+X\n ' && boa\n@@ -212,17 +212,17 @@\n -1%5D == '\n-O\n+X\n '%7B%0A%09%09ret\n@@ -229,12 +229,11 @@\n urn \n-fals\n+tru\n e%0A%09%7D\n@@ -241,19 +241,20 @@\n %09return \n-tru\n+fals\n e%0A%7D%0A%0Afun\n@@ -403,16 +403,66 @@\n urn%0A%09%7D%0A%0A\n+%09if cercado(board, r, c) %7B%0A%09%09board%5Br%5D%5Bc%5D = 'X'%0A%09%7D%0A\n %09%0A%09pos :\n@@ -473,17 +473,16 @@\n s%7Br, c%7D%0A\n-%09\n %0A%09if vis\n@@ -526,58 +526,8 @@\n ue%0A%0A\n-%0A%09if cercado(board, r, c) %7B%0A%09%09board%5Br%5D%5Bc%5D = 'X'%0A%09%7D\n %0A%0A%09d\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-05-25_23-15-12",
+            "content": "@@ -407,60 +407,8 @@\n %09%7D%0A%0A\n-%09%0A%09if cercado(board, r, c) %7B%0A%09%09board%5Br%5D%5Bc%5D = 'X'%0A%09%7D%0A\n %09%0A%09p\n@@ -473,16 +473,66 @@\n = true%0A%0A\n+%0A%09if cercado(board, r, c) %7B%0A%09%09board%5Br%5D%5Bc%5D = 'X'%0A%09%7D\n %0A%0A%09dps(b\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-05-25_23-15-40",
+            "content": "@@ -266,32 +266,51 @@\n (board %5B%5D%5B%5Dbyte,\n+ visi map%5BPos%5Dbool,\n  r, c int) %7B%0A%09if\n@@ -455,16 +455,87 @@\n  'X'%0A%09%7D%0A\n+%09%0A%09pos := Pos%7Br, c%7D%0A%09%0A%09if visi%5Bpos%5D %7B%0A%09%09return%0A%09%7D%0A%0A%09visi%5Bpos%5D = true%0A%0A%0A\n %0A%09dps(bo\n@@ -538,16 +538,22 @@\n s(board,\n+ visi,\n  r+1, c)\n@@ -564,16 +564,22 @@\n s(board,\n+ visi,\n  r-1, c)\n@@ -586,24 +586,30 @@\n %0A%09dps(board,\n+ visi,\n  r, c+1)%0A%09dp\n@@ -612,24 +612,30 @@\n %0A%09dps(board,\n+ visi,\n  r, c-1)%0A%7D%0A%0A\n@@ -707,18 +707,16 @@\n yte) %7B%0A%09\n-//\n visi := \n@@ -823,24 +823,30 @@\n %09%09dps(board,\n+ visi,\n  r, c)%0A%09%09%09%7D%0A\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-05-25_23-16-49",
+            "content": "@@ -387,15 +387,15 @@\n %0A%09%7D%0A\n+%0A\n %09%0A%09if \n-!\n cerc\n@@ -414,28 +414,16 @@\n , c) %7B%0A%09\n-%09return%0A%09%7D%0A%0A\n %09board%5Br\n@@ -432,16 +432,19 @@\n c%5D = 'X'\n+%0A%09%7D\n %0A%0A%09dps(b\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-05-25_23-17-48",
+            "content": "@@ -346,16 +346,38 @@\n oard%5B0%5D)\n+ %7C%7C board%5Br%5D%5Bc%5D == 'X'\n  %7B%0A%09%09ret\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-05-25_23-18-39",
+            "content": "@@ -371,100 +371,30 @@\n %09if \n-board%5Br+1%5D%5Bc%5D == 'O' %7C%7C board%5Br-1%5D%5Bc%5D == 'O' && board%5Br%5D%5Bc+1%5D == 'O' && board%5Br%5D%5Bc-1%5D == 'O'\n+!cercado(board, r, c) \n %7B%0A%09%09\n@@ -403,15 +403,12 @@\n turn\n- \n %0A%09%7D\n- %0A%09\n+%0A\n %0A%09bo\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-05-25_23-19-35",
+            "content": "@@ -473,17 +473,19 @@\n turn %0A%09%7D\n-%0A\n+ %0A%09\n %0A%09board%5B\n@@ -734,16 +734,44 @@\n ard%5B0%5D%7B%0A\n+%09%09%09if board%5Br%5D%5Bc%5D == '0' %7B%0A%09\n %09%09%09dps(b\n@@ -782,16 +782,21 @@\n , r, c)%0A\n+%09%09%09%7D%0A\n %09%09%7D%0A%09%7D%0A%7D\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-05-25_23-21-28",
+            "content": "@@ -736,36 +736,8 @@\n 0%5D%7B%0A\n-%09%09%09if board%5Br%5D%5Bc%5D == '0' %7B%0A%09\n %09%09%09d\n@@ -756,13 +756,8 @@\n  c)%0A\n-%09%09%09%7D%0A\n %09%09%7D%0A\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-05-25_23-21-50",
+            "content": "@@ -45,115 +45,437 @@\n %0A)%0A%0A\n-func dps(board %5B%5D%5B%5Dbyte, r, c int) %7B%0A%09if r %3C 0 %7C%7C r %3E= len(board) %7C%7C c %3C 0 %7C%7C c %3E= len(board%5B0%5D) %7B%0A%09%09return\n+type Pos struct %7B%0A%09r, c int%0A%7D%0A%0Afunc cercado(board %5B%5D%5B%5Dbyte, r, c int) bool %7B%0A%09if board%5Br+1%5D%5Bc%5D == 'O' %7C%7C board%5Br-1%5D%5Bc%5D == 'O' && board%5Br%5D%5Bc+1%5D == 'O' && board%5Br%5D%5Bc-1%5D == 'O'%7B%0A%09%09return false%0A%09%7D%0A%09return true%0A%7D%0A%0Afunc dps(board %5B%5D%5B%5Dbyte, r, c int) %7B%0A%09if r %3C 0 %7C%7C r %3E= len(board) %7C%7C c %3C 0 %7C%7C c %3E= len(board%5B0%5D) %7B%0A%09%09return%0A%09%7D%0A%09%0A%09if board%5Br+1%5D%5Bc%5D == 'O' %7C%7C board%5Br-1%5D%5Bc%5D == 'O' && board%5Br%5D%5Bc+1%5D == 'O' && board%5Br%5D%5Bc-1%5D == 'O'%7B%0A%09%09return \n %0A%09%7D%0A\n@@ -754,17 +754,17 @@\n %5Bc%5D == '\n-O\n+0\n ' %7B%0A%09%09%09%09\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-05-25_23-24-34",
+            "content": "@@ -152,16 +152,17 @@\n turn%0A%09%7D%0A\n+%0A\n %09board%5Br\n@@ -171,16 +171,97 @@\n c%5D = 'X'\n+%0A%0A%09dps(board, r+1, c)%0A%09dps(board, r-1, c)%0A%09dps(board, r, c+1)%0A%09dps(board, r, c-1)\n %0A%7D%0A%0A// N\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-25_23-24-49",
+            "content": "@@ -45,38 +45,8 @@\n %0A)%0A%0A\n-type Pos struct %7B%0A%09r, c int%0A%7D%0A\n func\n@@ -69,27 +69,8 @@\n yte,\n- visi map%5BPos%5Dbool,\n  r, \n@@ -155,77 +155,8 @@\n n%0A%09%7D\n-%0A%0A%09pos := Pos%7Br, c%7D%0A%0A%09if visi%5Bpos%5D %7B%0A%09%09return%0A%09%7D%0A%0A%09visi%5Bpos%5D = true%0A%09\n %0A%09bo\n@@ -247,16 +247,18 @@\n yte) %7B%0A%09\n+//\n visi := \n@@ -355,16 +355,16 @@\n = 'O' %7B%0A\n+\n %09%09%09%09dps(\n@@ -373,14 +373,8 @@\n ard,\n- visi,\n  r, \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-05-25_23-29-58",
+            "content": "@@ -201,16 +201,17 @@\n turn%0A%09%7D%0A\n+%0A\n %09pos := \n@@ -220,16 +220,17 @@\n s%7Br, c%7D%0A\n+%0A\n %09if visi\n@@ -292,113 +292,8 @@\n  'X'\n-%0A%0A%09dps(board, visi, r+1, c)%0A%09dps(board, visi, r-1, c)%0A%09dps(board, visi, r, c+1)%0A%09dps(board, visi, r, c-1)\n %0A%7D%0A%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-05-25_23-35-04",
+            "content": "@@ -268,16 +268,36 @@\n  true%0A%09%0A\n+%09board%5Br%5D%5Bc%5D = 'X'%0A%0A\n %09dps(boa\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-05-25_23-35-11",
+            "content": "@@ -190,30 +190,8 @@\n %5B0%5D)\n- %7C%7C board%5Br%5D%5Bc%5D == 'X'\n  %7B%0A%09\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-05-25_23-35-51",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tr, c int\n}\nfunc dps(board [][]byte, visi map[Pos]bool, r, c int) {\n\tif r < 0 || r >= len(board) || c < 0 || c >= len(board[0]) || board[r][c] == 'X' {\n\t\treturn\n\t}\n\tpos := Pos{r, c}\n\tif visi[pos] {\n\t\treturn\n\t}\n\n\tvisi[pos] = true\n\t\n\tdps(board, visi, r+1, c)\n\tdps(board, visi, r-1, c)\n\tdps(board, visi, r, c+1)\n\tdps(board, visi, r, c-1)\n}\n\n// N\u00c3O ALTERE A ASSINATURA DA FUN\u00c7\u00c3O solve\nfunc solve(board [][]byte) {\n\tvisi := make(map[Pos]bool)\n\n\tfor r := range board {\n\t\tfor c := range board[0]{\n\t\t\tif board[r][c] == 'O' {\n\t\t\t\tdps(board, visi, r, c)\n\t\t\t}\n\t\t}\n\t}\n}\n\n// N\u00c3O ALTERE A MAIN\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar nrows, ncols int\n\tfmt.Sscanf(scanner.Text(), \"%d %d\", &nrows, &ncols)\n\tboard := make([][]byte, nrows)\n\tfor i := 0; i < nrows; i++ {\n\t\tscanner.Scan()\n\t\tboard[i] = []byte(scanner.Text())\n\t}\n\tsolve(board)\n\tfor _, row := range board {\n\t\tfmt.Println(string(row))\n\t}\n}\n",
+            "lines": "57"
         }
     ]
 }

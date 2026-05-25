@@ -9,24 +9,34 @@ import (
 type Pos struct {
 	r, c int
 }
-
-func siege(board[][]byte, visitacao map[Pos]bool, r, c int) {
-	if r == 0 && c == 0 {
-		for 
+func dps(board [][]byte, visi map[Pos]bool, r, c int) {
+	if r < 0 || r >= len(board) || c < 0 || c >= len(board[0]) || board[r][c] == 'X' {
+		return
 	}
 
-	if board[r][c] == 'O' {
-		if board[r+1][c] == 'X' && board[r-1][c] == 'X' && board[r][c+1] == 'X' && board[r][c-1] == 'X' {
-			board[r][c] = 'X'
-		}
+	pos := Pos{r, c}
+	if visi[pos] {
+		return
 	}
-	siege(board, r+1, c)
+	visi[pos] = true
 	
+	dps(board, visi, r+1, c)
+	dps(board, visi, r-1, c)
+	dps(board, visi, r, c+1)
+	dps(board, visi, r, c-1)
 }
+
 // NÃO ALTERE A ASSINATURA DA FUNÇÃO solve
 func solve(board [][]byte) {
-	visitacao := make(map[Pos]bool)
-	siege(board, visitacao, 0, 0)
+	visi := make(map[Pos]bool)
+
+	for r := range board {
+		for c := range board[0]{
+			if board[r][c] == 'O' {
+				dps(board, visi, r, c)
+			}
+		}
+	}
 }
 
 // NÃO ALTERE A MAIN
