@@ -2,8 +2,13 @@
     "patches": [
         {
             "label": "2026-05-25_17-45-21",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00c3O ALTERE A ASSINATURA DA FUN\u00c7\u00c3O solve\nfunc solve(board [][]byte) {\n\t_ = board\n}\n\n// N\u00c3O ALTERE A MAIN\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar nrows, ncols int\n\tfmt.Sscanf(scanner.Text(), \"%d %d\", &nrows, &ncols)\n\tboard := make([][]byte, nrows)\n\tfor i := 0; i < nrows; i++ {\n\t\tscanner.Scan()\n\t\tboard[i] = []byte(scanner.Text())\n\t}\n\tsolve(board)\n\tfor _, row := range board {\n\t\tfmt.Println(string(row))\n\t}\n}\n",
+            "content": "@@ -45,344 +45,8 @@\n %0A)%0A%0A\n-type Pos struct %7B%0A%09row, collum int%0A%7D%0A%0Afunc siege(board%5B%5D%5B%5Dbyte, r, c int) %7B%0A%09if (r == 0 %7C%7C c == 0 ) %7C%7C (r ==len(board) %7C%7C c == len(board%5B0%5D)) %7B%0A%09%09return%0A%09%7D%0A%0A%09if board%5Br%5D%5Bc%5D == 'O' %7B%0A%09%09if board%5Br+1%5D%5Bc%5D == 'X' && board%5Br-1%5D%5Bc%5D == 'X' && board%5Br%5D%5Bc+1%5D == 'X' && board%5Br%5D%5Bc-1%5D == 'X' %7B%0A%09%09%09board%5Br%5D%5Bc%5D = 'X'%0A%09%09%7D%0A%09%7D%0A%09siege(board, r+1, c)%0A%09%0A%7D%0A\n // N\n@@ -118,26 +118,17 @@\n  %7B%0A%09\n-siege(board, 0, 0)\n+_ = board\n %0A%7D%0A%0A\n",
             "lines": "29"
+        },
+        {
+            "label": "2026-05-25_19-26-40",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\trow, collum int\n}\n\nfunc siege(board[][]byte, r, c int) {\n\tif (r == 0 || c == 0 ) || (r ==len(board) || c == len(board[0])) {\n\t\treturn\n\t}\n\n\tif board[r][c] == 'O' {\n\t\tif board[r+1][c] == 'X' && board[r-1][c] == 'X' && board[r][c+1] == 'X' && board[r][c-1] == 'X' {\n\t\t\tboard[r][c] = 'X'\n\t\t}\n\t}\n\tsiege(board, r+1, c)\n\t\n}\n// N\u00c3O ALTERE A ASSINATURA DA FUN\u00c7\u00c3O solve\nfunc solve(board [][]byte) {\n\tsiege(board, 0, 0)\n}\n\n// N\u00c3O ALTERE A MAIN\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar nrows, ncols int\n\tfmt.Sscanf(scanner.Text(), \"%d %d\", &nrows, &ncols)\n\tboard := make([][]byte, nrows)\n\tfor i := 0; i < nrows; i++ {\n\t\tscanner.Scan()\n\t\tboard[i] = []byte(scanner.Text())\n\t}\n\tsolve(board)\n\tfor _, row := range board {\n\t\tfmt.Println(string(row))\n\t}\n}\n",
+            "lines": "46"
         }
     ]
 }

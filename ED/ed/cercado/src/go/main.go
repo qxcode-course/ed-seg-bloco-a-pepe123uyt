@@ -6,9 +6,27 @@ import (
 	"os"
 )
 
+type Pos struct {
+	r, c int
+}
+
+func siege(board[][]byte, visitacao map[Pos]bool, r, c int) {
+	if r == 0 && c == 0 {
+		for 
+	}
+
+	if board[r][c] == 'O' {
+		if board[r+1][c] == 'X' && board[r-1][c] == 'X' && board[r][c+1] == 'X' && board[r][c-1] == 'X' {
+			board[r][c] = 'X'
+		}
+	}
+	siege(board, r+1, c)
+	
+}
 // NÃO ALTERE A ASSINATURA DA FUNÇÃO solve
 func solve(board [][]byte) {
-	_ = board
+	visitacao := make(map[Pos]bool)
+	siege(board, visitacao, 0, 0)
 }
 
 // NÃO ALTERE A MAIN
