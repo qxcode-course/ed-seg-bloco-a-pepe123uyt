@@ -16,10 +16,10 @@ expanded:
 - ed@dfs
 flags:
   inbox: all
-  panel: graph
+  panel: skills
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@cercado
-selected_index: 12
+selected: ed@dfs
+selected_index: 9
