@@ -1,0 +1,139 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-26_13-28-21",
+            "content": "@@ -23,98 +23,8 @@\n %0A)%0A%0A\n-func oitavas() Queue%5BT%5D %7B%0A%0A%7D%0Afunc (q *Queue%5BT%5D) resultado(q *Queue%5BT%5D, jogos %5B%5Dint) %7B%0A%09%0A%7D%0A\n func\n@@ -37,12 +37,6 @@\n ) %7B%0A\n-%09for %0A\n %7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-05-26_13-39-39",
+            "content": "@@ -33,16 +33,25 @@\n itavas()\n+ Queue%5BT%5D\n  %7B%0A%0A%7D%0Afu\n@@ -77,16 +77,29 @@\n sultado(\n+q *Queue%5BT%5D, \n jogos %5B%5D\n@@ -105,16 +105,17 @@\n %5Dint) %7B%0A\n+%09\n %0A%7D%0Afunc \n@@ -123,11 +123,16 @@\n ain() %7B%0A\n+%09for \n %0A%7D%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-05-26_13-40-25",
+            "content": "@@ -87,20 +87,8 @@\n ) %7B%0A\n-acascsccacac\n %0A%7D%0Af\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-05-26_13-49-50",
+            "content": "@@ -79,24 +79,36 @@\n os %5B%5Dint) %7B%0A\n+acascsccacac\n %0A%7D%0Afunc main\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-05-26_13-49-54",
+            "content": "@@ -20,17 +20,30 @@\n t (%0A\n-%09%22fmt%22%0A)%0A\n+)%0A%0Afunc oitavas() %7B%0A%0A%7D\n %0Afun\n@@ -104,62 +104,7 @@\n ) %7B%0A\n-%09var nn, mm int %0A%09for range 16 %7B%0A%09%09fmt.Scan(&nn, mm)%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-05-26_13-53-28",
+            "content": "@@ -26,17 +26,16 @@\n fmt%22%0A)%0A%0A\n-%0A\n func (q \n@@ -92,31 +92,61 @@\n  %7B%0A%09\n-q := NewQueue%5Brune%5D()%0A\n+var nn, mm int %0A%09for range 16 %7B%0A%09%09fmt.Scan(&nn, mm)\n %0A%09\n+%7D\n %0A%7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-26_13-56-04",
+            "content": "@@ -30,126 +30,94 @@\n %0A)%0A%0A\n+%0A\n func \n-main() %7B%0A%09times := NewQueue%5Brune%5D()%0A%0A%09for i := 65; i %3C= 80; i++%7B%0A%09%09times.Enq\n+(q *Queue%5BT%5D) resultado(jogos %5B%5Dint) %7B%0A%0A%7D%0Afunc main() %7B%0A%09q := NewQ\n ueue\n-(\n+%5B\n rune\n-(i))%0A%09%7D%0A%0A%09fmt.Println(times)%0A\n+%5D()%0A%0A%09\n %0A%7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-26_14-03-54",
+            "content": "@@ -59,22 +59,20 @@\n ewQueue%5B\n-string\n+rune\n %5D()%0A%0A%09fo\n@@ -116,14 +116,12 @@\n eue(\n-string\n+rune\n (i))\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-05-26_14-04-12",
+            "content": "@@ -118,18 +118,14 @@\n eue(\n-fmt.Sprint\n+string\n (i))\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-05-26_14-04-48",
+            "content": "@@ -114,22 +114,26 @@\n Enqueue(\n-string\n+fmt.Sprint\n (i))%0A%09%7D%0A\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-05-26_14-04-53",
+            "content": "@@ -72,39 +72,8 @@\n g%5D()\n-%0A%09resultados := NewQueue%5Bint%5D()\n %0A%0A%09f\n@@ -132,118 +132,10 @@\n %0A%09%7D%0A\n+%0A\n %09\n-for range 16 %7B%0A%09%09var mm, nn int%0A%09%09fmt.Scan(&mm, &nn)%0A%09%09resultados.Enqueue(mm)%0A%09%09resultados.Enqueue(nn)%0A%09%7D%0A%09//\n fmt.\n@@ -150,11 +150,10 @@\n times)%0A%0A\n-%0A\n %7D%0A\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-05-26_14-12-53",
+            "content": "@@ -163,30 +163,8 @@\n %0A%09%7D%0A\n-%09//fmt.Println(times)%0A\n %09for\n@@ -267,16 +267,18 @@\n nn)%0A%09%7D%0A%09\n+//\n fmt.Prin\n@@ -285,19 +285,15 @@\n tln(\n-resultado\n+time\n s)%0A%0A\n+%0A\n %7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-05-26_14-13-13",
+            "content": "@@ -156,24 +156,26 @@\n ing(i))%0A%09%7D%0A%09\n+//\n fmt.Println(\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-05-26_14-13-29",
+            "content": "@@ -191,17 +191,17 @@\n  range 1\n-5\n+6\n  %7B%0A%09%09var\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-05-26_14-14-23",
+            "content": "@@ -183,10 +183,8 @@\n es)%0A\n-%09%0A\n %09for\n@@ -237,24 +237,8 @@\n nn)%0A\n-%09%09if mm %3E nn %7B%0A%09\n %09%09re\n@@ -262,20 +262,8 @@\n mm)%0A\n-%09%09%7D else %7B%0A%09\n %09%09re\n@@ -287,15 +287,11 @@\n nn)%0A\n-%09\n %09%7D%0A\n-%09%7D%0A\n %09fmt\n@@ -312,11 +312,10 @@\n tados)%0A%0A\n-%0A\n %7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-05-26_14-21-34",
+            "content": "@@ -276,35 +276,16 @@\n eue(mm)%0A\n-%09%09%09times.Dequeue()%0A\n %09%09%7D else\n@@ -317,27 +317,8 @@\n nn)%0A\n-%09%09%09times.Dequeue()%0A\n %09%09%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-05-26_14-22-36",
+            "content": "@@ -30,185 +30,8 @@\n %0A)%0A%0A\n-func ganhou(times *Queue%5Bstring%5D, ganhador string, mm, nn int) int %7B%0A%09if mm %3E nn %7B%0A%09%09ganhador = times.Peek()%0A%09%09return mm%0A%09%7D else %7B%0A%09%09ganhador = times.Dequeue()%0A%09%09return nn%0A%09%7D%0A%7D%0A\n func\n@@ -75,16 +75,22 @@\n )%0A%09resul\n+tados \n := NewQu\n@@ -104,28 +104,8 @@\n %5D()%0A\n-%09var ganhador string\n %0A%09fo\n@@ -193,16 +193,17 @@\n  range 1\n+5\n  %7B%0A%09%09var\n@@ -241,222 +241,152 @@\n )%0A%09%09\n-ganhou(times, ganhador, mm, nn)%0A%09%7D%0A%0A%09fmt.Println(resul)%0A%0A%09// times, resul = oitavas(times, resul)%0A%09// times, resul = quartas(times, resul)%0A%09// times, resul = semi(times, resul)%0A%09// times, resul = final(times, resul\n+if mm %3E nn %7B%0A%09%09%09resultados.Enqueue(mm)%0A%09%09%09times.Dequeue()%0A%09%09%7D else %7B%0A%09%09%09resultados.Enqueue(nn)%0A%09%09%09times.Dequeue()%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(resultados\n )%0A%0A%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-05-26_14-47-39",
+            "content": "@@ -476,24 +476,21 @@\n Println(\n-ganhador\n+resul\n )%0A%0A%09// t\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-05-26_14-48-33",
+            "content": "@@ -246,16 +246,41 @@\n ring%5D()%0A\n+%09resul:= NewQueue%5Bint%5D()%0A\n %09var gan\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-05-26_14-48-42",
+            "content": "@@ -89,22 +89,19 @@\n nn int) \n-str\n in\n-g\n+t\n  %7B%0A%09if m\n@@ -135,16 +135,28 @@\n .Peek()%0A\n+%09%09return mm%0A\n %09%7D else \n@@ -191,18 +191,16 @@\n ()%0A%09\n-%7D%0A\n %09return \n ganh\n@@ -195,24 +195,21 @@\n %09return \n-ganhador\n+nn%0A%09%7D\n %0A%7D%0Afunc \n@@ -402,27 +402,16 @@\n  &nn)%0A%09%09\n-ganhador = \n ganhou(t\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-05-26_14-50-22",
+            "content": "@@ -144,20 +144,13 @@\n )%0A%09%7D\n-%0A%09if nn %3E mm\n+ else\n  %7B%0A%09\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-26_14-50-51",
+            "content": "@@ -329,18 +329,16 @@\n i))%0A%09%7D%0A%09\n-//\n fmt.Prin\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-05-26_14-51-36",
+            "content": "@@ -42,39 +42,67 @@\n hou(\n-mm, nn int) int%7B%0A%09ganhador := 0\n+times *Queue%5Bstring%5D, ganhador string, mm, nn int) string %7B\n %0A%09if\n@@ -129,18 +129,35 @@\n r = \n-mm%0A%09%7D else\n+times.Peek()%0A%09%7D%0A%09if nn %3E mm\n  %7B%0A%09\n@@ -168,18 +168,31 @@\n hador = \n-nn\n+times.Dequeue()\n %0A%09%7D%0A%09ret\n@@ -206,17 +206,16 @@\n hador%0A%7D%0A\n-%0A\n func mai\n@@ -253,34 +253,8 @@\n %5D()%0A\n-%09resul := NewQueue%5Bint%5D()%0A\n %09var\n@@ -364,17 +364,16 @@\n  range 1\n-5\n  %7B%0A%09%09var\n@@ -411,37 +411,50 @@\n )%0A%09%09\n-resul.Enqueue(ganhou(\n+ganhador = ganhou(times, ganhador, \n mm, nn)\n-)\n %0A%09%7D%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-05-26_15-01-02",
+            "content": "@@ -42,30 +42,8 @@\n hou(\n-times *Queue%5Bstring%5D, \n mm, \n@@ -54,62 +54,27 @@\n nt) \n-str\n in\n-g%7B%0A%09t1 := times.Dequeue()%0A%09t2 := times.Dequeue()%0A\n+t%7B%0A%09ganhador := 0\n %0A%09if\n@@ -88,122 +88,52 @@\n n %7B%0A\n-    %09vence\n+%09%09ganha\n dor \n-:\n = \n-t1%0A    %09times.Enqueue(vencedor)%0A    %09return vencedor%0A%09%7D%0A%0A%09vence\n+mm%0A%09%7D else %7B%0A%09%09ganha\n dor \n-:\n = \n-t2%0A%09times.Enqueue(vencedor)\n+nn%0A%09%7D\n %0A%09re\n@@ -141,13 +141,13 @@\n urn \n-vence\n+ganha\n dor%0A\n@@ -192,16 +192,63 @@\n ring%5D()%0A\n+%09resul := NewQueue%5Bint%5D()%0A%09var ganhador string%0A\n %09for i :\n@@ -293,24 +293,46 @@\n ring(i))%0A%09%7D%0A\n+%09//fmt.Println(times)%0A\n %09%0A%09for range\n@@ -377,21 +377,21 @@\n  &nn)%0A%09%09\n-times\n+resul\n .Enqueue\n@@ -398,23 +398,16 @@\n (ganhou(\n-times, \n mm, nn))\n@@ -410,17 +410,16 @@\n nn))%0A%09%7D%0A\n-%09\n %0A%09fmt.Pr\n@@ -424,21 +424,24 @@\n Println(\n-times\n+ganhador\n )%0A%0A%09// t\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-05-26_15-16-29",
+            "content": "@@ -476,26 +476,8 @@\n n))%0A\n-%09%09times.Dequeue()%0A\n %09%7D%0A%09\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-05-26_15-17-13",
+            "content": "@@ -437,26 +437,8 @@\n nn)%0A\n-%09%09times.Dequeue()%0A\n %09%09ti\n@@ -472,16 +472,34 @@\n m, nn))%0A\n+%09%09times.Dequeue()%0A\n %09%7D%0A%09%0A%09fm\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-05-26_15-17-24",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc ganhou(times *Queue[string], mm, nn int) string{\n\tt1 := times.Dequeue()\n\tt2 := times.Dequeue()\n\n\tif mm > nn {\n    \tvencedor := t1\n    \ttimes.Enqueue(vencedor)\n    \treturn vencedor\n\t}\n\n\tvencedor := t2\n\ttimes.Enqueue(vencedor)\n\treturn vencedor\n}\n\nfunc main() {\n\ttimes := NewQueue[string]()\n\tfor i := 65; i <= 80; i++{\n\t\ttimes.Enqueue(string(i))\n\t}\n\t\n\tfor range 15 {\n\t\tvar mm, nn int\n\t\tfmt.Scan(&mm, &nn)\n\t\ttimes.Dequeue()\n\t\ttimes.Enqueue(ganhou(times, mm, nn))\n\t}\n\t\n\tfmt.Println(times)\n\n\t// times, resul = oitavas(times, resul)\n\t// times, resul = quartas(times, resul)\n\t// times, resul = semi(times, resul)\n\t// times, resul = final(times, resul)\n\n\n}\n",
+            "lines": "43"
+        }
+    ]
+}
