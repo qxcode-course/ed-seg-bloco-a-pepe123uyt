@@ -4,19 +4,15 @@ import (
 	"fmt"
 )
 
-func ganhou(times *Queue[string], mm, nn int) string{
+func ganhou(times *Queue[string], mm, nn int) {
 	t1 := times.Dequeue()
 	t2 := times.Dequeue()
 
 	if mm > nn {
-    	vencedor := t1
-    	times.Enqueue(vencedor)
-    	return vencedor
+    	times.Enqueue(t1)
+	} else {
+		times.Enqueue(t2)
 	}
-
-	vencedor := t2
-	times.Enqueue(vencedor)
-	return vencedor
 }
 
 func main() {
@@ -28,12 +24,10 @@ func main() {
 	for range 15 {
 		var mm, nn int
 		fmt.Scan(&mm, &nn)
-		times.Dequeue()
-		times.Enqueue(ganhou(times, mm, nn))
+		ganhou(times, mm, nn)
 	}
 	
-	fmt.Println(times)
-
+	fmt.Printf("%s\n", times.items.Front().Value)
 	// times, resul = oitavas(times, resul)
 	// times, resul = quartas(times, resul)
 	// times, resul = semi(times, resul)

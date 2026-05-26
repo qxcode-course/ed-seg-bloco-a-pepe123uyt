@@ -17,13 +17,6 @@ func (q *Queue[T]) Enqueue(item T) {
 	q.items.PushBack(item)
 }
 
-func (q *Queue[T]) Peek() T {
-	if q.items.Len() == 0 {
-		var zero T
-		return zero
-	}
-	return q.items.Front().Value.(T)
-}
 func (q *Queue[T]) Dequeue() T {
 	if q.items.Len() == 0 {
 		var zero T

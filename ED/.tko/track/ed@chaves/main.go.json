@@ -132,8 +132,33 @@
         },
         {
             "label": "2026-05-26_15-17-24",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc ganhou(times *Queue[string], mm, nn int) string{\n\tt1 := times.Dequeue()\n\tt2 := times.Dequeue()\n\n\tif mm > nn {\n    \tvencedor := t1\n    \ttimes.Enqueue(vencedor)\n    \treturn vencedor\n\t}\n\n\tvencedor := t2\n\ttimes.Enqueue(vencedor)\n\treturn vencedor\n}\n\nfunc main() {\n\ttimes := NewQueue[string]()\n\tfor i := 65; i <= 80; i++{\n\t\ttimes.Enqueue(string(i))\n\t}\n\t\n\tfor range 15 {\n\t\tvar mm, nn int\n\t\tfmt.Scan(&mm, &nn)\n\t\ttimes.Dequeue()\n\t\ttimes.Enqueue(ganhou(times, mm, nn))\n\t}\n\t\n\tfmt.Println(times)\n\n\t// times, resul = oitavas(times, resul)\n\t// times, resul = quartas(times, resul)\n\t// times, resul = semi(times, resul)\n\t// times, resul = final(times, resul)\n\n\n}\n",
+            "content": "@@ -72,16 +72,22 @@\n nn int) \n+string\n %7B%0A%09t1 :=\n@@ -150,58 +150,134 @@\n    %09\n-times.Enqueue(t1)%0A%09%7D else %7B%0A%09%09times.Enqueue(t2)%0A%09%7D\n+vencedor := t1%0A    %09times.Enqueue(vencedor)%0A    %09return vencedor%0A%09%7D%0A%0A%09vencedor := t2%0A%09times.Enqueue(vencedor)%0A%09return vencedor\n %0A%7D%0A%0A\n@@ -435,16 +435,48 @@\n  &nn)%0A%09%09\n+times.Dequeue()%0A%09%09times.Enqueue(\n ganhou(t\n@@ -488,16 +488,17 @@\n  mm, nn)\n+)\n %0A%09%7D%0A%09%0A%09f\n",
             "lines": "43"
+        },
+        {
+            "label": "2026-05-26_16-34-13",
+            "content": "@@ -384,30 +384,8 @@\n %7D%0A%09%0A\n-%09s := times.String()%0A%0A\n %09fmt\n@@ -393,16 +393,20 @@\n Println(\n+time\n s)%0A%0A%09// \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-05-26_16-35-12",
+            "content": "@@ -385,34 +385,46 @@\n %0A%09%0A%09\n-fmt.Printf(%22%25s/n%22, time\n+s := times.String()%0A%0A%09fmt.Println(\n s)%0A\n+%0A\n %09// \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-05-26_16-46-40",
+            "content": "@@ -399,9 +399,9 @@\n (%22%25s\n-%5C\n+/\n n%22, \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-26_16-46-50",
+            "content": "@@ -409,28 +409,8 @@\n imes\n-.items.Front().Value\n )%0A%09/\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-26_16-47-17",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc ganhou(times *Queue[string], mm, nn int) {\n\tt1 := times.Dequeue()\n\tt2 := times.Dequeue()\n\n\tif mm > nn {\n    \ttimes.Enqueue(t1)\n\t} else {\n\t\ttimes.Enqueue(t2)\n\t}\n}\n\nfunc main() {\n\ttimes := NewQueue[string]()\n\tfor i := 65; i <= 80; i++{\n\t\ttimes.Enqueue(string(i))\n\t}\n\t\n\tfor range 15 {\n\t\tvar mm, nn int\n\t\tfmt.Scan(&mm, &nn)\n\t\tganhou(times, mm, nn)\n\t}\n\t\n\tfmt.Printf(\"%s\\n\", times.items.Front().Value)\n\t// times, resul = oitavas(times, resul)\n\t// times, resul = quartas(times, resul)\n\t// times, resul = semi(times, resul)\n\t// times, resul = final(times, resul)\n\n\n}\n",
+            "lines": "37"
         }
     ]
 }
