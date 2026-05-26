@@ -1,0 +1,94 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-26_16-55-25",
+            "content": "@@ -63,17 +63,16 @@\n ngs%22%0A)%0A%0A\n-%0A\n func Mag\n@@ -115,245 +115,37 @@\n  %7B%0A%09\n-meio := slice%5Blen(slice)/2%5D%0A%0A%09if value %3C= meio %7B%0A%09%09for i := 0; i %3C= meio; i++%7B%0A%09%09%09if slice%5Bi%5D %3E value %7B%0A%09%09%09%09return i%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D else %7B%0A%09%09for i := len(slice)-1; i %3E meio; i--%7B%0A%09%09%09if slice%5Bi%5D %3C= value %7B%0A%09%09%09%09return i%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09return -1\n+_, _ = slice, value%0A%09return 0\n %0A%7D%0A%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-05-26_17-00-50",
+            "content": "@@ -67,18 +67,25 @@\n %0A)%0A%0A\n+%0A\n func \n-Exist\n+MagicSearch\n (sli\n@@ -109,14 +109,65 @@\n nt) \n-bool\n+int %7B%0A%09meio := slice%5Blen(slice)/2%5D%0A%0A%09if value %3C= meio \n %7B%0A\n+%09\n %09for\n@@ -182,26 +182,22 @@\n  i %3C\n- len(slice)\n+= meio\n ; i++%7B%0A\n+%09\n %09%09if\n@@ -206,18 +206,17 @@\n lice%5Bi%5D \n-==\n+%3E\n  value %7B\n@@ -223,169 +223,78 @@\n %0A%09%09%09\n+%09\n return \n-true\n+i\n %0A%09%09\n+%09\n %7D%0A\n+%09\n %09%7D%0A%09\n-return false%0A%7D%0Afunc binarySearch(slice %5B%5Dint, value int) int %7B%0A%09%0A%09ini := 0%0A%09fim := len(slice) - 1%0A%0A%09for ini %3C= fim %7B%0A%09%09index := ini + fim/2%0A%0A\n+%7D else %7B%0A%09%09for i := len(slice)-1; i %3E meio; i--%7B%0A%09\n %09%09if\n@@ -305,15 +305,11 @@\n ce%5Bi\n-ndex\n %5D \n-=\n+%3C\n = va\n@@ -317,24 +317,25 @@\n ue %7B%0A%09%09%09\n+%09\n return i\n ndex%0A%09%09%7D\n@@ -330,201 +330,31 @@\n rn i\n-ndex%0A%09%09%7D%0A%0A%09%09if (slice%5Bindex%5D %3C value) %7B%0A%09%09%09ini = index + 1;%0A%09%09%7D else %7B%0A%09%09%09fim = index - 1; %0A%09%09%7D%0A%09%7D%0A%09return -1%0A%7D%0Afunc MagicSearch(slice %5B%5Dint, value int) int %7B%0A%09return binarySearch(slice, value)\n+%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09return -1\n %0A%7D%0A%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-26_17-15-39",
+            "content": "@@ -114,17 +114,17 @@\n or i := \n-1\n+0\n ; i %3C le\n@@ -131,18 +131,16 @@\n n(slice)\n--1\n ; i++%7B%0A%09\n@@ -158,54 +158,8 @@\n %5D ==\n- value && slice%5Bi-1%5D == value && slice%5Bi+1%5D ==\n  val\n@@ -249,16 +249,18 @@\n ) int %7B%0A\n+%09%0A\n %09ini := \n@@ -530,38 +530,8 @@\n t %7B%0A\n-%09if Exist(slice, value) %7B%0A%0A%09%7D%0A\n %09ret\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-05-26_17-20-00",
+            "content": "@@ -61,16 +61,203 @@\n rings%22%0A)\n+%0A%0Afunc Exist(slice %5B%5Dint, value int) bool%7B%0A%09for i := 1; i %3C len(slice)-1; i++%7B%0A%09%09if slice%5Bi%5D == value && slice%5Bi-1%5D == value && slice%5Bi+1%5D == value %7B%0A%09%09%09return true%0A%09%09%7D%0A%09%7D%0A%09return false%0A%7D\n %0Afunc bi\n@@ -572,16 +572,46 @@\n ) int %7B%0A\n+%09if Exist(slice, value) %7B%0A%0A%09%7D%0A\n %09return \n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-05-26_17-22-39",
+            "content": "@@ -390,14 +390,14 @@\n  %7B%0A%09\n-pos :=\n+return\n  bin\n@@ -423,42 +423,8 @@\n lue)\n-%0A%0A%09if pos == -1 %7B%0A%0A%09%7D%0A%0A%09return pos\n %0A%7D%0A%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-26_17-24-08",
+            "content": "@@ -389,44 +389,8 @@\n t %7B%0A\n-%09if len(slice) == 0 %7B%0A%09%09return 0%0A%09%7D%0A\n %09pos\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-26_17-24-35",
+            "content": "@@ -202,20 +202,16 @@\n ce%5Bindex\n- - 1\n %5D == val\n@@ -421,17 +421,16 @@\n rn 0%0A%09%7D%0A\n-%0A\n %09pos := \n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-05-26_17-25-25",
+            "content": "@@ -147,18 +147,9 @@\n - 1%0A\n-%09pos := 0\n %0A\n+\n %09for\n@@ -202,16 +202,20 @@\n ce%5Bindex\n+ - 1\n %5D == val\n@@ -226,13 +226,14 @@\n %0A%09%09%09\n-pos =\n+return\n  ind\n@@ -333,127 +333,8 @@\n %0A%09%7D%0A\n-%0A%09for i := pos; slice%5Bi%5D == value; i++ %7B%0A%09%09if slice%5Bi+1%5D != value %7C%7C slice%5Bi%5D == len(slice) -1 %7B%0A%09%09%09return i%0A%09%09%7D  %0A%09%7D%0A%0A\n %09ret\n@@ -426,16 +426,16 @@\n n 0%0A%09%7D%0A%0A\n-\n %09pos := \n@@ -462,16 +462,37 @@\n value)%0A%0A\n+%09if pos == -1 %7B%0A%0A%09%7D%0A%0A\n %09return \n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-05-26_17-31-15",
+            "content": "@@ -548,16 +548,17 @@\n rn 0%0A%09%7D%0A\n+%0A\n %09pos := \n@@ -589,115 +589,8 @@\n e)%0A%0A\n-%09if pos != -1 %7B%0A%09%09for i := pos; i %3C len(slice); i++ %7B%0A%09%09%09if slice%5Bi%5D != value %7B%0A%09%09%09%09return i%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09%0A\n %09ret\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-05-26_17-35-23",
+            "content": "@@ -182,17 +182,16 @@\n ndex := \n-(\n ini + fi\n@@ -191,17 +191,16 @@\n ni + fim\n-)\n /2%0A%0A%09%09if\n@@ -685,24 +685,25 @@\n %09%09%09%7D%0A%09%09%7D%0A%09%7D%0A\n+%09\n %0A%09return pos\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-05-26_17-36-50",
+            "content": "@@ -143,17 +143,26 @@\n ce) - 1%0A\n+%09pos := 0\n %0A\n-\n %09for ini\n@@ -229,22 +229,21 @@\n ue %7B%0A%09%09%09\n-return\n+pos =\n  index%0A%09\n@@ -328,32 +328,150 @@\n x - 1; %0A%09%09%7D%0A%09%7D%0A%0A\n+%09for i := pos; slice%5Bi%5D == value; i++ %7B%0A%09%09if slice%5Bi+1%5D != value %7C%7C slice%5Bi%5D == len(slice) -1 %7B%0A%09%09%09return i%0A%09%09%7D  %0A%09%7D%0A%0A\n %09return -1%0A%7D%0Afun\n@@ -551,13 +551,11 @@\n n 0%0A\n+\n %09%7D%0A\n-%09%0A\n %09pos\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-05-26_17-46-01",
+            "content": "@@ -424,16 +424,17 @@\n rn 0%0A%09%7D%0A\n+%09\n %0A%09pos :=\n@@ -544,37 +544,8 @@\n lue \n-%7C%7C slice%5Bi%5D == len(slice) - 1\n %7B%0A%09%09\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-05-26_17-46-54",
+            "content": "@@ -519,75 +519,8 @@\n + %7B%0A\n-%09%09%09if i == len(slice) - 1 && slice%5Bi%5D == value %7B%0A%09%09%09%09return i%0A%09%09%09%7D%0A\n %09%09%09i\n@@ -566,16 +566,17 @@\n slice) -\n+ \n 1%7B%0A%09%09%09%09r\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-05-26_17-48-21",
+            "content": "@@ -648,20 +648,16 @@\n return i\n- - 1\n %0A%09%09%09%7D%0A%09%09\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-05-26_17-48-44",
+            "content": "@@ -340,15 +340,13 @@\n urn \n-ini\n+-1\n %0A%7D%0A\n-%0A\n func\n@@ -665,17 +665,16 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%09\n %0A%09return\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-05-26_17-59-39",
+            "content": "@@ -65,151 +65,8 @@\n s%22%0A)\n-%0A%0Afunc Exist(slice %5B%5Dint, value int) bool%7B%0A%09for i := 0; i %3C len(slice) - 1; i++%7B%0A%09%09if slice%5Bi%5D == value %7B%0A%09%09%09return true%0A%09%09%7D%0A%09%7D%0A%09return false%0A%7D\n %0Afun\n@@ -471,27 +471,17 @@\n %09if \n-Exist(slice, value)\n+pos != -1\n  %7B%0A%09\n@@ -659,32 +659,33 @@\n - 1%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A\n+%09\n %0A%09return pos%0A%7D%0A%0A\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-05-26_18-01-41",
+            "content": "@@ -415,12 +415,8 @@\n ) %7B%0A\n-%09%09%09%0A\n %09%09%09i\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-05-26_18-05-14",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc Exist(slice []int, value int) bool{\n\tfor i := 0; i < len(slice) - 1; i++{\n\t\tif slice[i] == value {\n\t\t\treturn true\n\t\t}\n\t}\n\treturn false\n}\nfunc binarySearch(slice []int, value int) int {\n\tini := 0\n\tfim := len(slice) - 1\n\n\tfor ini <= fim {\n\t\tindex := (ini + fim)/2\n\n\t\tif slice[index] == value {\n\t\t\treturn index\n\t\t}\n\n\t\tif (slice[index] < value) {\n\t\t\t\n\t\t\tini = index + 1;\n\t\t} else {\n\t\t\tfim = index - 1; \n\t\t}\n\t}\n\n\treturn ini\n}\n\nfunc MagicSearch(slice []int, value int) int {\n\tif len(slice) == 0 {\n\t\treturn 0\n\t}\n\n\tpos := binarySearch(slice, value)\n\n\tif Exist(slice, value) {\n\t\tfor i := pos; i < len(slice); i++ {\n\t\t\tif i == len(slice) - 1 && slice[i] == value {\n\t\t\t\treturn i\n\t\t\t}\n\t\t\tif slice[i] != value || slice[i] == len(slice) -1{\n\t\t\t\treturn i - 1\n\t\t\t}\n\t\t}\n\t}\n\n\treturn pos\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Fields(scanner.Text())\n\tslice := make([]int, 0, 1)\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tresult := MagicSearch(slice, value)\n\tfmt.Println(result)\n}\n",
+            "lines": "76"
+        }
+    ]
+}

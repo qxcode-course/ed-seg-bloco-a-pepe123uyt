@@ -125,3 +125,66 @@
 2026-05-26 16:48:06, EXEC, v:1, k:ed@chaves, mode:FULL, rate:100
 2026-05-26 16:48:07, EXEC, v:1, k:ed@chaves, mode:FULL, rate:100
 2026-05-26 16:48:08, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-05-26 16:48:07, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-05-26 16:47:16, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-05-26 16:55:12, MOVE, v:1, k:ed@magicsearch, mode:DOWN
+2026-05-26 16:55:13, MOVE, v:1, k:ed@magicsearch, mode:PICK
+2026-05-26 16:55:25, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:30, size:30
+2026-05-26 16:55:35, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:30
+2026-05-26 16:55:11, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-05-26 16:55:12, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-05-26 16:59:11, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-05-26 16:55:35, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-05-26 17:00:50, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:0, size:45
+2026-05-26 17:00:51, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:0
+2026-05-26 17:04:11, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-05-26 17:00:51, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-05-26 17:09:04, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-05-26 17:13:54, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-05-26 17:15:39, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:10, size:57
+2026-05-26 17:18:00, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-05-26 17:15:39, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-05-26 17:20:00, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:10, size:59
+2026-05-26 17:22:39, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:10, size:47
+2026-05-26 17:24:08, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:10, size:53
+2026-05-26 17:24:07, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-05-26 17:24:08, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-05-26 17:24:35, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:20, size:56
+2026-05-26 17:25:25, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:10, size:57
+2026-05-26 17:25:37, MOVE, v:1, k:ed@magicsearch, mode:PICK
+2026-05-26 17:25:38, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:10
+2026-05-26 17:25:38, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-05-26 17:30:32, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-05-26 17:31:15, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:10, size:60
+2026-05-26 17:31:16, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:10
+2026-05-26 17:31:18, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:10
+2026-05-26 17:35:23, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:10, size:67
+2026-05-26 17:35:23, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-05-26 17:35:23, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-05-26 17:36:50, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:10, size:67
+2026-05-26 17:39:26, MOVE, v:1, k:ed@magicsearch, mode:BACK
+2026-05-26 17:42:54, MOVE, v:1, k:sandbox@user_001, mode:PICK
+2026-05-26 17:42:57, EXEC, v:1, k:sandbox@user_001, mode:LOCK, rate:0
+2026-05-26 17:43:36, MOVE, v:1, k:sandbox@user_001, mode:BACK
+2026-05-26 17:42:57, MOVE, v:1, k:sandbox@user_001, mode:EDIT
+2026-05-26 17:45:03, MOVE, v:1, k:ed@magicsearch, mode:PICK
+2026-05-26 17:45:04, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:10
+2026-05-26 17:46:01, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:20, size:62
+2026-05-26 17:46:54, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:20, size:62
+2026-05-26 17:48:21, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:40, size:65
+2026-05-26 17:48:44, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:60, size:65
+2026-05-26 17:48:44, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-05-26 17:49:54, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-05-26 17:54:56, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-05-26 17:59:39, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:70, size:66
+2026-05-26 17:59:38, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-05-26 17:59:39, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-05-26 18:01:41, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:100, size:75
+2026-05-26 18:01:44, MOVE, v:1, k:ed@magicsearch, mode:BACK
+2026-05-26 18:02:01, MOVE, v:1, k:ed@magicsearch, mode:PICK
+2026-05-26 18:02:02, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:100
+2026-05-26 18:01:40, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-05-26 18:02:02, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-05-26 18:05:14, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:100, size:76
+2026-05-26 18:05:15, MOVE, v:1, k:ed@magicsearch, mode:BACK
+2026-05-26 18:05:29, SELF, v:1, k:ed@magicsearch, self:1, rate:100, study:60
