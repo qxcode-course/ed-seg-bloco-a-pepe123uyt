@@ -13,14 +13,13 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@vector
-- sandbox@sandbox
+- ed@linear
 flags:
   inbox: all
-  panel: skills
+  panel: graph
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@magicsearch
-selected_index: 11
+selected: ed@queimando
+selected_index: 12

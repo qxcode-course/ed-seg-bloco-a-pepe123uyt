@@ -9,3 +9,4 @@
 
 - [ ] `@user_001 🛠️ 👤 type=make xp=1 tier=1 loss=part :self` [cur!ll.roo](user_001/README.md)
 
+- [ ] `@user_002 👤 xp=1                                 ` [etur2](user_002/README.md)

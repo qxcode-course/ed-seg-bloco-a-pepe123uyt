@@ -1,0 +1,199 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-26_19-40-49",
+            "content": "@@ -63,17 +63,7 @@\n Scan\n-(&n)%0A%0A    \n %0A%7D%0A\n",
+            "lines": "6"
+        },
+        {
+            "label": "2026-05-26_19-41-24",
+            "content": "@@ -22,113 +22,8 @@\n fmt%22\n-%0A%0Afunc fibo(n int) int %7B%0A    if n == 1 %7C%7C n == 2%7B%0A%09%09return 1%0A%09%7D%0A%09return fibo(n-1, k) + k * fibo(n-2, k)%0A%7D\n %0Afun\n@@ -65,11 +65,15 @@\n an(&n)%0A%0A\n+    \n %0A%7D%0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-05-26_19-45-38",
+            "content": "@@ -102,11 +102,18 @@\n (n-1\n+, k\n ) +\n+ k *\n  fib\n@@ -117,16 +117,19 @@\n fibo(n-2\n+, k\n )%0A%7D%0Afunc\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-26_19-45-56",
+            "content": "@@ -86,77 +86,8 @@\n %0A%09%7D%0A\n-    if n %25 2 == 0 %7B%0A        return fibo(n-1) + fibo(n - 2) - 2%0A    %7D%0A\n %09ret\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-26_19-59-09",
+            "content": "@@ -232,32 +232,8 @@\n &n)%0A\n-    fmt.Println(fibo(n))\n %0A%0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-05-26_20-00-39",
+            "content": "@@ -82,16 +82,85 @@\n rn 1%0A%09%7D%0A\n+    if n %25 2 == 0 %7B%0A        return fibo(n-1) + fibo(n - 2) - 2%0A    %7D%0A\n %09return \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-05-26_20-01-22",
+            "content": "@@ -86,92 +86,9 @@\n %0A%09%7D%0A\n-    if n %25 2 == 0 %7B%0A        return fibo(n-1) + fibo(n - 2) - 2%0A    %7D else %7B%0A        \n+%09\n retu\n@@ -100,11 +100,9 @@\n bo(n\n- - \n+-\n 1) +\n@@ -115,17 +115,8 @@\n n-2)\n- -1%0A    %7D\n %0A%7D%0Af\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-26_20-02-19",
+            "content": "@@ -90,40 +90,127 @@\n     \n-return fibo(n - 2) + fibo(n - 3)\n+if n %25 2 == 0 %7B%0A        return fibo(n-1) + fibo(n - 2) - 2%0A    %7D else %7B%0A        return fibo(n - 1) + fibo(n-2) -1%0A    %7D\n %0A%7D%0Af\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-05-26_20-03-24",
+            "content": "@@ -120,14 +120,10 @@\n n - \n-1) + 1\n+3)\n %0A%7D%0Af\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-26_20-03-37",
+            "content": "@@ -106,14 +106,28 @@\n n - \n-1) - 2\n+2) + fibo(n - 1) + 1\n %0A%7D%0Af\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-26_20-05-18",
+            "content": "@@ -105,16 +105,19 @@\n (n - 1) \n+- 2\n %0A%7D%0Afunc \n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-26_20-05-27",
+            "content": "@@ -109,21 +109,8 @@\n  1) \n-+ fibo(n - 2)\n %0A%7D%0Af\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-26_20-05-42",
+            "content": "@@ -118,20 +118,16 @@\n o(n - 2)\n- - 1\n %0A%7D%0Afunc \n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-26_20-06-00",
+            "content": "@@ -118,16 +118,20 @@\n o(n - 2)\n+ - 1\n %0A%7D%0Afunc \n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-26_20-06-08",
+            "content": "@@ -102,17 +102,17 @@\n ibo(n - \n-2\n+1\n ) + fibo\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-26_20-06-13",
+            "content": "@@ -106,9 +106,9 @@\n n - \n-3\n+2\n ) + \n@@ -120,11 +120,10 @@\n n - \n-5) \n+2)\n %0A%7D%0Af\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-27_14-02-39",
+            "content": "@@ -102,17 +102,17 @@\n ibo(n - \n-1\n+3\n ) + fibo\n@@ -116,17 +116,17 @@\n ibo(n - \n-2\n+5\n ) %0A%7D%0Afun\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-27_14-02-54",
+            "content": "@@ -123,12 +123,8 @@\n  2) \n-+ 2 \n %0A%7D%0Af\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-27_14-03-10",
+            "content": "@@ -121,17 +121,18 @@\n  - 2) + \n-1\n+2 \n %0A%7D%0Afunc \n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-27_14-03-19",
+            "content": "@@ -119,17 +119,17 @@\n (n - 2) \n--\n++\n  1%0A%7D%0Afun\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-27_14-03-50",
+            "content": "@@ -119,16 +119,19 @@\n (n - 2) \n+- 1\n %0A%7D%0Afunc \n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-27_14-04-04",
+            "content": "@@ -86,75 +86,8 @@\n %0A%09%7D%0A\n-    if n %25 2 == 0 %7B%0A        return fibo(n-1) + fibo(n-2) - 2%0A    %7D%0A\n     \n@@ -123,10 +123,8 @@\n  2) \n--1\n %0A%7D%0Af\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-27_14-05-00",
+            "content": "@@ -141,17 +141,17 @@\n (n-2) - \n-1\n+2\n %0A    %7D%0A \n@@ -185,16 +185,19 @@\n o(n - 2)\n+ -1\n %0A%7D%0Afunc \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-05-27_14-05-10",
+            "content": "@@ -82,16 +82,83 @@\n rn 1%0A%09%7D%0A\n+    if n %25 2 == 0 %7B%0A        return fibo(n-1) + fibo(n-2) - 1%0A    %7D%0A\n     retu\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-05-27_14-09-36",
+            "content": "@@ -86,75 +86,8 @@\n %0A%09%7D%0A\n-    if n %25 2 != 0 %7B%0A        return fibo(n-1) + fibo(n-2) - 2%0A    %7D%0A\n     \n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-27_14-11-15",
+            "content": "@@ -70,19 +70,8 @@\n == 2\n- %7C%7C n == 3 \n %7B%0A%09%09\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-05-27_14-14-18",
+            "content": "@@ -106,17 +106,17 @@\n f n %25 2 \n-=\n+!\n = 0 %7B%0A  \n@@ -126,35 +126,33 @@\n    return fibo(n\n- - \n+-\n 1) + fibo(n - 2)\n@@ -150,17 +150,15 @@\n bo(n\n- - \n+-\n 2) - \n-1\n+2\n %0A   \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-05-27_14-15-36",
+            "content": "@@ -204,12 +204,8 @@\n - 2)\n- + 2\n %0A%7D%0Af\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-05-27_14-15-54",
+            "content": "@@ -156,17 +156,17 @@\n  - 2) - \n-2\n+1\n %0A    %7D%0A \n@@ -201,16 +201,19 @@\n (n - 2) \n++ 2\n %0A%7D%0Afunc \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-05-27_14-16-14",
+            "content": "@@ -93,16 +93,40 @@\n rn 1%0A%09%7D%0A\n+    if n %25 2 == 0 %7B%0A    \n     retu\n@@ -156,23 +156,61 @@\n  - 2) - \n-fibo(n)\n+2%0A    %7D%0A    return fibo(n - 1) + fibo(n - 2) \n %0A%7D%0Afunc \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-05-27_14-17-32",
+            "content": "@@ -132,17 +132,23 @@\n  - 2) - \n-3\n+fibo(n)\n %0A%7D%0Afunc \n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-27_14-17-41",
+            "content": "@@ -132,17 +132,17 @@\n  - 2) - \n-2\n+3\n %0A%7D%0Afunc \n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-27_14-17-47",
+            "content": "@@ -132,17 +132,17 @@\n  - 2) - \n-1\n+2\n %0A%7D%0Afunc \n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-27_14-17-53",
+            "content": "@@ -132,17 +132,17 @@\n  - 2) - \n-2\n+1\n %0A%7D%0Afunc \n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-27_14-18-00",
+            "content": "@@ -129,16 +129,20 @@\n o(n - 2)\n+ - 2\n %0A%7D%0Afunc \n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-27_14-18-10",
+            "content": "@@ -129,20 +129,16 @@\n o(n - 2)\n- - 1\n %0A%7D%0Afunc \n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-27_14-18-21",
+            "content": "@@ -113,17 +113,17 @@\n ibo(n - \n-2\n+1\n ) + fibo\n@@ -131,10 +131,14 @@\n n - \n-3)\n+2) - 1\n %0A%7D%0Af\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-27_14-19-31",
+            "content": "@@ -71,30 +71,10 @@\n = 2 \n-%7B%0A%09%09return 1%0A%09%7D%0A    if\n+%7C%7C\n  n =\n@@ -88,17 +88,17 @@\n %09return \n-2\n+1\n %0A%09%7D%0A    \n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-27_14-20-01",
+            "content": "package main\nimport \"fmt\"\n\nfunc fibo(n int) int {\n    if n == 1 || n == 2 {\n\t\treturn 1\n\t}\n    if n == 3 {\n\t\treturn 2\n\t}\n    return fibo(n - 2) + fibo(n - 3)\n}\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n    fmt.Println(fibo(n))\n\n}\n",
+            "lines": "18"
+        }
+    ]
+}

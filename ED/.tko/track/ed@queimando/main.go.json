@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-27_14-26-33",
+            "content": "@@ -45,39 +45,8 @@\n %0A)%0A%0A\n-type Pos struct %7B%0A%09l, c int%0A%7D%0A%0A\n func\n@@ -113,66 +113,31 @@\n %5D()%0A\n-%0A%09Posi := Pos%7Bl,c%7D%0A%0A%09stack.Push(Posi)%0A%0A%09fmt.Println(stack)\n+%09_ , _ , _ = mat, l, c%0A\n %0A%09//\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-05-27_14-33-30",
+            "content": "@@ -196,18 +196,15 @@\n tln(\n-&\n stack)%0A\n-%0A%0A\n %09// \n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-05-27_14-33-49",
+            "content": "@@ -196,16 +196,17 @@\n tln(\n+&\n stack)%0A%0A\n %09%0A%09/\n@@ -201,17 +201,16 @@\n stack)%0A%0A\n-%09\n %0A%09// Ess\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-05-27_14-33-54",
+            "content": "@@ -204,109 +204,8 @@\n k)%0A%0A\n-%09burnTrees(grid, l+1, c)%0A%09burnTrees(grid, l -1, c)%0A%09burnTrees(grid, l, c+1)%0A%09burnTrees(grid, l, c-1)%0A\n %09%0A%09/\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-05-27_14-35-21",
+            "content": "@@ -106,94 +106,46 @@\n ne, \n-stack *Stack%5BPos%5D, l, c int) %7B%0A%09if grid%5Bl%5D%5Bc%5D == '.'%7B%0A%09%09return%0A%09%7D%0A%0A%09grid%5Bl%5D%5Bc%5D = 'o'%0A%09\n+l, c int) %7B%0A%09stack := NewStack%5BPos%5D()%0A\n %0A%09Po\n@@ -159,16 +159,17 @@\n os%7Bl,c%7D%0A\n+%0A\n %09stack.P\n@@ -180,18 +180,16 @@\n Posi)%0A%0A%09\n-//\n fmt.Prin\n@@ -216,23 +216,16 @@\n es(grid,\n- stack,\n  l+1, c)\n@@ -241,23 +241,16 @@\n es(grid,\n- stack,\n  l -1, c\n@@ -263,31 +263,24 @@\n nTrees(grid,\n- stack,\n  l, c+1)%0A%09bu\n@@ -296,15 +296,8 @@\n rid,\n- stack,\n  l, \n@@ -629,17 +629,16 @@\n %C3%A0 pilha%0A\n-%09\n %0A%7D%0A%0Afunc\n@@ -815,17 +815,16 @@\n &cfire)%0A\n-%09\n %0A%09grid :\n@@ -948,34 +948,8 @@\n %0A%09%7D%0A\n-%09stack := NewStack%5BPos%5D()%0A\n %09bur\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-05-27_14-41-17",
+            "content": "@@ -187,16 +187,17 @@\n %5D = 'o'%0A\n+%09\n %0A%09Posi :\n@@ -1065,23 +1065,16 @@\n es(grid,\n- stack,\n  lfire, \n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-05-27_14-41-39",
+            "content": "@@ -168,16 +168,36 @@\n turn%0A%09%7D%0A\n+%0A%09grid%5Bl%5D%5Bc%5D = 'o'%0A%0A\n %09Posi :=\n@@ -229,28 +229,8 @@\n i)%0A%0A\n-%09grid%5Bl%5D%5Bc%5D = 'o'%0A%0A%0A\n %09//f\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-05-27_14-42-20",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl, c int\n}\n\nfunc burnTrees(grid [][]rune, stack *Stack[Pos], l, c int) {\n\tif grid[l][c] == '.'{\n\t\treturn\n\t}\n\tPosi := Pos{l,c}\n\tstack.Push(Posi)\n\n\tgrid[l][c] = 'o'\n\n\n\t//fmt.Println(stack)\n\n\tburnTrees(grid, stack, l+1, c)\n\tburnTrees(grid, stack, l -1, c)\n\tburnTrees(grid, stack, l, c+1)\n\tburnTrees(grid, stack, l, c-1)\n\t\n\t// Essa fun\u00e7\u00e3o deve usar uma list como pilha\n\t// e marcar as \u00e1rvores na matriz como queimados\n\t// Uma sugest\u00e3o de como fazer isso \u00e9:\n\t// - adicionar a primeira posi\u00e7\u00e3o na pilha\n\t// - enquanto a pilha n\u00e3o estiver vazia:\n\t//   - retirar o elemento do topo\n\t//   - se puder ser queimado, queime e adicione seus vizinhos \u00e0 pilha\n\t\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc, lfire, cfire int\n\tfmt.Sscanf(line, \"%d %d %d %d\", &nl, &nc, &lfire, &cfire)\n\t\n\tgrid := make([][]rune, 0, nl)\n\tfor range nl {\n\t\tscanner.Scan()\n\t\tline := []rune(scanner.Text())\n\t\tgrid = append(grid, line)\n\t}\n\tstack := NewStack[Pos]()\n\tburnTrees(grid, stack, lfire, cfire)\n\tshowGrid(grid)\n}\n\nfunc showGrid(mat [][]rune) {\n\tfor _, linha := range mat {\n\t\tfmt.Println(string(linha))\n\t}\n}\n",
+            "lines": "62"
+        }
+    ]
+}

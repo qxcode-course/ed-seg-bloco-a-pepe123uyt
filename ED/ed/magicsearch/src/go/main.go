@@ -28,7 +28,6 @@ func binarySearch(slice []int, value int) int {
 		}
 
 		if (slice[index] < value) {
-			
 			ini = index + 1;
 		} else {
 			fim = index - 1; 
