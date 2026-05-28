@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-28_21-31-12",
+            "content": "@@ -67,721 +67,140 @@\n %0A)%0A%0A\n-func dps(image %5B%5D%5B%5Dint, sr int, sc int, color int) %7B%0A%09if sr %3C 0 %7C%7C sc %3C 0 %7C%7C sr %3E len(image) - 1 %7C%7C sc %3E len(image%5B0%5D) %7B%0A%09%09return%0A%09%7D%0A%09if image%5Bsr%5D%5Bsc%5D == 0 %7B%0A%09%09return%0A%09%7D%0A%0A%09image%5Bsr%5D%5Bsc%5D = color%0A%0A%09dps(image, sr + 1, sc, color)%0A%09dps(image, sr - 1, sc, color)%0A%09dps(image, sr, sc + 1, color)%0A%09dps(image, sr, sc-1, color)%0A%0A%7D%0A// N%C3%A3o modifique a assinatura da fun%C3%A7%C3%A3o floodFill%0Afunc floodFill(image %5B%5D%5B%5Dint, sr int, sc int, color int) %5B%5D%5B%5Dint %7B%0A%09if sr %3C 0 %7C%7C sc %3C 0 %7C%7C sr %3E len(image) - 1 %7C%7C sc %3E len(image%5B0%5D) %7B%0A%09%09return image%0A%09%7D%0A%09if image%5Bsr%5D%5Bsc%5D == 0 %7B%0A%09%09return image%0A%09%7D%0A%0A%09image%5Bsr%5D%5Bsc%5D = color%0A%0A%09dps(image, sr + 1, sc, color)%0A%09dps(image, sr - 1, sc, color)%0A%09dps(image, sr, sc + 1, color)%0A%09dps(image, sr, sc-1, color)%0A\n+// N%C3%A3o modifique a assinatura da fun%C3%A7%C3%A3o floodFill%0Afunc floodFill(image %5B%5D%5B%5Dint, sr int, sc int, color int) %5B%5D%5B%5Dint %7B%0A%09//%0A%09_ := image\n %0A%09re\n@@ -204,21 +204,17 @@\n %09return \n-image\n+0\n %0A%7D%0A%0A// N\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-05-28_21-44-58",
+            "content": "@@ -500,16 +500,170 @@\n %5B%5Dint %7B%0A\n+%09if sr %3C 0 %7C%7C sc %3C 0 %7C%7C sr %3E len(image) - 1 %7C%7C sc %3E len(image%5B0%5D) %7B%0A%09%09return image%0A%09%7D%0A%09if image%5Bsr%5D%5Bsc%5D == 0 %7B%0A%09%09return image%0A%09%7D%0A%0A%09image%5Bsr%5D%5Bsc%5D = color%0A%0A\n %09dps(ima\n@@ -660,32 +660,36 @@\n %0A%0A%09dps(image, sr\n+ + 1\n , sc, color)%0A%09re\n@@ -685,16 +685,108 @@\n  color)%0A\n+%09dps(image, sr - 1, sc, color)%0A%09dps(image, sr, sc + 1, color)%0A%09dps(image, sr, sc-1, color)%0A%0A\n %09return \n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-05-28_21-48-01",
+            "content": "@@ -114,23 +114,16 @@\n or int) \n-%5B%5D%5B%5Dint\n %7B%0A%09if sr\n@@ -188,30 +188,24 @@\n ) %7B%0A%09%09return\n- image\n %0A%09%7D%0A%09if imag\n@@ -229,22 +229,16 @@\n %09%09return\n- image\n %0A%09%7D%0A%0A%09im\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-05-28_21-48-54",
+            "content": "@@ -89,33 +89,28 @@\n %5Dint, sr\n-, sc, corOriginal\n+ int, sc int\n , color \n@@ -114,16 +114,23 @@\n or int) \n+%5B%5D%5B%5Dint\n %7B%0A%09if sr\n@@ -188,20 +188,16 @@\n mage%5B0%5D)\n- - 1\n  %7B%0A%09%09ret\n@@ -195,24 +195,30 @@\n ) %7B%0A%09%09return\n+ image\n %0A%09%7D%0A%09if imag\n@@ -231,22 +231,12 @@\n sc%5D \n-!= corOriginal\n+== 0\n  %7B%0A%09\n@@ -242,16 +242,22 @@\n %09%09return\n+ image\n %0A%09%7D%0A%0A%09im\n@@ -296,37 +296,24 @@\n  sr + 1, sc,\n- corOriginal,\n  color)%0A%09dps\n@@ -327,37 +327,24 @@\n  sr - 1, sc,\n- corOriginal,\n  color)%0A%09dps\n@@ -362,29 +362,16 @@\n  sc + 1,\n- corOriginal,\n  color)%0A\n@@ -391,29 +391,16 @@\n r, sc-1,\n- corOriginal,\n  color)%0A\n@@ -523,38 +523,8 @@\n t %7B%0A\n-%09corOriginal := image%5Bsr%5D%5Bsc%5D%0A\n %09dps\n@@ -542,21 +542,8 @@\n  sc,\n- corOriginal,\n  col\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-05-28_21-52-02",
+            "content": "@@ -242,31 +242,8 @@\n nal \n-%7C%7C color == corOriginal\n %7B%0A%09%09\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-05-28_21-54-11",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc dps(image [][]int, sr, sc, corOriginal, color int) {\n\tif sr < 0 || sc < 0 || sr > len(image) - 1 || sc > len(image[0]) - 1 {\n\t\treturn\n\t}\n\tif image[sr][sc] != corOriginal || color == corOriginal{\n\t\treturn\n\t}\n\n\timage[sr][sc] = color\n\n\tdps(image, sr + 1, sc, corOriginal, color)\n\tdps(image, sr - 1, sc, corOriginal, color)\n\tdps(image, sr, sc + 1, corOriginal, color)\n\tdps(image, sr, sc-1, corOriginal, color)\n\n}\n// N\u00e3o modifique a assinatura da fun\u00e7\u00e3o floodFill\nfunc floodFill(image [][]int, sr int, sc int, color int) [][]int {\n\tcorOriginal := image[sr][sc]\n\tdps(image, sr, sc, corOriginal, color)\n\treturn image\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tparts := strings.Fields(line)\n\tnl, _ := strconv.Atoi(parts[0])\n\tnc, _ := strconv.Atoi(parts[1])\n\n\timage := make([][]int, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\trowStr := strings.Fields(scanner.Text())\n\t\trow := make([]int, nc)\n\t\tfor j := 0; j < nc; j++ {\n\t\t\trow[j], _ = strconv.Atoi(rowStr[j])\n\t\t}\n\t\timage[i] = row\n\t}\n\n\t// L\u00ea sr, sc e color\n\tscanner.Scan()\n\tparams := strings.Fields(scanner.Text())\n\tsr, _ := strconv.Atoi(params[0])\n\tsc, _ := strconv.Atoi(params[1])\n\tcolor, _ := strconv.Atoi(params[2])\n\n\tresult := floodFill(image, sr, sc, color)\n\n\t// Imprime a matriz resultante\n\tfor _, row := range result {\n\t\tfor j, val := range row {\n\t\t\tif j > 0 {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t\tfmt.Print(val)\n\t\t}\n\t\tfmt.Println()\n\t}\n}\n",
+            "lines": "73"
+        }
+    ]
+}

@@ -70,3 +70,18 @@
 2026-05-27 14:41:41, EXEC, v:1, k:ed@queimando, mode:FULL, rate:0
 2026-05-27 14:42:20, EXEC, v:1, k:ed@queimando, mode:FULL, rate:0, size:95
 2026-05-27 14:42:25, MOVE, v:1, k:ed@queimando, mode:BACK
+2026-05-27 14:42:24, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-05-27 14:42:20, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-05-27 23:48:17, MOVE, v:1, k:ed@queimando, mode:PICK
+2026-05-27 23:48:20, EXEC, v:1, k:ed@queimando, mode:FULL, rate:0, size:96
+2026-05-27 23:49:59, EXEC, v:1, k:ed@queimando, mode:FULL, size:96, fail:COMP
+2026-05-27 23:50:00, EXEC, v:1, k:ed@queimando, mode:FULL, fail:COMP
+2026-05-27 23:50:08, EXEC, v:1, k:ed@queimando, mode:FULL, rate:0, size:96
+2026-05-27 23:51:07, EXEC, v:1, k:ed@queimando, mode:FULL, rate:0
+2026-05-27 23:51:08, MOVE, v:1, k:ed@queimando, mode:BACK
+2026-05-27 23:51:12, MOVE, v:1, k:ed@queimando, mode:PICK
+2026-05-27 23:51:13, EXEC, v:1, k:ed@queimando, mode:FULL, rate:0
+2026-05-27 23:51:13, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-05-27 23:50:05, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-05-27 23:57:35, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-05-27 23:57:36, EXEC, v:1, k:ed@queimando, mode:FULL, rate:0, size:91

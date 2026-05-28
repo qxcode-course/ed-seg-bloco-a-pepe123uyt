@@ -6,27 +6,22 @@ import (
 	"os"
 )
 
-type Pos struct {
-	l, c int
-}
+func burnTrees(grid [][]rune, l, c int) {
+	stack := NewStack[rune]()
 
-func burnTrees(grid [][]rune, stack *Stack[Pos], l, c int) {
-	if grid[l][c] == '.'{
-		return
-	}
+	stack.Push(grid[l][c])
+
+	for !stack.IsEmpty() {
+		stack.Pop()
 	
-	Posi := Pos{l,c}
-	stack.Push(Posi)
-
-	grid[l][c] = 'o'
-
-
-	//fmt.Println(stack)
-
-	burnTrees(grid, stack, l+1, c)
-	burnTrees(grid, stack, l -1, c)
-	burnTrees(grid, stack, l, c+1)
-	burnTrees(grid, stack, l, c-1)
+		if grid[l][c] == '#' {
+			stack.Push(grid[l+1][c])
+			stack.Push(grid[l-1][c])
+			stack.Push(grid[l][c+1])
+			stack.Push(grid[l][c+1])
+			grid[l][c] = 'o'
+		}
+	}
 	
 	// Essa função deve usar uma list como pilha
 	// e marcar as árvores na matriz como queimados
@@ -51,8 +46,7 @@ func main() {
 		line := []rune(scanner.Text())
 		grid = append(grid, line)
 	}
-	stack := NewStack[Pos]()
-	burnTrees(grid, stack, lfire, cfire)
+	burnTrees(grid, lfire, cfire)
 	showGrid(grid)
 }
 
