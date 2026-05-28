@@ -1,0 +1,99 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-28_22-16-11",
+            "content": "@@ -568,16 +568,50 @@\n +%0A%09%09%7D%0A%09%7D\n+%0A%0A%09if count == 0 %7B%0A%09%09count = -1%0A%09%7D\n %0A%09return\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-05-28_22-16-26",
+            "content": "@@ -524,52 +524,9 @@\n %09if \n-board%5B0%5D%5Bi%5D == 'X' %7C%7C board%5Blen(board)-1%5D%5Bi%5D\n+i\n  == \n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-05-28_22-18-47",
+            "content": "@@ -438,55 +438,9 @@\n %09if \n-board%5Bi%5D%5B0%5D == 'X' %7C%7C board%5Bi%5D%5Blen(board%5B0%5D)-1%5D\n+i\n  == \n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-05-28_22-19-46",
+            "content": "@@ -405,17 +405,17 @@\n 0%0A%0A%09for \n-l\n+i\n  := rang\n@@ -420,32 +420,136 @@\n nge \n+len(\n board\n+) \n %7B%0A%09%09\n-for c := 0; c %3C\n+if board%5Bi%5D%5B0%5D == 'X' %7C%7C board%5Bi%5D%5Blen(board%5B0%5D)-1%5D == 'X' %7B%0A%09%09%09dps(board, i, 0)%0A%09%09%09count++%0A%09%09%7D%0A%09%7D%0A%09for i := range\n  len\n@@ -562,16 +562,11 @@\n %5B0%5D)\n-; c++\n+ \n %7B%0A\n-%09\n %09%09if\n@@ -576,24 +576,56 @@\n ard%5B\n-l%5D%5Bc\n+0%5D%5Bi\n %5D == '\n-1\n+X' %7C%7C board%5Blen(board)-1%5D%5Bi%5D == 'X\n ' %7B%0A\n-%09\n %09%09%09d\n@@ -638,15 +638,14 @@\n rd, \n-l, c\n+0, i\n )%0A\n-%09\n %09%09%09c\n@@ -655,13 +655,8 @@\n t++%0A\n-%09%09%09%7D%0A\n %09%09%7D%0A\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-05-28_22-23-06",
+            "content": "@@ -152,16 +152,81 @@\n rn %0A%09%7D%0A%0A\n+%09if board%5Br+1%5D%5Bc%5D == 'X' && board%5Br%5D%5Bc+1%5D == 'X' %7B%0A%09%09return %0A%09%7D%0A%0A\n %09dps(boa\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-05-28_22-23-54",
+            "content": "@@ -156,183 +156,8 @@\n %09%7D%0A%0A\n-%0A%09// if board%5Br+1%5D%5Bc%5D != 'X' && board%5Br%5D%5Bc+1%5D != 'X' && board%5Br%5D%5Bc-1%5D != 'X' && board%5Br-1%5D%5Bc%5D != 'X' %7B%0A%09// %09return %0A%09// %7D%0A%0A%09if board%5Br%5D%5Bc+1%5D != 'X' && board%5Br%5D%5Bc-1%5D != 'X' %7B%0A%09\n %09dps\n@@ -172,17 +172,16 @@\n r+1, c)%0A\n-%09\n %09dps(boa\n@@ -192,20 +192,16 @@\n r-1, c)%0A\n-%09%7D%0A%0A\n %09dps(boa\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-28_22-30-47",
+            "content": "@@ -74,19 +74,20 @@\n , c int)\n+ \n  %7B%0A\n-\n %09if r %3C \n@@ -152,16 +152,139 @@\n rn %0A%09%7D%0A%0A\n+%0A%09// if board%5Br+1%5D%5Bc%5D != 'X' && board%5Br%5D%5Bc+1%5D != 'X' && board%5Br%5D%5Bc-1%5D != 'X' && board%5Br-1%5D%5Bc%5D != 'X' %7B%0A%09// %09return %0A%09// %7D%0A%0A\n %09if boar\n@@ -371,17 +371,16 @@\n , c)%0A%09%7D%0A\n-%09\n %0A%09dps(bo\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-05-28_22-44-11",
+            "content": "@@ -250,17 +250,11 @@\n )%0A%09%7D\n- else %7B\n %0A%09\n+%0A\n %09dps\n@@ -269,17 +269,16 @@\n r, c+1)%0A\n-%09\n %09dps(boa\n@@ -289,20 +289,16 @@\n r, c-1)%0A\n-%09%7D%0A%0A\n %0A%7D%0A// Fu\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-05-28_22-44-28",
+            "content": "@@ -386,16 +386,20 @@\n ) int %7B%0A\n+%09//%0A\n %09count :\n@@ -486,17 +486,17 @@\n %5Bc%5D == '\n-X\n+1\n ' %7B%0A%09%09%09%09\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-05-28_22-44-50",
+            "content": "@@ -155,28 +155,8 @@\n %09%7D%0A%0A\n-%09board%5Br%5D%5Bc%5D = '.'%0A%0A\n %09if \n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-05-28_22-45-58",
+            "content": "@@ -114,19 +114,16 @@\n (board) \n-- 1\n %7C%7C c %3E l\n@@ -139,11 +139,8 @@\n 0%5D) \n-- 1\n %7B%0A%09%09\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-05-28_22-47-00",
+            "content": "@@ -177,16 +177,68 @@\n  = '.'%0A%0A\n+%09if board%5Br%5D%5Bc+1%5D != 'X' && board%5Br%5D%5Bc-1%5D != 'X' %7B%0A%09\n %09dps(boa\n@@ -245,24 +245,25 @@\n rd, r+1, c)%0A\n+%09\n %09dps(board, \n@@ -270,16 +270,27 @@\n r-1, c)%0A\n+%09%7D else %7B%0A%09\n %09dps(boa\n@@ -301,16 +301,17 @@\n r, c+1)%0A\n+%09\n %09dps(boa\n@@ -322,16 +322,19 @@\n r, c-1)%0A\n+%09%7D%0A\n %0A%0A%7D%0A// F\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-05-28_22-48-01",
+            "content": "@@ -102,17 +102,16 @@\n 0 %7C%7C r %3E\n-=\n  len(boa\n@@ -123,17 +123,16 @@\n  1%7C%7C c %3E\n-=\n  len(boa\n@@ -137,16 +137,20 @@\n oard%5B0%5D)\n+ - 1\n %7B%0A%09%09retu\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-05-28_22-48-25",
+            "content": "@@ -115,16 +115,19 @@\n (board) \n+- 1\n %7C%7C c %3E= \n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-05-28_22-48-36",
+            "content": "@@ -102,16 +102,17 @@\n 0 %7C%7C r %3E\n+=\n  len(boa\n@@ -114,20 +114,16 @@\n n(board)\n- - 1\n  %7C%7C c %3E=\n@@ -140,12 +140,8 @@\n %5B0%5D)\n- - 1\n %7B%0A%09%09\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-05-28_22-48-56",
+            "content": "@@ -163,47 +163,8 @@\n %09%7D%0A%0A\n-%09if board%5Br%5D%5Bc%5D != 'X' %7B%0A%09%09return%0A%09%7D%0A%09%0A\n %09boa\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-05-28_22-49-57",
+            "content": "@@ -124,16 +124,17 @@\n 1 %7C%7C c %3E\n+=\n  len(boa\n@@ -196,16 +196,17 @@\n turn%0A%09%7D%0A\n+%09\n %0A%09board%5B\n@@ -299,16 +299,17 @@\n , c-1)%0A%0A\n+%0A\n %7D%0A// Fun\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-05-28_22-50-25",
+            "content": "@@ -532,10 +532,8 @@\n %0A%09%7D%0A\n-%09%0A\n %09ret\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-05-28_22-52-00",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc dps(board[][]byte, r, c int) {\n\tif r < 0 || c < 0 || r > len(board) - 1 || c > len(board[0]) - 1{\n\t\treturn \n\t}\n\n\tif board[r][c] != 'X' {\n\t\treturn\n\t}\n\n\tboard[r][c] = '.'\n\n\tdps(board, r+1, c)\n\tdps(board, r-1, c)\n\tdps(board, r, c+1)\n\tdps(board, r, c-1)\n\n}\n// Fun\u00e7\u00e3o que ser\u00e1 chamada no LeetCode\nfunc countBattleships(board [][]byte) int {\n\tcount := 0\n\n\tfor l := range board{\n\t\tfor c := 0; c < len(board[0]); c++{\n\t\t\tif board[l][c] == 'X' {\n\t\t\t\tdps(board, l, c)\n\t\t\t\tcount++\n\t\t\t}\n\t\t}\n\t}\n\t\n\treturn count\n\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\n\tboard := make([][]byte, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tboard[i] = []byte(scanner.Text())\n\t}\n\n\tresult := countBattleships(board)\n\tfmt.Println(result)\n}\n",
+            "lines": "59"
+        }
+    ]
+}
