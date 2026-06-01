@@ -168,3 +168,7 @@
 2026-05-28 22:53:15, MOVE, v:1, k:ed@battleship, mode:BACK
 2026-05-28 22:53:27, MOVE, v:1, k:ed@battleship, mode:DOWN
 2026-05-28 22:53:31, SELF, v:1, k:ed@battleship, self:1, rate:100, study:60
+2026-05-28 23:02:01, MOVE, v:1, k:ed@battleship, mode:PICK
+2026-05-28 23:02:02, EXEC, v:1, k:ed@battleship, mode:FULL, rate:100
+2026-05-28 23:02:03, MOVE, v:1, k:ed@battleship, mode:BACK
+2026-05-28 23:02:02, MOVE, v:1, k:ed@battleship, mode:EDIT

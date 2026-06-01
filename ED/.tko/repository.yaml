@@ -12,8 +12,7 @@ sources:
   type: git
   writeable: false
   quests: null
-expanded:
-- ed@dfs
+expanded: []
 flags:
   inbox: all
   panel: graph
@@ -21,5 +20,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@dfs_read
-selected_index: 9
+selected: ed@backtrack
+selected_index: 3
