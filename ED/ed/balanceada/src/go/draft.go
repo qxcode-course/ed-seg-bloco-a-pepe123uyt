@@ -9,29 +9,18 @@ import (
 type Stack struct {
     data []rune
 }
-
 func NewStack() *Stack{
     return &Stack{data: []rune{}}
 }
-
 func (s *Stack) Push(value rune) {
     s.data = append(s.data, value)
 }
-
 func (s *Stack) Top() rune {
-	if len(s.data) == 0 {
-		panic("stack is empty")
-	}
 	return s.data[len(s.data)-1]
 }
-
 func (s *Stack) Pop() {
-	if s.IsEmpty() {
-		panic("stack is empty")
-	}
 	s.data = s.data[:len(s.data)-1]
 }
-
 func (s *Stack) IsEmpty() bool {
     if len(s.data) <= 0 {
         return true
@@ -55,7 +44,7 @@ func isBalance(formula []rune) bool {
             s := stack.Top()
     
             if i == ')'{
-                if s == '(' {
+                if s == '(' || s == ']'{
                     stack.Pop()
                 } else {
                     return false

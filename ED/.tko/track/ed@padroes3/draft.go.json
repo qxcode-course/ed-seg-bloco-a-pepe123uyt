@@ -1,0 +1,204 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-01_21-36-30",
+            "content": "@@ -41,207 +41,35 @@\n     \n-var n, m int%0A    fmt.Scan(&n, &m)%0A    fmt.Println(points(n,m))%0A%7D%0A%0Afunc points(n, m int) int %7B%0A    if m == 1 %7B%0A        return 1%0A    %7D%0A    if m == 2 %7B%0A        return n%0A    %7D%0A%0A    return points(n, m - 1\n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-06-01_21-44-21",
+            "content": "@@ -224,12 +224,8 @@\n turn\n- n +\n  poi\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_21-44-49",
+            "content": "@@ -227,12 +227,8 @@\n n n \n-- 1 \n + po\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_21-45-06",
+            "content": "@@ -223,16 +223,20 @@\n eturn n \n+- 1 \n + points\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_21-45-12",
+            "content": "@@ -233,20 +233,16 @@\n points(n\n- - 1\n , m - 1)\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_21-47-54",
+            "content": "@@ -214,21 +214,8 @@\n  %7D%0A%0A\n-    sub := n%0A\n     \n@@ -239,12 +239,8 @@\n (n -\n- n -\n  1, \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_21-48-29",
+            "content": "@@ -210,16 +210,29 @@\n %0A    %7D%0A%0A\n+    sub := n%0A\n     retu\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-01_21-48-35",
+            "content": "@@ -174,17 +174,32 @@\n   %7D%0A    \n+if m == 2 %7B\n %0A\n+    \n     retu\n@@ -206,12 +206,28 @@\n rn n\n- - m\n+%0A    %7D%0A%0A    return n\n  + p\n@@ -234,16 +234,23 @@\n oints(n \n+- n - 1\n , m - 1)\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_21-49-07",
+            "content": "@@ -192,9 +192,9 @@\n n n \n-*\n+-\n  m +\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-06-01_21-49-48",
+            "content": "@@ -178,43 +178,8 @@\n     \n-if m == 2 %7B%0A        return n%0A    %7D%0A\n %0A   \n@@ -187,16 +187,20 @@\n return n\n+ * m\n  + point\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-06-01_21-50-18",
+            "content": "@@ -221,17 +221,17 @@\n  return \n-m\n+n\n  + point\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_21-50-48",
+            "content": "@@ -135,47 +135,8 @@\n t %7B%0A\n-    if n %3C= 2 %7B%0A        return 0%0A    %7D%0A\n     \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_21-51-36",
+            "content": "@@ -213,16 +213,50 @@\n   %7D%0A    \n+if m == 2 %7B%0A        return n%0A    %7D\n %0A%0A    re\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-01_21-52-15",
+            "content": "@@ -217,42 +217,8 @@\n     \n-if m == 2 %7B%0A        return n%0A    %7D\n %0A%0A  \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-01_21-52-22",
+            "content": "@@ -131,16 +131,55 @@\n ) int %7B%0A\n+    if n %3C= 2 %7B%0A        return 0%0A    %7D%0A\n     if m\n@@ -252,22 +252,8 @@\n   %7D%0A\n-    acc := m*m\n %0A   \n@@ -264,11 +264,9 @@\n urn \n-acc\n+m\n  + p\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-01_21-54-13",
+            "content": "@@ -243,12 +243,8 @@\n acc \n-- m \n + po\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_21-54-25",
+            "content": "@@ -241,17 +241,17 @@\n n acc - \n-n\n+m\n  + point\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_21-54-29",
+            "content": "@@ -209,16 +209,30 @@\n n%0A    %7D%0A\n+    acc := m*m\n %0A    ret\n@@ -235,17 +235,23 @@\n  return \n-m\n+acc - n\n  + point\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_21-54-44",
+            "content": "@@ -225,15 +225,9 @@\n urn \n-2*m - n\n+m\n  + p\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_21-55-09",
+            "content": "@@ -221,17 +221,23 @@\n  return \n-m\n+2*m - n\n  + point\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_21-55-29",
+            "content": "@@ -246,13 +246,7 @@\n - 1)\n- - n*n\n %0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_21-58-12",
+            "content": "@@ -238,18 +238,15 @@\n s(n \n-- 1\n , m - 1)\n %0A%7D%0A\n@@ -242,11 +242,17 @@\n , m - 1)\n+ - n*n\n %0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_21-58-29",
+            "content": "@@ -226,18 +226,9 @@\n rn m\n-*n - (n-1)\n+ \n + po\n@@ -234,16 +234,19 @@\n oints(n \n+- 1\n , m - 1)\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_22-00-53",
+            "content": "@@ -227,18 +227,21 @@\n n m*n - \n-n \n+(n-1)\n + points\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_22-01-04",
+            "content": "@@ -222,16 +222,22 @@\n return m\n+*n - n\n  + point\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_22-01-41",
+            "content": "@@ -227,12 +227,8 @@\n n m \n-- n \n + po\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_22-03-06",
+            "content": "@@ -213,37 +213,8 @@\n   %7D%0A\n-    soma := m*m - (m-1)*(m-1)\n %0A   \n@@ -225,12 +225,13 @@\n urn \n-soma\n+m - n\n  + p\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_22-09-58",
+            "content": "@@ -213,17 +213,41 @@\n   %7D%0A    \n-%0A\n+soma := m*m - (m-1)*(m-1)\n %0A    ret\n@@ -250,18 +250,20 @@\n  return \n- n\n+soma\n  + point\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_22-12-23",
+            "content": "@@ -217,62 +217,23 @@\n     \n-if m == 3 %7B%0A        return m%0A    %7D%0A    %0A%0A    return  m\n+%0A%0A    return  n\n  + p\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-01_22-12-46",
+            "content": "@@ -247,16 +247,21 @@\n  m%0A    %7D\n+%0A    \n %0A%0A    re\n@@ -264,16 +264,21 @@\n   return\n+  m +\n  points(\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-01_22-12-57",
+            "content": "@@ -213,16 +213,50 @@\n   %7D%0A    \n+if m == 3 %7B%0A        return m%0A    %7D\n %0A%0A    re\n@@ -263,13 +263,8 @@\n turn\n-  m +\n  poi\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-01_22-13-06",
+            "content": "@@ -174,21 +174,40 @@\n   %7D%0A\n-%0A\n+    if m == 2 %7B%0A   \n     \n+ \n return n\n  * p\n@@ -206,10 +206,36 @@\n rn n\n- *\n+%0A    %7D%0A    %0A%0A    return  m +\n  poi\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-01_22-14-31",
+            "content": "@@ -207,21 +207,7 @@\n - 1)\n- + (n-1)*(m-1)\n %0A%7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-06-01_22-15-12",
+            "content": "@@ -186,12 +186,11 @@\n urn \n- m +\n+n *\n  poi\n@@ -203,11 +203,25 @@\n , m - 1)\n+ + (n-1)*(m-1)\n %0A%7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-06-01_22-15-32",
+            "content": "@@ -188,10 +188,8 @@\n n  m\n-*m\n  + p\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-06-01_22-18-15",
+            "content": "@@ -184,16 +184,18 @@\n eturn  m\n+*m\n  + point\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-06-01_22-18-21",
+            "content": "@@ -182,16 +182,20 @@\n  return \n+ m +\n  points(\n@@ -208,21 +208,7 @@\n - 1)\n- + (n - m - 2)\n %0A%7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-06-01_22-19-23",
+            "content": "@@ -206,17 +206,17 @@\n 1) + (n \n-+\n+-\n  m - 2)%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-06-01_22-19-30",
+            "content": "@@ -209,20 +209,16 @@\n + (n\n--2)*(m-1) + 1\n+ + m - 2)\n %0A%7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-06-01_22-22-53",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var n, m int\n    fmt.Scan(&n, &m)\n    fmt.Println(points(n,m))\n}\n\nfunc points(n, m int) int {\n    if m == 1 {\n        return 1\n    }\n\n    return  points(n , m - 1) + (n-2)*(m-1) + 1\n}\n",
+            "lines": "15"
+        }
+    ]
+}

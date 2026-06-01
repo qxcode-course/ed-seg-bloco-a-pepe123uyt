@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-01_21-29-46",
+            "content": "@@ -55,12 +55,12 @@\n f n \n-== 1\n+%3C= 0\n  %7B%0A \n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-06-01_21-30-01",
+            "content": "@@ -112,20 +112,8 @@\n  1) \n-+ req(n - 2)\n %0A%7D%0A%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-06-01_21-30-39",
+            "content": "@@ -97,17 +97,26 @@\n  return \n-n\n+req(n - 1)\n  + req(n\n@@ -118,17 +118,17 @@\n req(n - \n-1\n+2\n )%0A%7D%0A%0Afun\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-06-01_21-31-11",
+            "content": "@@ -97,17 +97,17 @@\n  return \n-2\n+n\n  + req(n\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-06-01_21-31-23",
+            "content": "@@ -100,20 +100,16 @@\n turn 2 +\n- n +\n  req(n -\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-06-01_21-31-32",
+            "content": "@@ -101,11 +101,11 @@\n urn \n-n *\n+2 +\n  n +\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-06-01_21-32-28",
+            "content": "@@ -101,16 +101,14 @@\n urn \n-2+ (n*n)\n+n * n \n + re\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-06-01_21-33-22",
+            "content": "@@ -74,18 +74,16 @@\n return n\n-*n\n  + 2%0A   \n@@ -98,17 +98,16 @@\n return 2\n- \n + (n*n)+\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-06-01_21-33-45",
+            "content": "@@ -96,46 +96,24 @@\n     \n-soma := (n*n) + (n*2)%0A    return soma \n+return 2 + (n*n)\n + re\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-06-01_21-34-42",
+            "content": "@@ -74,16 +74,18 @@\n return n\n+*n\n  + 2%0A   \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_21-35-00",
+            "content": "@@ -45,19 +45,16 @@\n nt %7B%0A   \n- //\n  if n ==\n@@ -66,15 +66,12 @@\n     \n-//\n     \n- \n retu\n@@ -86,11 +86,8 @@\n %0A   \n- //\n  %7D%0A%0A\n@@ -127,16 +127,29 @@\n urn soma\n+ + req(n - 1)\n %0A%7D%0A%0Afunc\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_21-35-51",
+            "content": "package main\nimport \"fmt\"\n\nfunc req(n int) int {\n    // if n == 1 {\n    //     return n + 2\n    // }\n\n    soma := (n*n) + (n*2)\n    return soma\n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    fmt.Println(req(n))\n}\n",
+            "lines": "18"
+        }
+    ]
+}
