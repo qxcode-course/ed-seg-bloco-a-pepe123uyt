@@ -22,10 +22,12 @@ type Node struct {
 func create(parts *[]string) *Node {
 
 	elem := (*parts)[0]
-	node = Node{value: elem}
 
+	if elem == "#" {
+		return nil
+	}
 
-	*parts = (*parts)[i:]
+	*parts = (*parts)[1:]
 	return create(parts)
 }
 

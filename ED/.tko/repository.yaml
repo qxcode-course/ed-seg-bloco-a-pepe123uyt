@@ -13,13 +13,17 @@ sources:
   writeable: false
   quests: null
 expanded:
+- ed@list
 - ed@tree
+- ed@linear
 flags:
-  inbox: inbox
+  inbox: all
   panel: graph
-  show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
+audit:
+  enabled: true
+  interval_seconds: null
 lang: go
 selected: ed@serial
-selected_index: 8
+selected_index: 27

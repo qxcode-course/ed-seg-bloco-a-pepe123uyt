@@ -332,3 +332,4 @@
 2026-06-01 22:34:24, MOVE, v:1, k:ed@serial, mode:PICK
 2026-06-01 22:34:25, EXEC, v:1, k:ed@serial, mode:FULL, size:70, fail:COMP
 2026-06-01 22:34:26, MOVE, v:1, k:ed@serial, mode:BACK
+2026-06-01 22:34:09, MOVE, v:1, k:ed@serial, mode:EDIT
