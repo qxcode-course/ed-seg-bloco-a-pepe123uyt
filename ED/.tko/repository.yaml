@@ -13,9 +13,7 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@list
 - ed@tree
-- ed@linear
 flags:
   inbox: all
   panel: graph
@@ -25,5 +23,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@serial
-selected_index: 27
+selected: ed@map_set
+selected_index: 1

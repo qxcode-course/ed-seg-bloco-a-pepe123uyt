@@ -1,0 +1,374 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-01_20-03-21",
+            "content": "@@ -215,17 +215,16 @@\n  int) %7B%0A\n-%0A\n %09if nive\n@@ -265,10 +265,8 @@\n %0A%09%7D%0A\n-%09%0A\n %09//_\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-07-01_20-05-55",
+            "content": "@@ -225,44 +225,18 @@\n if n\n-ode.Left == nil && node.Right == nil\n+ivel == 0 \n %7B%0A%09%09\n@@ -262,18 +262,17 @@\n lue)%0A%09%7D%0A\n-%0A%0A\n+%09\n %0A%09//_, _\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-07-01_20-07-35",
+            "content": "@@ -220,55 +220,8 @@\n  %7B%0A%0A\n-%09if nivel == 1 %7B%0A%09%09fmt.Println(node.Value)%0A%09%7D%0A%0A\n %09if \n@@ -233,26 +233,26 @@\n Left == nil \n-%7C%7C\n+&&\n  node.Right \n@@ -253,25 +253,24 @@\n Right == nil\n- \n %7B%0A%09%09fmt.Prin\n@@ -277,15 +277,23 @@\n tln(\n+node.Value\n )%0A%09%7D%0A\n-%09%0A\n %0A%0A%0A%09\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-07-01_20-10-15",
+            "content": "@@ -244,16 +244,18 @@\n mt.Print\n+ln\n (node.Va\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-07-01_20-10-21",
+            "content": "@@ -219,18 +219,8 @@\n ) %7B%0A\n-%09str := %22%22\n %0A%09if\n@@ -239,33 +239,18 @@\n %7B%0A%09%09\n-str += \n fmt.\n-Sp\n+P\n rint\n-f(%22%25d%22, \n+(\n node\n@@ -319,19 +319,16 @@\n Println(\n-str\n )%0A%09%7D%0A%09%0A%0A\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-07-01_20-11-28",
+            "content": "@@ -307,18 +307,18 @@\n  == nil \n-&&\n+%7C%7C\n  node.Ri\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-07-01_20-11-49",
+            "content": "@@ -211,24 +211,95 @@\n ivel int) %7B%0A\n+%09str := %22%22%0A%09if nivel == 1 %7B%0A%09%09str += fmt.Sprintf(%22%25d%22, node.Value)%0A%09%7D%0A%0A\n %09if node.Lef\n@@ -344,26 +344,19 @@\n Println(\n-node.Value\n+str\n )%0A%09%7D%0A%09%0A%0A\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-07-01_20-12-35",
+            "content": "@@ -292,91 +292,9 @@\n %0A%09%7D%0A\n-%0A%09fmt.Print(%22....%22)%0A%09fmt.Print(node.Left)%0A%09fmt.Print(%22....%22)%0A%09fmt.Print(node.Right)\n+%09\n %0A%0A%0A%0A\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-07-01_20-14-10",
+            "content": "@@ -285,25 +285,16 @@\n .Value)%0A\n-%09%09return%0A\n %09%7D%0A%0A%09fmt\n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-07-01_20-14-36",
+            "content": "@@ -323,26 +323,24 @@\n )%0A%09fmt.Print\n-ln\n (node.Left.V\n@@ -337,22 +337,16 @@\n ode.Left\n-.Value\n )%0A%09fmt.P\n@@ -364,26 +364,24 @@\n )%0A%09fmt.Print\n-ln\n (node.Right.\n@@ -379,22 +379,16 @@\n de.Right\n-.Value\n )%0A%0A%0A%0A%09//\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-07-01_20-15-04",
+            "content": "@@ -339,16 +339,22 @@\n ode.Left\n+.Value\n )%0A%09fmt.P\n@@ -389,16 +389,22 @@\n de.Right\n+.Value\n )%0A%0A%0A%0A%09//\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-07-01_20-15-13",
+            "content": "@@ -286,19 +286,114 @@\n Value)%0A%09\n-%7D%0A%09\n+%09return%0A%09%7D%0A%0A%09fmt.Print(%22....%22)%0A%09fmt.Println(node.Left)%0A%09fmt.Print(%22....%22)%0A%09fmt.Println(node.Right)\n %0A%0A%0A%0A%09//_\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-07-01_20-19-34",
+            "content": "@@ -292,247 +292,9 @@\n %0A%09%7D%0A\n-%0A%09fmt.Print(%22....%22)%0A%09if node.Left == nil %7B%0A%09%09fmt.Println(%22#%22)%0A%09%7D else %7B%0A%09%09fmt.Println(node.Left.Value)%0A%09%7D%0A%09%0A%09fmt.Println(node.Value)%0A%0A%09fmt.Print(%22....%22)%0A%09if node.Left == nil %7B%0A%09%09fmt.Println(%22#%22)%0A%09%7D else %7B%0A%09%09fmt.Println(node.Right.Value)%0A%09%7D\n+%09\n %0A%0A%0A%0A\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-07-01_20-23-39",
+            "content": "@@ -285,25 +285,16 @@\n .Value)%0A\n-%09%09return%0A\n %09%7D%0A%0A%09fmt\n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-07-01_20-23-53",
+            "content": "@@ -455,28 +455,27 @@\n %22)%0A%09if node.\n-Righ\n+Lef\n t == nil %7B%0A%09\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-07-01_20-24-04",
+            "content": "@@ -321,34 +321,8 @@\n .%22)%0A\n-%09MyShow(node.Left, nivel)%0A\n %09if \n@@ -454,35 +454,8 @@\n .%22)%0A\n-%09MyShow(node.Right, nivel)%0A\n %09if \n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-07-01_20-30-43",
+            "content": "@@ -321,32 +321,37 @@\n .%22)%0A%09MyShow(node\n+.Left\n , nivel)%0A%09if nod\n@@ -484,24 +484,30 @@\n %09MyShow(node\n+.Right\n , nivel)%0A%09if\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-07-01_20-31-18",
+            "content": "@@ -219,32 +219,37 @@\n ) %7B%0A%09if node\n+.Left\n  == nil \n %7B%0A%09%09for i :=\n@@ -240,65 +240,30 @@\n nil \n-%7B%0A%09%09for i := 0; i %3C nivel; i++ %7B%0A%09%09%09fmt.Print(%22....%22)%0A%09%09%7D\n+&& node.Right == nil %7B\n %0A%09%09f\n@@ -265,35 +265,42 @@\n %7B%0A%09%09fmt.Println(\n-%22#%22\n+node.Value\n )%0A%09%09return%0A%09%7D%0A%0A%09\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-07-01_20-35-00",
+            "content": "@@ -327,59 +327,131 @@\n %0A%0A%09f\n-or i := 0; i %3C nivel; i++ %7B%0A%09%09fmt.Print(%22....%22\n+mt.Print(%22....%22)%0A%09MyShow(node, nivel)%0A%09if node.Left == nil %7B%0A%09%09fmt.Println(%22#%22)%0A%09%7D else %7B%0A%09%09fmt.Println(node.Left.Value\n )%0A%09%7D\n-%09\n %0A%09%0A%09\n@@ -474,17 +474,35 @@\n .Value)%0A\n-%09\n+%0A%09fmt.Print(%22....%22)\n %0A%09MyShow\n@@ -510,48 +510,106 @@\n node\n-.Left\n , nivel\n-+1\n )%0A%09\n-%0A%09MyShow(node, nivel+1)\n+if node.Right == nil %7B%0A%09%09fmt.Println(%22#%22)%0A%09%7D else %7B%0A%09%09fmt.Println(node.Right.Value)%0A%09%7D%0A%0A\n %0A%0A%09/\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-01_20-37-23",
+            "content": "@@ -325,54 +325,8 @@\n %09%7D%0A%0A\n-%09if nivel == 0 %7B%0A%09%09fmt.Println(node.Value)%0A%09%7D%0A\n %09for\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-07-01_20-38-47",
+            "content": "@@ -321,16 +321,62 @@\n urn%0A%09%7D%0A%0A\n+%09if nivel == 0 %7B%0A%09%09fmt.Println(node.Value)%0A%09%7D%0A\n %09for i :\n@@ -492,22 +492,16 @@\n how(node\n-.Right\n , nivel+\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-07-01_20-39-54",
+            "content": "@@ -377,16 +377,41 @@\n )%0A%09%7D%09%0A%09%0A\n+%09fmt.Println(node.Value)%0A\n %09%0A%09MySho\n@@ -438,35 +438,8 @@\n )%0A%09%0A\n-%09fmt.Println(node.Value)%0A%09%0A\n %09MyS\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-07-01_20-41-12",
+            "content": "@@ -219,64 +219,8 @@\n ) %7B%0A\n-%09if node.Left == nil && node.Right == nil %7B%0A%09%09return%0A%09%7D%0A\n %09if \n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-07-01_20-41-48",
+            "content": "@@ -261,39 +261,22 @@\n nil %7B%0A%09%09\n-fmt.Println(node.Value)\n+return\n %0A%09%7D%0A%09if \n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-07-01_20-42-03",
+            "content": "@@ -277,16 +277,22 @@\n tln(node\n+.Value\n )%0A%09%7D%0A%09if\n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-07-01_20-42-14",
+            "content": "@@ -277,22 +277,16 @@\n tln(node\n-.Value\n )%0A%09%7D%0A%09if\n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-07-01_20-42-22",
+            "content": "@@ -288,18 +288,16 @@\n lue)%0A%09%7D%0A\n-%09%0A\n %09if node\n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-07-01_20-42-30",
+            "content": "@@ -286,27 +286,19 @@\n Value)%0A%09\n-%09return%0A%09\n %7D%0A\n+%09\n %0A%09if nod\n@@ -452,16 +452,18 @@\n )%0A%09%7D%09%0A%09%0A\n+%09%0A\n %09MyShow(\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-07-01_20-44-53",
+            "content": "@@ -259,16 +259,42 @@\n = nil %7B%0A\n+%09%09fmt.Println(node.Value)%0A\n %09%09return\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-07-01_20-45-15",
+            "content": "@@ -263,34 +263,8 @@\n l %7B%0A\n-%09%09fmt.Println(node.Value)%0A\n %09%09re\n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-07-01_20-45-41",
+            "content": "@@ -299,19 +299,16 @@\n rn%0A%09%7D%0A%0A%09\n-// \n if node \n@@ -317,19 +317,16 @@\n  nil %7B%0A%09\n-// \n %09for i :\n@@ -348,19 +348,16 @@\n  i++ %7B%0A%09\n-// \n %09%09fmt.Pr\n@@ -373,18 +373,12 @@\n %22)%0A%09\n-// \n %09%7D%0A%09\n-// \n %09fmt\n@@ -392,19 +392,16 @@\n n(%22#%22)%0A%09\n-// \n %09return%0A\n@@ -401,19 +401,16 @@\n return%0A%09\n-// \n %7D%0A%0A%09for \n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-07-01_20-46-37",
+            "content": "@@ -299,16 +299,19 @@\n rn%0A%09%7D%0A%0A%09\n+// \n if node \n@@ -312,32 +312,100 @@\n  node == nil %7B%0A%09\n+// %09for i := 0; i %3C nivel; i++ %7B%0A%09// %09%09fmt.Print(%22....%22)%0A%09// %09%7D%0A%09// \n %09fmt.Println(%22#%22\n@@ -399,32 +399,35 @@\n t.Println(%22#%22)%0A%09\n+// \n %09return%0A%09%7D%0A%0A%09for\n@@ -415,24 +415,27 @@\n // %09return%0A%09\n+// \n %7D%0A%0A%09for i :=\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-07-01_20-48-19",
+            "content": "@@ -219,32 +219,37 @@\n ) %7B%0A%09if node\n+.Left\n  == nil \n %7B%0A%09%09for i :=\n@@ -240,42 +240,31 @@\n nil \n-%7B%0A%09%09for i := 0; i %3C nivel; i++\n+&& node.Right == nil\n  %7B%0A\n-%09\n %09%09fm\n@@ -274,20 +274,53 @@\n rint\n-(%22....%22)%0A%09%09%7D\n+ln(node.Value)%0A%09%09return%0A%09%7D%0A%0A%09if node == nil %7B\n %0A%09%09f\n@@ -352,38 +352,8 @@\n %09%7D%0A%0A\n-%09%0A%09MyShow(node.Left, nivel+1)%0A\n %09for\n@@ -402,14 +402,44 @@\n .%22)%0A\n-\n %09%7D%09%0A%09%0A\n+%09MyShow(node.Left, nivel+1)%0A%09%0A\n %09fmt\n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-07-01_20-49-37",
+            "content": "@@ -325,65 +325,8 @@\n %09%7D%0A%0A\n-%09if node.Left == nil && node.Right == nil %7B%0A%09%09return%0A%09%7D%0A%0A\n %09%0A%09M\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-07-01_20-51-18",
+            "content": "@@ -369,34 +369,8 @@\n l %7B%0A\n-%09%09fmt.Println(node.Value)%0A\n %09%09re\n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-07-01_20-51-33",
+            "content": "@@ -444,17 +444,17 @@\n or i := \n-1\n+0\n ; i %3C ni\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-07-01_20-52-01",
+            "content": "@@ -236,33 +236,33 @@\n il %7B%0A%09%09for i := \n-1\n+0\n ; i %3C nivel; i++\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-07-01_20-52-10",
+            "content": "@@ -236,33 +236,33 @@\n il %7B%0A%09%09for i := \n-0\n+1\n ; i %3C nivel; i++\n@@ -440,25 +440,25 @@\n )%0A%09for i := \n-0\n+1\n ; i %3C nivel;\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-07-01_20-52-21",
+            "content": "@@ -411,118 +411,34 @@\n %0A%09%0A%09\n-for i := 0; i %3C nivel; i++ %7B%0A%09%09fmt.Print(%22....%22)%0A%09%7D%09%0A%0A%09MyShow(node.Left, nivel+1)%0A%09%0A%09fmt.Println(node.Value)%0A%09\n+MyShow(node.Left, nivel+1)\n %0A%09fo\n@@ -488,16 +488,44 @@\n .%22)%0A%09%7D%09%0A\n+%09%0A%09fmt.Println(node.Value)%0A%09\n %0A%09MyShow\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-07-01_20-53-09",
+            "content": "@@ -414,33 +414,32 @@\n %09for i := 0; i %3C\n-=\n  nivel; i++ %7B%0A%09%09\n@@ -516,16 +516,17 @@\n .Value)%0A\n+%09\n %0A%09for i \n@@ -534,17 +534,16 @@\n = 0; i %3C\n-=\n  nivel; \n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-01_20-55-08",
+            "content": "@@ -414,32 +414,33 @@\n %09for i := 0; i %3C\n+=\n  nivel; i++ %7B%0A%09%09\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-01_20-55-17",
+            "content": "@@ -410,39 +410,8 @@\n %0A%0A%09%0A\n-%09%0A%09MyShow(node.Left, nivel+1)%0A%0A\n %09for\n@@ -459,16 +459,45 @@\n ..%22)%0A%09%7D%09\n+%0A%0A%09MyShow(node.Left, nivel+1)\n %0A%09%0A%09fmt.\n@@ -521,41 +521,8 @@\n e)%0A%0A\n-%09%0A%09MyShow(node.Right, nivel+1)%0A%09%0A\n %09for\n@@ -525,32 +525,33 @@\n %09for i := 0; i %3C\n+=\n  nivel; i++ %7B%0A%09%09\n@@ -572,16 +572,47 @@\n .%22)%0A%09%7D%09%0A\n+%0A%09MyShow(node.Right, nivel+1)%0A%0A\n %09//_, _ \n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-01_20-56-12",
+            "content": "@@ -436,16 +436,17 @@\n ivel+1)%0A\n+%0A\n %09for i :\n@@ -445,33 +445,32 @@\n %09for i := 0; i %3C\n-=\n  nivel; i++ %7B%0A%09%09\n@@ -568,17 +568,16 @@\n = 0; i %3C\n-=\n  nivel; \n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-07-01_20-56-30",
+            "content": "@@ -408,16 +408,44 @@\n %09%7D%0A%0A%09%0A%09%0A\n+%09MyShow(node.Left, nivel+1)%0A\n %09for i :\n@@ -444,32 +444,33 @@\n %09for i := 0; i %3C\n+=\n  nivel; i++ %7B%0A%09%09\n@@ -495,36 +495,8 @@\n %09%7D%09%0A\n-%09MyShow(node.Left, nivel+1)%0A\n %09%0A%09f\n@@ -560,32 +560,33 @@\n %09for i := 0; i %3C\n+=\n  nivel; i++ %7B%0A%09%09\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-01_20-56-45",
+            "content": "@@ -567,17 +567,16 @@\n = 0; i %3C\n-=\n  nivel; \n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-01_20-56-53",
+            "content": "@@ -518,16 +518,49 @@\n Value)%0A%0A\n+%09%0A%09MyShow(node.Right, nivel+1)%0A%09%0A\n %09for i :\n@@ -610,41 +610,8 @@\n %09%7D%09%0A\n-%09%0A%09MyShow(node.Right, nivel+1)%0A%09%0A\n %09//_\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-01_20-57-03",
+            "content": "@@ -404,16 +404,19 @@\n urn%0A%09%7D%0A%0A\n+%09%0A%09\n %0A%09for i \n@@ -460,17 +460,17 @@\n ...%22)%0A%09%7D\n-%0A\n+%09\n %0A%09MyShow\n@@ -493,62 +493,8 @@\n l+1)\n-%0A%0A%09for i := 0; i %3C nivel; i++ %7B%0A%09%09fmt.Print(%22....%22)%0A%09%7D\n %0A%09%0A%09\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-01_20-58-13",
+            "content": "@@ -577,32 +577,33 @@\n %09for i := 0; i %3C\n+=\n  nivel; i++ %7B%0A%09%09\n",
+            "lines": "105"
+        },
+        {
+            "label": "2026-07-01_20-58-31",
+            "content": "@@ -585,17 +585,16 @@\n = 0; i %3C\n-=\n  nivel; \n",
+            "lines": "105"
+        },
+        {
+            "label": "2026-07-01_20-59-15",
+            "content": "@@ -225,32 +225,88 @@\n f node == nil %7B%0A\n+%09%09for i := 0; i %3C nivel; i++ %7B%0A%09%09%09fmt.Print(%22....%22)%0A%09%09%7D%0A\n %09%09fmt.Println(%22#\n",
+            "lines": "105"
+        },
+        {
+            "label": "2026-07-01_20-59-53",
+            "content": "@@ -357,33 +357,32 @@\n %09for i := 0; i %3C\n-=\n  nivel; i++ %7B%0A%09%09\n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-07-01_21-00-56",
+            "content": "@@ -348,16 +348,17 @@\n urn%0A%09%7D%0A%0A\n+%0A\n %09for i :\n@@ -513,17 +513,72 @@\n .Value)%0A\n-%09\n+%0A%09for i := 0; i %3C= nivel; i++ %7B%0A%09%09fmt.Print(%22....%22)%0A%09%7D%09%0A\n %09%0A%09MySho\n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-07-01_21-01-38",
+            "content": "@@ -440,33 +440,32 @@\n %09for i := 0; i %3C\n-=\n  nivel; i++ %7B%0A%09%09\n@@ -516,64 +516,9 @@\n ue)%0A\n-%0A%09for i := 0; i %3C= nivel; i++ %7B%0A%09%09fmt.Print(%22....%22)%0A%09%7D%09%0A\n+%09\n %09%0A%09M\n",
+            "lines": "97"
+        },
+        {
+            "label": "2026-07-01_21-01-57",
+            "content": "@@ -530,16 +530,17 @@\n = 0; i %3C\n+=\n  nivel; \n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-01_21-02-19",
+            "content": "@@ -448,16 +448,17 @@\n = 0; i %3C\n+=\n  nivel; \n@@ -522,33 +522,32 @@\n %09for i := 0; i %3C\n-=\n  nivel; i++ %7B%0A%09%09\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-01_21-02-24",
+            "content": "@@ -356,32 +356,33 @@\n %09for i := 0; i %3C\n+=\n  nivel; i++ %7B%0A%09%09\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-01_21-03-08",
+            "content": "@@ -356,33 +356,32 @@\n %09for i := 0; i %3C\n-=\n  nivel; i++ %7B%0A%09%09\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-01_21-03-22",
+            "content": "@@ -383,39 +383,8 @@\n + %7B%0A\n-%09%09if nivel == 1 %7B%0A%09%09%09break%0A%09%09%7D%0A\n %09%09fm\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-01_21-05-02",
+            "content": "@@ -371,32 +371,63 @@\n %3C= nivel; i++ %7B%0A\n+%09%09if nivel == 1 %7B%0A%09%09%09break%0A%09%09%7D%0A\n %09%09fmt.Print(%22...\n",
+            "lines": "104"
+        },
+        {
+            "label": "2026-07-01_21-06-05",
+            "content": "@@ -356,32 +356,33 @@\n %09for i := 0; i %3C\n+=\n  nivel; i++ %7B%0A%09%09\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-01_21-07-29",
+            "content": "@@ -356,33 +356,32 @@\n %09for i := 0; i %3C\n-=\n  nivel; i++ %7B%0A%09%09\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-01_21-07-33",
+            "content": "@@ -555,18 +555,16 @@\n mt.Print\n-ln\n (%22....%22)\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-01_21-10-06",
+            "content": "@@ -547,32 +547,34 @@\n ++ %7B%0A%09%09fmt.Print\n+ln\n (%22....%22)%0A%09%7D%09%0A%09%0A%09\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-01_21-10-49",
+            "content": "@@ -511,16 +511,72 @@\n e.Value)\n+%0A%0A%09for i := 0; i %3C= nivel; i++ %7B%0A%09%09fmt.Print(%22....%22)%0A%09%7D%09\n %0A%09%0A%09MySh\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-01_21-12-16",
+            "content": "@@ -515,64 +515,8 @@\n lue)\n-%0A%0A%09for i := 0; i %3C= nivel; i++ %7B%0A%09%09fmt.Print(%22....%22)%0A%09%7D%09\n %0A%09%0A%09\n",
+            "lines": "97"
+        },
+        {
+            "label": "2026-07-01_21-12-31",
+            "content": "@@ -517,33 +517,8 @@\n e)%0A%0A\n-%09if node.Right != nil %7B%0A%09\n %09for\n@@ -542,25 +542,24 @@\n el; i++ %7B%0A%09%09\n-%09\n fmt.Print(%22.\n@@ -568,15 +568,13 @@\n .%22)%0A\n-%09\n %09%7D%09%0A%09\n-%7D\n %0A%09My\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-01_21-13-09",
+            "content": "@@ -237,65 +237,8 @@\n l %7B%0A\n-%09%09for i := 0; i %3C= nivel; i++ %7B%0A%09%09%09fmt.Print(%22....%22)%0A%09%09%7D%0A\n %09%09fm\n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-07-01_21-13-26",
+            "content": "@@ -409,32 +409,8 @@\n %09%7D%0A%0A\n-%09if node.Left != nil %7B%0A%09\n %09for\n@@ -430,33 +430,32 @@\n  nivel; i++ %7B%0A%09%09\n-%09\n fmt.Print(%22....%22\n@@ -456,21 +456,16 @@\n %22....%22)%0A\n-%09%09%7D%09%0A\n %09%7D%0A%0A%09MyS\n",
+            "lines": "105"
+        },
+        {
+            "label": "2026-07-01_21-13-56",
+            "content": "@@ -225,32 +225,89 @@\n f node == nil %7B%0A\n+%09%09for i := 0; i %3C= nivel; i++ %7B%0A%09%09%09fmt.Print(%22....%22)%0A%09%09%7D%0A\n %09%09fmt.Println(%22#\n@@ -301,32 +301,32 @@\n mt.Println(%22#%22)%0A\n-\n %09%09return%0A%09%7D%0A%0A%09if\n@@ -405,16 +405,40 @@\n urn%0A%09%7D%0A%0A\n+%09if node.Left != nil %7B%0A%09\n %09for i :\n@@ -454,32 +454,33 @@\n  nivel; i++ %7B%0A%09%09\n+%09\n fmt.Print(%22....%22\n@@ -481,16 +481,21 @@\n %22....%22)%0A\n+%09%09%7D%09%0A\n %09%7D%0A%0A%09MyS\n@@ -600,16 +600,41 @@\n Value)%0A%0A\n+%09if node.Right != nil %7B%0A%09\n %09for i :\n@@ -650,32 +650,33 @@\n  nivel; i++ %7B%0A%09%09\n+%09\n fmt.Print(%22....%22\n@@ -677,21 +677,23 @@\n %22....%22)%0A\n+%09\n %09%7D%09%0A%09\n+%7D\n %0A%09MyShow\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-01_21-14-20",
+            "content": "@@ -265,16 +265,98 @@\n urn%0A%09%7D%0A%0A\n+%09if node.Left == nil && node.Right == nil %7B%0A%09%09fmt.Println(node.Value)%0A%09%09return%0A%09%7D%0A\n %0A%09for i \n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-01_21-15-06",
+            "content": "@@ -269,90 +269,8 @@\n %09%7D%0A%0A\n-%09if node.Left == nil && node.Right == nil %7B%0A%09%09fmt.Println(node.Value)%0A%09%09return%0A%09%7D%0A\n %0A%09fo\n",
+            "lines": "97"
+        },
+        {
+            "label": "2026-07-01_21-16-03",
+            "content": "@@ -240,37 +240,81 @@\n %0A%09%09f\n-or i := 0; i %3C nivel; i++\n+mt.Println(%22#%22)%0A%09%09return%0A%09%7D%0A%0A%09if node.Left == nil && node.Right == nil\n  %7B%0A\n-%09\n %09%09fm\n@@ -324,52 +324,89 @@\n rint\n-(%22....%22)%0A%09%09%7D%0A%09%09fmt.Println(%22#%22)%0A%09%09return%0A%09%7D%0A\n+ln(node.Value)%0A%09%09return%0A%09%7D%0A%0A%09for i := 0; i %3C= nivel; i++ %7B%0A%09%09fmt.Print(%22....%22)%0A%09%7D\n %0A%0A%09M\n@@ -511,16 +511,72 @@\n e.Value)\n+%0A%0A%09for i := 0; i %3C= nivel; i++ %7B%0A%09%09fmt.Print(%22....%22)%0A%09%7D%09\n %0A%09%0A%09MySh\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-01_21-18-03",
+            "content": "@@ -325,145 +325,8 @@\n %09%7D%0A%0A\n-%09if node.Left == nil && node.Right == nil %7B%0A%09%09for i := 0; i %3C nivel; i++ %7B%0A%09%09%09fmt.Print(%22....%22)%0A%09%09%7D%0A%09%09fmt.Println(node.Value)%0A%09%09return%0A%09%7D\n %0A%09My\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-07-01_21-21-26",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\n// MyShow imprime a \u00e1rvore bin\u00e1ria de forma formatada.\nfunc MyShow(node *Node, nivel int) {\n\tif node == nil {\n\t\tfor i := 0; i < nivel; i++ {\n\t\t\tfmt.Print(\"....\")\n\t\t}\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\n\tif node.Left == nil && node.Right == nil {\n\t\tfor i := 0; i < nivel; i++ {\n\t\t\tfmt.Print(\"....\")\n\t\t}\n\t\tfmt.Println(node.Value)\n\t\treturn\n\t}\n\tMyShow(node.Left, nivel+1)\n\n\tfor i := 0; i < nivel; i++ {\n\t\tfmt.Print(\"....\")\n\t}\n\t\n\tfmt.Println(node.Value)\n\t\n\tMyShow(node.Right, nivel+1)\n\t\n\t//_, _ = node, nivel\n\t//....\n\t// TODO\n}\n// -----------------------------------------------------------------------------------\nfunc BShow(node *Node, history string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, history+\"l\")\n\t}\n\tfor i := 0; i < len(history)-1; i++ {\n\t\tif history[i] != history[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif history != \"\" {\n\t\tif history[len(history)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, history+\"r\")\n\t}\n}\n\nfunc create(parts *[]string) *Node {\n\telem := (*parts)[0]\n\t*parts = (*parts)[1:]\n\tif elem == \"#\" {\n\t\treturn nil\n\t}\n\tvalue, _ := strconv.Atoi(elem)\n\tnode := &Node{Value: value}\n\tnode.Left = create(parts)\n\tnode.Right = create(parts)\n\treturn node\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\troot := create(&parts)\n\tBShow(root, \"\") // Chama a fun\u00e7\u00e3o de impress\u00e3o formatada\n\tMyShow(root, 0) // Chama a fun\u00e7\u00e3o de impress\u00e3o personalizada\n}\n",
+            "lines": "98"
+        }
+    ]
+}

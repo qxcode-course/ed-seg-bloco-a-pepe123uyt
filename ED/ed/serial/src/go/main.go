@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strconv"
 	"strings"
 )
 
@@ -23,12 +24,21 @@ func create(parts *[]string) *Node {
 
 	elem := (*parts)[0]
 
+	*parts = (*parts)[1:]
+
 	if elem == "#" {
 		return nil
 	}
 
-	*parts = (*parts)[1:]
-	return create(parts)
+	valor, _ := strconv.Atoi(elem)
+
+	node := &Node{Value : valor,}
+
+	node.Left = create(parts)
+
+	node.Right = create(parts)
+
+	return node
 }
 
 // BShow é uma função auxiliar para imprimir a árvore binária.
