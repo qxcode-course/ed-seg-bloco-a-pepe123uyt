@@ -16,12 +16,12 @@ expanded:
 - ed@tree
 flags:
   inbox: all
-  panel: graph
+  panel: skills
   task_graph_mode: executions
   show_time: 'true'
 audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@map_set
-selected_index: 1
+selected: ed@list
+selected_index: 4

@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-02_04-28-08",
+            "content": "@@ -182,84 +182,8 @@\n n%0A%09%7D\n-%0A%0A%09rev := node.Left%0A%09node.Left = node.Right%0A%09node.Right = rev%0A%09Reverse(node)\n %0A%7D%0A%0A\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-07-02_04-30-33",
+            "content": "@@ -180,16 +180,76 @@\n urn%0A%09%7D%0A%0A\n+%09rev := node.Left%0A%09node.Left = node.Right%0A%09node.Right = rev%0A\n %09Reverse\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-07-02_04-30-43",
+            "content": "@@ -185,94 +185,20 @@\n %7D%0A%0A%09\n-node.Left = node.Right%0A%09Reverse(node.Left)%0A%09node.Right = node.Left%0A%09Reverse(node.Right\n+Reverse(node\n )%0A%7D%0A\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-07-02_04-31-33",
+            "content": "@@ -224,16 +224,40 @@\n e.Left)%0A\n+%09node.Right = node.Left%0A\n %09Reverse\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-07-02_04-34-13",
+            "content": "@@ -182,28 +182,27 @@\n n%0A%09%7D%0A%0A%09node.\n-Righ\n+Lef\n t = node.Lef\n@@ -198,19 +198,20 @@\n  = node.\n-Lef\n+Righ\n t%0A%09Rever\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-07-02_04-34-28",
+            "content": "@@ -182,27 +182,28 @@\n n%0A%09%7D%0A%0A%09node.\n-Lef\n+Righ\n t = node.Rig\n@@ -199,20 +199,19 @@\n  = node.\n-Righ\n+Lef\n t%0A%09Rever\n@@ -218,20 +218,19 @@\n se(node.\n-Righ\n+Lef\n t)%0A%09Reve\n@@ -238,19 +238,20 @@\n se(node.\n-Lef\n+Righ\n t)%0A%7D%0A%0A//\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-07-02_04-34-53",
+            "content": "@@ -183,27 +183,8 @@\n %0A%09%7D%0A\n-%09%0A%09rev := node.Left\n %0A%09no\n@@ -208,27 +208,8 @@\n ght%0A\n-%09node.Right = rev%0A%0A\n %09Rev\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-07-02_04-37-20",
+            "content": "@@ -179,16 +179,17 @@\n turn%0A%09%7D%0A\n+%09\n %0A%09rev :=\n@@ -256,19 +256,20 @@\n se(node.\n-Lef\n+Righ\n t)%0A%09Reve\n@@ -277,20 +277,19 @@\n se(node.\n-Righ\n+Lef\n t)%0A%7D%0A%0A//\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-07-02_04-37-37",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\nfunc Reverse(node *Node) {\n\tif node == nil {\n\t\treturn\n\t}\n\n\trev := node.Left\n\tnode.Left = node.Right\n\tnode.Right = rev\n\n\tReverse(node.Left)\n\tReverse(node.Right)\n}\n\n// -----------------------------------------------------------------------------------\nfunc BShow(node *Node, history string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, history+\"l\")\n\t}\n\tfor i := 0; i < len(history)-1; i++ {\n\t\tif history[i] != history[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif history != \"\" {\n\t\tif history[len(history)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, history+\"r\")\n\t}\n}\n\nfunc create(parts *[]string) *Node {\n\telem := (*parts)[0]\n\t*parts = (*parts)[1:]\n\tif elem == \"#\" {\n\t\treturn nil\n\t}\n\tvalue, _ := strconv.Atoi(elem)\n\tnode := &Node{Value: value}\n\tnode.Left = create(parts)\n\tnode.Right = create(parts)\n\treturn node\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\troot := create(&parts)\n\tBShow(root, \"\") // Chama a fun\u00e7\u00e3o de impress\u00e3o formatada\n\tReverse(root)   // Inverte a \u00e1rvore\n\tBShow(root, \"\") // Chama novamente para mostrar a \u00e1rvore invertida\n}\n",
+            "lines": "80"
+        }
+    ]
+}
