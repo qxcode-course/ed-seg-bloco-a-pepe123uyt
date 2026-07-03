@@ -19,12 +19,12 @@ func Clone(node *Node) *Node {
 		return nil
 	}
 
-	no := &Node{Value: node.Value,}
+	clone := &Node{Value: node.Value,}
 
-	no.Left = Clone(node.Left)
-	no.Right = Clone(node.Right)
+	clone.Left = Clone(node.Left)
+	clone.Right = Clone(node.Right)
 
-	return no
+	return clone
 }
 
 // -----------------------------------------------------------------------------------

@@ -45,3 +45,14 @@
 2026-07-02 04:58:56, SELF, v:1, k:ed@clonar, self:1, rate:100, study:22, problem:1
 2026-07-02 04:58:37, MOVE, v:1, k:ed@clonar, mode:EDIT
 2026-07-02 04:58:39, MOVE, v:1, k:ed@clonar, mode:EDIT
+2026-07-02 05:01:55, MOVE, v:1, k:ed@clonar, mode:PICK
+2026-07-02 05:01:56, EXEC, v:1, k:ed@clonar, mode:FULL, rate:100, size:83
+2026-07-02 05:01:57, MOVE, v:1, k:ed@clonar, mode:BACK
+2026-07-02 05:04:04, MOVE, v:1, k:ed@soma, mode:DOWN
+2026-07-02 05:04:04, MOVE, v:1, k:ed@soma, mode:PICK
+2026-07-02 05:04:05, EXEC, v:1, k:ed@soma, mode:FULL, rate:0, size:83
+2026-07-02 05:01:54, MOVE, v:1, k:ed@clonar, mode:EDIT
+2026-07-02 05:01:56, MOVE, v:1, k:ed@clonar, mode:EDIT
+2026-07-02 05:04:04, MOVE, v:1, k:ed@soma, mode:EDIT
+2026-07-02 05:04:04, MOVE, v:1, k:ed@soma, mode:EDIT
+2026-07-02 05:04:05, MOVE, v:1, k:ed@soma, mode:EDIT
