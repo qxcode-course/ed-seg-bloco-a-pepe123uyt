@@ -19,23 +19,21 @@ type Node struct {
 // Value is the value we are looking for
 // Returns the node with the value or nil if not found
 func find(node *Node, value int) *Node {
-	if node.Value != value {
+	if node == nil {
 		return nil
 	}
-
-	achado := node
+	if node.Value == value {
+		return node
+	}
 	
 	esq := find(node.Left, value)
 	dir := find(node.Right, value)
 
 	if esq != nil {
-		achado = esq
-	}
-	if dir != nil {
-		achado = dir
+		return esq
 	}
 	
-	return achado
+	return dir
 }
 
 // node is the node we want to find the height of
@@ -62,18 +60,20 @@ func calcNodeDepth(node *Node, level int, value int) int {
 	if node == nil {
 		return 0
 	}
-	if node.Value != value {
-		level++
+
+	if node.Value == value {
+		return level
 	}
+	
+	level++
 
 	esq := calcNodeDepth(node.Left, level, value)
-	dir := calcNodeDepth(node.Right, level, value)
 
-	if esq < dir {
+	if esq != 0 {
 		return esq
 	}
 
-	return dir
+	return calcNodeDepth(node.Right, level, value)
 }
 
 // --------------------------------------------------------------------

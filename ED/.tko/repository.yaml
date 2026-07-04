@@ -23,5 +23,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@altura
-selected_index: 13
+selected: ed@compare
+selected_index: 14
