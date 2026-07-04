@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-04_16-44-23",
+            "content": "@@ -340,16 +340,19 @@\n // ACT%0A%09\n+// \n _, _ = n\n@@ -363,16 +363,19 @@\n  value%0A%09\n+// \n return %22\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-07-04_16-45-01",
+            "content": "@@ -327,87 +327,52 @@\n  %7B%0A%09\n-str := %22%22%0A%09if node == nil %7B%0A%09%09str += %22%22%0A%09%7D%0A%0A%09if node.Value ==\n+// TODO%0A%09// ACT%0A%09_, _ = node,\n  value\n- %7B%0A%09\n+%0A\n %09return \n str \n@@ -371,70 +371,10 @@\n urn \n-str + %22x%22 %0A%09%7D %0A%0A%09if findPath(node.Left, value) == %22l%22%0A%09return \n+%22%22\n %0A%7D%0A%0A\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-07-04_16-55-15",
+            "content": "@@ -281,25 +281,24 @@\n io%0Afunc \n-nodeExist\n+findPath\n (node *N\n@@ -317,14 +317,27 @@\n nt) \n-bool %7B\n+string %7B%0A%09str := %22%22\n %0A%09if\n@@ -357,24 +357,22 @@\n %7B%0A%09%09\n-return false\n+str += %22%22\n %0A%09%7D%0A\n+%0A\n %09if \n@@ -406,453 +406,70 @@\n urn \n+s\n tr\n-ue%0A%09%7D %0A%0A%09esq := nodeExist(node.Left, value)%0A%0A%09if esq %7B%0A%09%09return true%0A%09%7D%0A%0A%09return nodeExist(node.Right , value)%0A%7D%0A%0Afunc findPath(node *Node, value int) string %7B%0A%09if !nodeExist(node, value) %7B%0A%09%09return %22!%22%0A%09%7D%0A%09if node == nil %7B%0A%09%09return %22%22%0A%09%7D%0A%09if node.Value == value %7B%0A%09%09return %22x%22%0A%09%7D%0A%0A%09if node.Left.Value == value %7B%0A%09%09return %22l%22%0A%09%7D%0A%09if node.Right.Value == value %7B%0A%09%09return %22r%22%0A%09%7D%0A%0A%0A%09return findPath(node.Left, value) + findPath(node.Right, value)\n+ + %22x%22 %0A%09%7D %0A%0A%09if findPath(node.Left, value) == %22l%22%0A%09return \n %0A%7D%0A%0A\n",
+            "lines": "87"
+        },
+        {
+            "label": "2026-07-04_19-52-24",
+            "content": "@@ -276,20 +276,16 @@\n ess%C3%A1rio%0A\n-%0A// \n func nod\n@@ -321,19 +321,16 @@\n  bool %7B%0A\n-// \n %09if node\n@@ -339,19 +339,16 @@\n = nil %7B%0A\n-// \n %09%09return\n@@ -358,17 +358,11 @@\n lse%0A\n-// %09%7D%0A// \n+%09%7D%0A\n %09if \n@@ -383,19 +383,16 @@\n value %7B%0A\n-// \n %09%09return\n@@ -401,19 +401,13 @@\n rue%0A\n-// \n %09%7D %0A%0A\n-// \n %09esq\n@@ -439,19 +439,16 @@\n value)%0A%0A\n-// \n %09if esq \n@@ -449,19 +449,16 @@\n f esq %7B%0A\n-// \n %09%09return\n@@ -467,18 +467,12 @@\n rue%0A\n-// \n %09%7D%0A%0A\n-// \n %09ret\n@@ -505,19 +505,16 @@\n  value)%0A\n-// \n %7D%0A%0Afunc \n@@ -554,16 +554,62 @@\n tring %7B%0A\n+%09if !nodeExist(node, value) %7B%0A%09%09return %22!%22%0A%09%7D%0A\n %09if node\n@@ -620,33 +620,32 @@\n nil %7B%0A%09%09return %22\n-!\n %22%0A%09%7D%0A%09if node.Va\n@@ -681,57 +681,83 @@\n %7D%0A%0A%09\n-esq := findPath(node.Left, value)%0A%0A%09if esq != %22!%22\n+if node.Left.Value == value %7B%0A%09%09return %22l%22%0A%09%7D%0A%09if node.Right.Value == value\n  %7B%0A%09\n@@ -769,29 +769,24 @@\n rn %22\n-l%22 + esq\n+r%22\n %0A%09%7D%0A%0A\n+%0A\n %09return \n %22r%22 \n@@ -781,19 +781,42 @@\n %09return \n-%22r%22\n+findPath(node.Left, value)\n  + findP\n",
+            "lines": "112"
+        },
+        {
+            "label": "2026-07-04_20-01-40",
+            "content": "@@ -752,14 +752,20 @@\n %7D%0A%0A%09\n-dir :=\n+return %22r%22 +\n  fin\n@@ -793,60 +793,8 @@\n ue)%0A\n-%09if dir != %22!%22 %7B%0A%09%09return %22r%22 + dir%0A%09%7D%0A%0A%09return %22!%22%0A\n %7D%0A%0A/\n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-07-04_20-03-01",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\n// retorne o caminho at\u00e9 o n\u00f3 ou ! se n\u00e3o existir\n// voc\u00ea pode fazer recursivo ou interativo\n// tamb\u00e9m pode criar fun\u00e7\u00f5es auxiliares se achar necess\u00e1rio\n\n// func nodeExist(node *Node, value int) bool {\n// \tif node == nil {\n// \t\treturn false\n// \t}\n// \tif node.Value == value {\n// \t\treturn true\n// \t} \n\n// \tesq := nodeExist(node.Left, value)\n\n// \tif esq {\n// \t\treturn true\n// \t}\n\n// \treturn nodeExist(node.Right , value)\n// }\n\nfunc findPath(node *Node, value int) string {\n\tif node == nil {\n\t\treturn \"!\"\n\t}\n\tif node.Value == value {\n\t\treturn \"x\"\n\t}\n\n\tesq := findPath(node.Left, value)\n\n\tif esq != \"!\" {\n\t\treturn \"l\" + esq\n\t}\n\n\tdir := findPath(node.Right, value)\n\tif dir != \"!\" {\n\t\treturn \"r\" + dir\n\t}\n\n\treturn \"!\"\n}\n\n// ----------------------------------------------------------------------------------\nfunc BShow(node *Node, heranca string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, heranca+\"l\")\n\t}\n\tfor i := 0; i < len(heranca)-1; i++ {\n\t\tif heranca[i] != heranca[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif heranca != \"\" {\n\t\tif heranca[len(heranca)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, heranca+\"r\")\n\t}\n}\n\nfunc create(parts *[]string) *Node {\n\telem := (*parts)[0]\n\t*parts = (*parts)[1:]\n\tif elem == \"#\" {\n\t\treturn nil\n\t}\n\tvalue, _ := strconv.Atoi(elem)\n\tnode := &Node{Value: value}\n\tnode.Left = create(parts)\n\tnode.Right = create(parts)\n\treturn node\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\troot := create(&parts)\n\tfmt.Println(\"Arvore:\")\n\tBShow(root, \"\") // Chama a fun\u00e7\u00e3o de impress\u00e3o formatada\n\tfmt.Println(\"Caminho:\", findPath(root, value))\n}\n",
+            "lines": "113"
+        }
+    ]
+}
