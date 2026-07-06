@@ -2,8 +2,28 @@
     "patches": [
         {
             "label": "2026-05-21_13-48-28",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00e3o mude a assinatura desta fun\u00e7\u00e3o, ela \u00e9 a fun\u00e7\u00e3o chamada pelo LeetCode\nfunc exist(grid [][]byte, word string) bool {\n\t_, _ = grid, word\n\treturn false\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar word string\n\tfmt.Sscanf(scanner.Text(), \"%s\", &word)\n\tgrid := make([][]byte, 0)\n\tfor scanner.Scan() {\n\t\tgrid = append(grid, []byte(scanner.Text()))\n\t}\n\tif exist(grid, word) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "content": "@@ -167,17 +167,8 @@\n l %7B%0A\n-%09if grid%0A\n %09_, \n",
             "lines": "29"
+        },
+        {
+            "label": "2026-07-06_18-30-47",
+            "content": "@@ -168,442 +168,48 @@\n  %7B%0A%09\n-n_linhas := len(grid)%0A%09n_colunas := len(grid%5B0%5D)%0A%0A%09for _, l := range n_linhas %7B%0A%0A%09%7D%0A%7D%0A%0Afunc backtrack(grid %5B%5D%5B%5Dbyte, (n_linhas, n_colunas, linha, coluna) int, suffix string) bool %7B%0A%09if len(word) == 0 %7B%0A%09%09return true%0A%09%7D%0A%0A%09if linha %3C 0 %7C%7C linha == n_linhas %7C%7C coluna %3C 0 %7C%7C coluna == n_colunas %7B%0A%09%09return false%0A%09%7D%0A%0A%09if grid%5Blinha%5D%5Bcoluna%5D != suffix%5B0%5D %7B%0A%09%09return false%0A%09%7D%0A%0A%09grid%5Blinha%5D%5Bcoluna%5D = '#'%0A%0A%0A%0A%0A%09grid%5Blinha%5D%5Bcoluna%5D = suffix%5B0%5D\n+if grid%0A%09_, _ = grid, word%0A%09return false\n %0A%7D%0A%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-07-06_18-50-27",
+            "content": "@@ -285,23 +285,9 @@\n te, \n-suffix string, \n+(\n n_li\n@@ -320,12 +320,28 @@\n luna\n+)\n  int\n+, suffix string\n ) bo\n@@ -353,22 +353,20 @@\n %09if len(\n-suffix\n+word\n ) == 0 %7B\n@@ -567,321 +567,9 @@\n #'%0A%0A\n-%09directions := %5B%5D%5B%5Dint %7B%0A%09%09%7B0, 1%7D,%0A%09%09%7B1, 0%7D,%0A%09%09%7B0, -1%7D,%0A%09%09%7B-1, 0%7D,%0A%09%7D%0A%0A%09for _, dir := range directions %7B%0A%09%09linhaOffset := dir%5B0%5D%0A%09%09colunaOffset := dir%5B1%5D%0A%0A%09%09res := backtrack(%0A%09%09%09grid,%0A%09%09%09suffix%5B1:%5D,%0A%09%09%09n_linhas,%0A%09%09%09n_colunas,%0A%09%09%09linha + linhaOffset,%0A%09%09%09coluna + colunaOffset,%0A%09%09)%0A%0A%09%09if res %7B%0A%09%09%09return true%0A%09%09%7D%0A%09%7D\n+%0A\n %0A%0A%09g\n@@ -599,30 +599,16 @@\n ffix%5B0%5D%0A\n-%09return false%0A\n %7D%0A%0Afunc \n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-07-06_18-58-59",
+            "content": "@@ -223,157 +223,36 @@\n for \n-l := range n_linhas %7B%0A%09%09for c := range n_colunas %7B%0A%09%09%09if backtrack(grid, word, n_linhas, n_colunas, l, c) %7B%0A%09%09%09%09return true%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09return false\n+_, l := range n_linhas %7B%0A%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-07-06_19-01-08",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00e3o mude a assinatura desta fun\u00e7\u00e3o, ela \u00e9 a fun\u00e7\u00e3o chamada pelo LeetCode\nfunc exist(grid [][]byte, word string) bool {\n\tn_linhas := len(grid)\n\tn_colunas := len(grid[0])\n\n\tfor l := range n_linhas {\n\t\tfor c := range n_colunas {\n\t\t\tif backtrack(grid, word, n_linhas, n_colunas, l, c) {\n\t\t\t\treturn true\n\t\t\t}\n\t\t}\n\t}\n\treturn false\n}\n\nfunc backtrack(grid [][]byte, suffix string, n_linhas, n_colunas, linha, coluna int) bool {\n\tif len(suffix) == 0 {\n\t\treturn true\n\t}\n\n\tif linha < 0 || linha == n_linhas || coluna < 0 || coluna == n_colunas {\n\t\treturn false\n\t}\n\n\tif grid[linha][coluna] != suffix[0] {\n\t\treturn false\n\t}\n\n\tgrid[linha][coluna] = '#'\n\n\tdirections := [][]int {\n\t\t{0, 1},\n\t\t{1, 0},\n\t\t{0, -1},\n\t\t{-1, 0},\n\t}\n\n\tfor _, dir := range directions {\n\t\tlinhaOffset := dir[0]\n\t\tcolunaOffset := dir[1]\n\n\t\tres := backtrack(\n\t\t\tgrid,\n\t\t\tsuffix[1:],\n\t\t\tn_linhas,\n\t\t\tn_colunas,\n\t\t\tlinha + linhaOffset,\n\t\t\tcoluna + colunaOffset,\n\t\t)\n\n\t\tif res {\n\t\t\treturn true\n\t\t}\n\t}\n\n\tgrid[linha][coluna] = suffix[0]\n\treturn false\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar word string\n\tfmt.Sscanf(scanner.Text(), \"%s\", &word)\n\tgrid := make([][]byte, 0)\n\tfor scanner.Scan() {\n\t\tgrid = append(grid, []byte(scanner.Text()))\n\t}\n\tif exist(grid, word) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "lines": "82"
         }
     ]
 }

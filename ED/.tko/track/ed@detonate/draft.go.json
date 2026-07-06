@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-05_19-24-01",
+            "content": "@@ -28,11 +28,16 @@\n unc \n-bfs\n+verifica\n (mat\n@@ -60,19 +60,9 @@\n     \n-return true\n+3\n %0A%7D%0Af\n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-07-05_19-30-04",
+            "content": "package main\nimport \"fmt\"\nfunc bfs(mat[][]int) bool {\n    return true\n}\nfunc main() {\n    var xi, yi int\n    fmt.Scan(&xi, &yi)\n}\n",
+            "lines": "9"
+        }
+    ]
+}

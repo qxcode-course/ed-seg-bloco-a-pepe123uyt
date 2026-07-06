@@ -13,7 +13,16 @@ sources:
   writeable: false
   quests: null
 expanded:
+- ed@basic
+- ed@dfs
+- ed@bfs
+- ed@map_set
+- ed@list
+- ed@rec
+- ed@vector
 - ed@tree
+- ed@linear
+- ed@backtrack
 flags:
   inbox: all
   panel: graph
@@ -23,5 +32,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@formatada
-selected_index: 9
+selected: ed@wordsearch
+selected_index: 73

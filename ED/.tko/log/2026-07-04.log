@@ -98,3 +98,15 @@
 2026-07-04 20:03:01, EXEC, v:1, k:ed@arvore-path, mode:FULL, rate:100, size:113
 2026-07-04 20:03:04, MOVE, v:1, k:ed@arvore-path, mode:BACK
 2026-07-04 20:03:38, SELF, v:1, k:ed@arvore-path, self:1, rate:100, study:40
+2026-07-04 20:02:47, MOVE, v:1, k:ed@arvore-path, mode:EDIT
+2026-07-04 20:03:01, MOVE, v:1, k:ed@arvore-path, mode:EDIT
+2026-07-04 20:17:36, MOVE, v:1, k:ed@arvore-path, mode:PICK
+2026-07-04 20:17:36, EXEC, v:1, k:ed@arvore-path, mode:FULL, rate:100
+2026-07-04 20:17:39, MOVE, v:1, k:ed@arvore-path, mode:BACK
+2026-07-04 20:17:51, MOVE, v:1, k:ed@arvore-path, mode:PICK
+2026-07-04 20:17:52, EXEC, v:1, k:ed@arvore-path, mode:FULL, rate:100
+2026-07-04 20:17:54, MOVE, v:1, k:ed@arvore-path, mode:BACK
+2026-07-04 20:18:04, SELF, v:1, k:ed@arvore-path, self:1, rate:100, study:55
+2026-07-04 20:18:05, MOVE, v:1, k:ed@arvore-path, mode:PICK
+2026-07-04 20:18:06, MOVE, v:1, k:ed@arvore-path, mode:BACK
+2026-07-04 20:17:52, MOVE, v:1, k:ed@arvore-path, mode:EDIT
