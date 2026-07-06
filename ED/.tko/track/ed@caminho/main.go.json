@@ -1,0 +1,69 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-06_19-35-04",
+            "content": "@@ -108,121 +108,18 @@\n  %7B%0A%09\n-positions := %5B%5DPos %7B%0A%09%09%7Bp.l + 1, p.c%7D,%0A%09%09%7Bp.l, p.c + 1%7D,%0A%09%09%7Bp.l - 1, p.c%7D,%0A%09%09%7Bp.l, p.c - 1%7D,%0A%09%7D%0A%09return positions\n+return nil\n %0A%7D%0A%0A\n@@ -445,456 +445,8 @@\n ) %7B%0A\n-%09queue := NewQueue%5BPos%5D()%0A%0A%09queue.Enqueue(startPos)%0A%0A%09visitados := make(map%5BPos%5Dbool)%0A%0A%09pos := Pos%7BstartPos.l, startPos.c%7D%0A%0A%09visitados%5Bpos%5D = true%0A%0A%09caminho := make(map%5BPos%5DPos)%0A%0A%09%0A%0A%09for !queue.IsEmpty() %7B%0A%09%09n, _ := queue.Peek()%0A%09%09queue.Dequeue()%0A%0A%09%09if n == endPos %7B%0A%09%09%09return%0A%09%09%7D%0A%0A%09%09for _, viz := range startPos.getNeig()%7B%0A%09%09%09if  grid%5Bviz.l%5D%5Bviz.c%5D != '#' && visitados%5Bviz%5D == false %7B%0A%09%09%09%09visitados%5Bviz%5D = true%0A%09%09%09%09queue.Enqueue(viz)%0A%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A\n %09_, \n@@ -603,16 +603,16 @@\n .Text()%0A\n+\n %09fmt.Ssc\n@@ -640,17 +640,16 @@\n l, &nc)%0A\n-%0A\n %09mat := \n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-07-06_19-57-44",
+            "content": "@@ -723,16 +723,19 @@\n s%5DPos)%0A%0A\n+%09%0A%0A\n %09for !qu\n@@ -979,20 +979,16 @@\n ue(viz)%0A\n-%09%09%09%09\n %0A%09%09%09%7D%0A%09%09\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-06_20-05-27",
+            "content": "@@ -984,43 +984,32 @@\n %09%09%09%09\n-caminho%5Bviz%5D = startPos%0A%09%09%09%09search(\n+%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09_, _, _ = \n grid\n@@ -1030,24 +1030,8 @@\n dPos\n-) %0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A\n %0A%7D%0A%0A\n",
+            "lines": "105"
+        },
+        {
+            "label": "2026-07-06_20-10-31",
+            "content": "@@ -1057,18 +1057,16 @@\n %09%7D%0A%0A%0A%7D%0A%0A\n-//\n func vol\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-06_20-10-47",
+            "content": "@@ -757,16 +757,31 @@\n n, _ := \n+queue.Peek()%0A%09%09\n queue.De\n@@ -1004,16 +1004,52 @@\n tartPos%0A\n+%09%09%09%09search(grid, startPos, endPos) %0A\n %09%09%09%7D%0A%09%09%7D\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-06_20-16-21",
+            "content": "@@ -854,35 +854,8 @@\n ()%7B%0A\n-%09%09%09if inside(grid, viz) %7B%0A%09\n %09%09%09i\n@@ -916,17 +916,16 @@\n e %7B%0A%09%09%09%09\n-%09\n visitado\n@@ -942,17 +942,16 @@\n rue%0A%09%09%09%09\n-%09\n queue.En\n@@ -961,17 +961,16 @@\n ue(viz)%0A\n-%09\n %09%09%09%09cami\n@@ -993,14 +993,8 @@\n Pos%0A\n-%09%09%09%09%7D%0A\n %09%09%09%7D\n",
+            "lines": "105"
+        },
+        {
+            "label": "2026-07-06_20-17-55",
+            "content": "@@ -913,17 +913,16 @@\n  '#' && \n-!\n visitado\n@@ -927,16 +927,26 @@\n dos%5Bviz%5D\n+ == false \n %7B%0A%09%09%09%09%09v\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-06_20-18-21",
+            "content": "@@ -1001,17 +1001,24 @@\n %5Bviz%5D = \n-n\n+startPos\n %0A%09%09%09%09%7D%0A%09\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-06_20-19-04",
+            "content": "@@ -830,17 +830,24 @@\n = range \n-n\n+startPos\n .getNeig\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-06_20-26-20",
+            "content": "@@ -853,14 +853,14 @@\n %09if \n-!match\n+inside\n (gri\n@@ -869,14 +869,45 @@\n  viz\n-,\n+) %7B%0A%09%09%09%09if  grid%5Bviz.l%5D%5Bviz.c%5D !=\n  '#'\n-)\n  && \n@@ -923,16 +923,17 @@\n s%5Bviz%5D%7B%0A\n+%09\n %09%09%09%09visi\n@@ -950,16 +950,17 @@\n  = true%0A\n+%09\n %09%09%09%09queu\n@@ -978,16 +978,17 @@\n iz)%0A%09%09%09%09\n+%09\n caminho%5B\n@@ -1000,17 +1000,19 @@\n = n%0A\n+%09%09%09%09%7D%0A\n %09%09%09%7D%0A\n-%09%09%09%0A\n %09%09%7D%0A\n@@ -1015,24 +1015,26 @@\n %09%09%7D%0A%09%7D%0A%0A%0A%7D%0A%0A\n+//\n func voltar(\n@@ -1037,198 +1037,9 @@\n tar(\n-grid %5B%5D%5B%5Drune, caminho map%5BPos%5DPos, startPos Pos, endPos Pos) %7B%0A%09atual := endPos%0A%0A%09for atual != startPos %7B%0A%09%09anterior := caminho%5Batual%5D%0A%09%09grid%5Batual.l%5D%5Batual.c%5D = '.'%0A%09%09atual = anterior%0A%09%7D%0A%7D\n+)\n %0A%0Afu\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-06_20-46-30",
+            "content": "@@ -1102,16 +1102,45 @@\n rtPos %7B%0A\n+%09%09anterior := caminho%5Batual%5D%0A\n %09%09grid%5Ba\n@@ -1176,63 +1176,19 @@\n l = \n-caminho%5Batual%5D%0A%09%7D%0A%0A%09grid%5BstartPos.l%5D%5BstartPos.c%5D = '.'%0A\n+anterior%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "114"
+        },
+        {
+            "label": "2026-07-06_20-48-46",
+            "content": "@@ -797,51 +797,8 @@\n s %7B%0A\n-%09%09%09voltar(grid, caminho, startPos, endPos)%0A\n %09%09%09r\n",
+            "lines": "116"
+        },
+        {
+            "label": "2026-07-06_20-49-54",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl, c int\n}\n\nfunc (p Pos) getNeig() []Pos {\n\tpositions := []Pos {\n\t\t{p.l + 1, p.c},\n\t\t{p.l, p.c + 1},\n\t\t{p.l - 1, p.c},\n\t\t{p.l, p.c - 1},\n\t}\n\treturn positions\n}\n\nfunc inside(grid [][]rune, pos Pos) bool {\n\tnrows := len(grid)\n\tncols := len(grid[0])\n\treturn pos.l >= 0 && pos.l < nrows && pos.c >= 0 && pos.c < ncols\n}\n\nfunc match(grid [][]rune, pos Pos, char rune) bool {\n\treturn inside(grid, pos) && grid[pos.l][pos.c] == char\n}\n\nfunc search(grid [][]rune, startPos Pos, endPos Pos) {\n\tqueue := NewQueue[Pos]()\n\n\tqueue.Enqueue(startPos)\n\n\tvisitados := make(map[Pos]bool)\n\n\tpos := Pos{startPos.l, startPos.c}\n\n\tvisitados[pos] = true\n\n\tcaminho := make(map[Pos]Pos)\n\n\tfor !queue.IsEmpty() {\n\t\tn, _ := queue.Dequeue()\n\n\t\tif n == endPos {\n\t\t\tvoltar(grid, caminho, startPos, endPos)\n\t\t\treturn\n\t\t}\n\n\t\tfor _, viz := range n.getNeig(){\n\t\t\tif !match(grid, viz, '#') && !visitados[viz]{\n\t\t\t\tvisitados[viz] = true\n\t\t\t\tqueue.Enqueue(viz)\n\t\t\t\tcaminho[viz] = n\n\t\t\t}\n\t\t\t\n\t\t}\n\t}\n\n\n}\n\nfunc voltar(grid [][]rune, caminho map[Pos]Pos, startPos Pos, endPos Pos) {\n\tatual := endPos\n\n\tfor atual != startPos {\n\t\tgrid[atual.l][atual.c] = '.'\n\t\tatual = caminho[atual]\n\t}\n\n\tgrid[startPos.l][startPos.c] = '.'\n\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tvar nl, nc int\n\tscanner.Scan()\n\tline := scanner.Text()\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\n\tmat := make([][]rune, nl) // Inicializa a matriz de runes\n\n\t// Carregando matriz\n\tfor i := range nl {\n\t\tscanner.Scan()\n\t\tline := scanner.Text()\n\t\tmat[i] = []rune(line)\n\t}\n\n\tvar inicio, fim Pos\n\n\t// Procurando inicio e fim e colocando ' ' nas posi\u00e7\u00f5es iniciais\n\tfor l := range nl {\n\t\tfor c := range nc {\n\t\t\tif mat[l][c] == 'I' {\n\t\t\t\tmat[l][c] = ' '\n\t\t\t\tinicio = Pos{l, c}\n\t\t\t}\n\t\t\tif mat[l][c] == 'F' {\n\t\t\t\tmat[l][c] = ' '\n\t\t\t\tfim = Pos{l, c}\n\t\t\t}\n\t\t}\n\t}\n\n\tsearch(mat, inicio, fim)\n\n\tfor _, line := range mat {\n\t\tfmt.Println(string(line)) // Converte o slice de runes de volta para string para imprimir\n\t}\n}\n",
+            "lines": "117"
+        }
+    ]
+}
