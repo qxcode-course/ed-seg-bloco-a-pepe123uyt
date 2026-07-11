@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-11_01-50-22",
+            "content": "@@ -39,19 +39,23 @@\n ack(\n-vet\n+numeros\n  %5B%5Dint, \n n in\n@@ -50,17 +50,20 @@\n  %5B%5Dint, \n-n\n+soma\n  int) bo\n@@ -71,90 +71,8 @@\n l %7B%0A\n-    if len(vet) == 0 %7C%7C len(vet) == 1 && vet%5B0%5D != n %7B%0A        return false%0A    %7D%0A\n     \n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-07-11_01-52-28",
+            "content": "@@ -81,16 +81,48 @@\n t) == 0 \n+%7C%7C len(vet) == 1 && vet%5B0%5D != n \n %7B%0A      \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-07-11_01-52-45",
+            "content": "@@ -85,40 +85,8 @@\n = 0 \n-%7C%7C len(vet) == 1 && vet%5B0%5D != n \n %7B%0A  \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-07-11_01-52-50",
+            "content": "package main\nimport \"fmt\"\n\nfunc backtrack(vet []int, n int) bool {\n    if len(vet) == 0 || len(vet) == 1 && vet[0] != n {\n        return false\n    }\n    return true\n}\n\nfunc main() {\n    var n, k int\n    fmt.Scan(&n, &k)\n\n    nums := make([]int, n)\n\n    for i := range n {\n        fmt.Scan(nums[i])\n    }\n\n    fmt.Println(backtrack(nums, k))\n\n}\n",
+            "lines": "23"
+        }
+    ]
+}

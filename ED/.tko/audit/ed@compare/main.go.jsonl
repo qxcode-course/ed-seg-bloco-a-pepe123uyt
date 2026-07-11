@@ -16,3 +16,4 @@
 {"ts":1783183092,"hash":"eb456b2883444da2562544ac6373eb5833e97e2f8ef85047d659bd7c3e07edd2","mode":"diff","ops":[{"tag":"insert","a1":21,"a2":21,"text":"\tif a.Value == b.Value {\n\t\treturn 0\n\t}\n"},{"tag":"replace","a1":36,"a2":37,"text":"\n"}]}
 {"ts":1783183118,"hash":"48f46e82635aafd16908ba66af6b0e619082345648f797d149e6a75692720209","mode":"diff","ops":[{"tag":"delete","a1":21,"a2":24,"text":""},{"tag":"replace","a1":43,"a2":44,"text":"\t\treturn esq\n"}]}
 {"ts":1783183254,"hash":"e944bf2f71676b751413c71d989a05b1b2cd1c6d8ddde365a3e370093c3cd1a8","mode":"diff","ops":[{"tag":"replace","a1":26,"a2":27,"text":"\tif b == nil {\n"}]}
+{"ts":1783438254,"hash":"5c52bbc5f3946a83c470f5f8946069e889d9b5a19ee32930e56c34d0d84cc470","mode":"diff","ops":[{"tag":"replace","a1":22,"a2":25,"text":"\t// if a == nil {\n\t// \treturn -1\n\t// }\n"},{"tag":"replace","a1":26,"a2":29,"text":"\t// if b == nil {\n\t// \treturn 1\n\t// }\n"}]}

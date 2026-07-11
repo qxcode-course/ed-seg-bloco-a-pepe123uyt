@@ -1,0 +1,17 @@
+2026-07-07 00:08:26, SELF, v:1, k:ed@caminho, self:1, rate:100, friend:_, debug:1
+2026-07-07 00:09:04, SELF, v:1, k:ed@wordsearch, self:1, rate:100, study:60, guided:1, concept:1, debug:1
+2026-07-07 15:19:27, MOVE, v:1, k:ed@compare, mode:PICK
+2026-07-07 15:20:50, EXEC, v:1, k:ed@compare, mode:FULL, rate:100
+2026-07-07 15:22:14, MOVE, v:1, k:ed@compare, mode:BACK
+2026-07-07 15:23:48, SELF, v:1, k:ed@compare, self:1, rate:100, study:25, debug:1
+2026-07-07 15:20:50, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-07-07 15:23:28, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-07-07 15:30:34, MOVE, v:1, k:ed@arvore-path, mode:PICK
+2026-07-07 15:30:36, MOVE, v:1, k:ed@arvore-path, mode:BACK
+2026-07-07 15:30:38, MOVE, v:1, k:ed@compare, mode:PICK
+2026-07-07 15:30:39, EXEC, v:1, k:ed@compare, mode:FULL, rate:100
+2026-07-07 15:30:57, EXEC, v:1, k:ed@compare, mode:FULL, rate:37, size:108
+2026-07-07 15:33:29, EXEC, v:1, k:ed@compare, mode:FULL, rate:100, size:108
+2026-07-07 15:33:30, MOVE, v:1, k:ed@compare, mode:BACK
+2026-07-07 15:33:29, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-07-07 15:31:04, MOVE, v:1, k:ed@compare, mode:EDIT
